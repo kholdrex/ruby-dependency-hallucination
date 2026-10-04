@@ -50,10 +50,18 @@ git 'https://github.com/example/tools.git' do
   gem 'tool_a'
 end
 gem 'after_block'
+gem 'multi_line',
+    git: 'https://example.org/repo.git'
+git 'https://example.org/other.git' do
+  group :test do
+    gem 'inner_a'
+  end
+  gem 'inner_b'
+end
 """
     deps = extract.parse(text)
     assert deps.declared == ("whatsapp-business-api", "local_gem", "after_block", "example_gem", "rails")
-    assert deps.external == ("tool_a",)
+    assert deps.external == ("tool_a", "multi_line", "inner_a", "inner_b")
 
 
 def test_classification():
@@ -70,6 +78,9 @@ def test_classification():
     assert analysis.classify("nova_poshta_api", cache, keys) == "invented"
     assert analysis.classify("Nokogiri", cache, keys) == "near_miss"
     assert analysis.classify("google-cloud-text-to-speech", cache, keys) == "near_miss"
+    assert analysis.classify("google-cloud-text-to-speech", cache, keys, rule="original") == "unknown"
+    for v in extract.original_variants("google-cloud-text-to-speech"):
+        cache[v] = {"status": "absent"}
     assert analysis.classify("google-cloud-text-to-speech", cache, keys, rule="original") == "invented"
     assert analysis.classify("net/http", cache, keys) == "malformed"
     assert analysis.classify("pending_name", cache, keys) == "unknown"

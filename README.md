@@ -29,7 +29,8 @@ Gemma 3 12B and Llama 3.1 8B (DeepInfra). Main run: one sample per task and lang
 src/rubydeps/   task loading, prompt, OpenRouter client, runner, dependency extraction, registry lookup, analysis
 data/           tasks.jsonl
 results/        replies.jsonl (every reply with tokens, provider and finish reason), registry.json (status and date
-                of every lookup), labelled.jsonl (declared names with their class), summary.json
+                of every lookup), rubygems_names.txt.gz (all published gem names, 4 October 2026),
+                labelled.jsonl (declared names with their class), summary.json
 figures/        figure of the paper
 tests/          unit tests
 PROTOCOL.md     analysis plan fixed before the main run, with the two dated changes made before the analysis
@@ -46,7 +47,8 @@ uv run rubydeps analyze      # labelled.jsonl, summary.json and the figure from 
 ```
 
 `uv run rubydeps check` looks up names that are not yet in `results/registry.json` (stored lookups are reused, so the
-analysis reproduces the paper; deleting the file repeats all lookups with today's registry). New model calls need
+analysis reproduces the paper). To repeat the classification against today's registry, delete both
+`results/registry.json` and `results/rubygems_names.txt.gz` (the list of published names used for near misses). New model calls need
 `OPENROUTER_API_KEY`; `uv run rubydeps run main` and `uv run rubydeps run repeats` resume `results/replies.jsonl`,
 which is complete. Hosted models change over time, so new replies may differ from the stored ones.
 

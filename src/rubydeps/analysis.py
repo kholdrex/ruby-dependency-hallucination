@@ -58,7 +58,10 @@ def classify(name: str, cache: dict, keys: set[str], rule: str = "final") -> str
     if rule == "final":
         near = extract.key(name) in keys
     else:
-        near = any(cache.get(v, {}).get("status") == "exists" for v in extract.original_variants(name))
+        statuses = [cache.get(v, {}).get("status", "unknown") for v in extract.original_variants(name)]
+        if "exists" not in statuses and "unknown" in statuses:
+            return "unknown"
+        near = "exists" in statuses
     return "near_miss" if near else "invented"
 
 

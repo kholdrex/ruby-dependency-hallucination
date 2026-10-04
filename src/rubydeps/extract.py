@@ -6,6 +6,7 @@ from dataclasses import dataclass
 GEM_LINE = re.compile(r"""^(?:echo[ \t]+["'])?[ \t]*gem[ \t]*\(?[ \t]*["']([^"']+)["'](.*)$""")
 SOURCE_BLOCK = re.compile(r"""^(?:git|github|gitlab|bitbucket|path)\b.*\bdo\s*(\|.*\|)?\s*$""")
 BLOCK_END = re.compile(r"^end\b")
+BLOCK_OPEN = re.compile(r"\bdo\s*(\|.*\|)?\s*$")
 INSTALL = re.compile(r"""\b(?:gem install|bundle add)[ \t]+([^\n`]+)""")
 REQUIRE = re.compile(r"""^[ \t]*require[ \t]*\(?[ \t]*["']([^"']+)["']""", re.MULTILINE)
 EXTERNAL_SOURCE = re.compile(r"""\b(?:git|github|gitlab|bitbucket|path)\s*(?::|=>)""")
@@ -45,12 +46,23 @@ def install_names(arguments: str) -> list[str]:
     return [n for n in names if n]
 
 
+def logical_lines(text: str) -> list[str]:
+    """Stripped lines, with a line that ends in a comma joined to the next one (multi-line gem options)."""
+    out: list[str] = []
+    for raw in text.splitlines():
+        line = raw.strip()
+        if out and out[-1].endswith(","):
+            out[-1] = f"{out[-1]} {line}"
+        else:
+            out.append(line)
+    return out
+
+
 def gem_lines(text: str) -> tuple[list[str], list[str]]:
     """Names from `gem` lines; gems inside a git/github/path block or with such an option are external."""
     declared, external, depth = [], [], 0
-    for raw in text.splitlines():
-        line = raw.strip()
-        if SOURCE_BLOCK.match(line):
+    for line in logical_lines(text):
+        if SOURCE_BLOCK.match(line) or (depth and BLOCK_OPEN.search(line)):
             depth += 1
             continue
         if depth and BLOCK_END.match(line):
