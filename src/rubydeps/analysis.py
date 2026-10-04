@@ -9,7 +9,7 @@ import numpy as np
 
 from . import extract
 from .experiment import MODELS, load_rows
-from .registry import Registry
+from .registry import Registry, fetch_index, read_index
 from .tasks import LANGS, Task
 
 SEED = 2026
@@ -27,37 +27,51 @@ LABELS = {
 
 
 def check_registry(results: Path) -> None:
+    """Look up every declared name and its original-rule variants; save the full name index once."""
     registry = Registry(results / "registry.json")
     names = set()
     for row in load_rows(results / "replies.jsonl"):
         for name in extract.parse(row["text"]).declared:
             if extract.valid(name):
                 names.add(name)
-                names.update(extract.variants(name))
+                names.update(extract.original_variants(name))
     for name in sorted(names):
         registry.status(name)
     registry.save()
+    index = results / "rubygems_names.txt.gz"
+    if not index.exists():
+        fetch_index(index)
 
 
-def classify(name: str, cache: dict) -> str:
-    """exists, invented, near_miss, malformed or unknown."""
+def classify(name: str, cache: dict, keys: set[str], rule: str = "final") -> str:
+    """exists, invented, near_miss, malformed or unknown.
+
+    final rule: an absent name is a near miss when some published gem has the same name up to letter case, hyphens
+    and underscores; original rule (first protocol version): when its case or wholesale hyphen/underscore variant
+    exists.
+    """
     if not extract.valid(name):
         return "malformed"
-    status = cache[name]["status"]
+    status = cache.get(name, {}).get("status", "unknown")
     if status != "absent":
         return status
-    if any(cache.get(v, {}).get("status") == "exists" for v in extract.variants(name)):
-        return "near_miss"
-    return "invented"
+    if rule == "final":
+        near = extract.key(name) in keys
+    else:
+        near = any(cache.get(v, {}).get("status") == "exists" for v in extract.original_variants(name))
+    return "near_miss" if near else "invented"
 
 
-def label_rows(rows: list[dict], cache: dict) -> list[dict]:
+def label_rows(rows: list[dict], cache: dict, keys: set[str], rule: str = "final") -> list[dict]:
     out = []
     for r in rows:
         deps = extract.parse(r["text"])
-        classes = {name: classify(name, cache) for name in deps.declared}
+        classes = {name: classify(name, cache, keys, rule) for name in deps.declared}
+        if "unknown" in classes.values():
+            raise ValueError(f"unresolved registry status in {r['model']} {r['task']} {r['lang']} {r['sample']}")
         out.append(
             {
+                "empty": not r["text"].strip(),
                 **{k: r[k] for k in ("model", "task", "lang", "sample", "finish")},
                 "classes": classes,
                 "external": list(deps.external),
@@ -115,16 +129,21 @@ def rates(labelled: list[dict], tasks: list[Task]) -> dict:
     pvalues = {}
     for m in MODELS:
         en, uk = matrix[m]["en"], matrix[m]["uk"]
-        cell = {lang: float(v.mean()) for lang, v in (("en", en), ("uk", uk))}
+        cell, cell_ci = {}, {}
         for lang, v in (("en", en), ("uk", uk)):
+            cell[lang] = float(v.mean())
+            cell_ci[lang] = interval(v[boots].mean(axis=1))
             for ctx in ("global", "ukraine"):
-                cell[f"{lang}|{ctx}"] = float(v[context == ctx].mean())
+                sel = v[context == ctx]
+                cell[f"{lang}|{ctx}"] = float(sel.mean())
+                cell_ci[f"{lang}|{ctx}"] = interval(sel[rng.integers(0, len(sel), (RESAMPLES, len(sel)))].mean(axis=1))
         d = uk - en
         gained, lost = int((d > 0).sum()), int((d < 0).sum())
         pvalues[m] = mcnemar(gained, lost)
         both = (en + uk) / 2
         res["models"][m] = {
             "rate": cell,
+            "rate_ci": cell_ci,
             "uk_minus_en": {
                 "value": float(d.mean()),
                 "ci": interval(d[boots].mean(axis=1)),
@@ -132,7 +151,7 @@ def rates(labelled: list[dict], tasks: list[Task]) -> dict:
                 "en_only": lost,
                 "p": pvalues[m],
             },
-            "ukraine_minus_global": {"value": gap(both, context), "ci": gap_interval(both, context, boots[:2000])},
+            "ukraine_minus_global": {"value": gap(both, context), "ci": gap_interval(both, context, boots)},
         }
     for m, p in holm(pvalues).items():
         res["models"][m]["uk_minus_en"]["p_holm"] = p
@@ -167,36 +186,62 @@ def names(labelled: list[dict]) -> dict:
             by_model[r["model"]]["no_dependency"] += 1
         by_model[r["model"]]["replies"] += 1
         by_model[r["model"]]["truncated"] += r["finish"] == "length"
+        by_model[r["model"]]["empty"] += r["empty"]
         by_model[r["model"]]["external"] += len(r["external"])
     return {m: dict(by_model[m]) for m in MODELS}
 
 
 def recurrence(labelled: list[dict]) -> dict:
-    groups = defaultdict(list)
+    """Two views on the repeat subset (three samples per model, task and language) and names shared by models."""
+    groups = defaultdict(dict)
     for r in labelled:
-        groups[(r["model"], r["task"], r["lang"])].append(r)
-    repeated = {k: v for k, v in groups.items() if len(v) > 1}
-    total, again = 0, 0
-    for replies in repeated.values():
-        per_sample = [{n for n, c in r["classes"].items() if c == "invented"} for r in replies]
-        for i, current in enumerate(per_sample):
-            others = set().union(*(s for j, s in enumerate(per_sample) if j != i))
-            total += len(current)
-            again += len(current & others)
+        groups[(r["model"], r["task"], r["lang"])][r["sample"]] = {
+            n for n, c in r["classes"].items() if c == "invented"
+        }
+    repeated = [g for g in groups.values() if len(g) > 1]
+    distinct = Counter()
+    for g in repeated:
+        for name in set().union(*g.values()):
+            distinct[sum(name in names for names in g.values())] += 1
+    first, again = 0, 0
+    for g in repeated:
+        later = set().union(*(names for sample, names in g.items() if sample > 0))
+        first += len(g.get(0, set()))
+        again += len(g.get(0, set()) & later)
     models_per_name = defaultdict(set)
     for r in labelled:
         for n, c in r["classes"].items():
             if c == "invented":
                 models_per_name[n].add(r["model"])
     shared = {n: sorted(ms) for n, ms in models_per_name.items() if len(ms) >= 2}
+    total = sum(distinct.values())
     return {
-        "invented_in_repeat_groups": total,
-        "seen_again": again,
-        "share_seen_again": again / total if total else None,
+        "distinct_in_repeat_groups": total,
+        "distinct_in_two_or_more_samples": total - distinct[1],
+        "share_distinct_recurring": (total - distinct[1]) / total if total else None,
+        "first_sample_invented": first,
+        "first_sample_seen_again": again,
+        "share_first_seen_again": again / first if first else None,
         "distinct_invented": len(models_per_name),
         "proposed_by_two_or_more_models": len(shared),
         "shared_examples": dict(sorted(shared.items(), key=lambda kv: -len(kv[1]))[:30]),
     }
+
+
+def completeness(rows: list[dict]) -> dict:
+    """Whether the first code block with gem lines was closed before the reply ended (main run)."""
+    out = defaultdict(Counter)
+    for r in rows:
+        if r["sample"] != 0:
+            continue
+        blocks = r["text"].split("```")
+        closed = [b for k, b in enumerate(blocks) if k % 2 == 1 and k < len(blocks) - 1]
+        has_gems = any(extract.gem_lines(b)[0] for b in closed)
+        open_tail = len(blocks) % 2 == 0 and extract.gem_lines(blocks[-1])[0]
+        out[r["finish"]]["replies"] += 1
+        out[r["finish"]]["closed_gem_block"] += bool(has_gems)
+        out[r["finish"]]["only_in_unclosed_block"] += bool(open_tail and not has_gems)
+    return {k: dict(v) for k, v in out.items()}
 
 
 def figure(res: dict, path: Path) -> None:
@@ -206,13 +251,13 @@ def figure(res: dict, path: Path) -> None:
     import matplotlib.pyplot as plt
 
     models = sorted(MODELS, key=lambda m: res["models"][m]["rate"]["en"] + res["models"][m]["rate"]["uk"])
-    fig, axes = plt.subplots(1, 2, figsize=(10, 4.2), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(10, 4.2), sharey=True, sharex=True)
     y = np.arange(len(models))
     for ax, ctx, title in ((axes[0], "global", "Global services"), (axes[1], "ukraine", "Ukrainian services")):
         en = [100 * res["models"][m]["rate"][f"en|{ctx}"] for m in models]
         uk = [100 * res["models"][m]["rate"][f"uk|{ctx}"] for m in models]
-        ax.barh(y - 0.2, en, 0.4, label="English request", color="#1f4e79")
-        ax.barh(y + 0.2, uk, 0.4, label="Ukrainian request", color="#d98c1f")
+        ax.barh(y - 0.2, en, 0.4, label="English request", color="#303030")
+        ax.barh(y + 0.2, uk, 0.4, label="Ukrainian request", color="#c8c8c8", edgecolor="#303030", hatch="//")
         ax.set_title(title, fontsize=12)
         ax.set_xlabel("Replies with an invented gem, %", fontsize=11)
         ax.tick_params(labelsize=10)
@@ -226,12 +271,27 @@ def figure(res: dict, path: Path) -> None:
 
 def main(tasks: list[Task], results: Path, figures: Path) -> None:
     cache = json.loads((results / "registry.json").read_text())
-    labelled = label_rows(load_rows(results / "replies.jsonl"), cache)
+    index = read_index(results / "rubygems_names.txt.gz")
+    keys = {extract.key(n) for n in index}
+    rows = load_rows(results / "replies.jsonl")
+    labelled = label_rows(rows, cache, keys)
     with (results / "labelled.jsonl").open("w") as f:
         for r in labelled:
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
     res = rates(labelled, tasks)
-    summary = {"rates": res, "names": names(labelled), "recurrence": recurrence(labelled)}
+    original = rates(label_rows(rows, cache, keys, rule="original"), tasks)
+    exists = {n for n, v in cache.items() if v["status"] == "exists"}
+    summary = {
+        "rates": res,
+        "names": names(labelled),
+        "recurrence": recurrence(labelled),
+        "completeness": completeness(rows),
+        "sensitivity_original_near_miss_rule": {
+            "pooled": original["pooled"],
+            "models": {m: {"rate": v["rate"], "uk_minus_en": v["uk_minus_en"]} for m, v in original["models"].items()},
+        },
+        "index": {"names": len(index), "api_exists_missing_from_index": sorted(exists - index)},
+    }
     (results / "summary.json").write_text(json.dumps(summary, indent=1, ensure_ascii=False) + "\n")
     figures.mkdir(exist_ok=True)
     figure(res, figures / "invented_by_model.png")

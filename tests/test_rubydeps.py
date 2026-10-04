@@ -35,9 +35,25 @@ def test_names_with_slashes_are_not_valid_gem_names():
     assert not extract.valid("net/http")
 
 
-def test_variants_cover_case_and_separator():
-    assert set(extract.variants("Nova-Poshta")) >= {"nova-poshta", "Nova_Poshta", "nova_poshta", "novaposhta"}
-    assert "activesupport" in extract.variants("active_support")
+def test_key_ignores_case_and_separators():
+    assert extract.key("Google-Cloud-Text-To_Speech") == extract.key("google-cloud-text_to_speech")
+    assert extract.key("active_support") == "activesupport"
+    assert set(extract.original_variants("Nova-Poshta")) >= {"nova-poshta", "Nova_Poshta", "nova_poshta"}
+
+
+def test_parse_handles_shell_commands_blocks_and_comments():
+    text = """echo "gem 'whatsapp-business-api'" >> Gemfile
+gem install --no-document example_gem
+gem install rails && bundle exec ruby app.rb
+gem 'local_gem' # path: ../local is only a comment
+git 'https://github.com/example/tools.git' do
+  gem 'tool_a'
+end
+gem 'after_block'
+"""
+    deps = extract.parse(text)
+    assert deps.declared == ("whatsapp-business-api", "local_gem", "after_block", "example_gem", "rails")
+    assert deps.external == ("tool_a",)
 
 
 def test_classification():
@@ -46,11 +62,18 @@ def test_classification():
         "nova_poshta_api": {"status": "absent"},
         "Nokogiri": {"status": "absent"},
         "nokogiri": {"status": "exists"},
+        "google-cloud-text-to-speech": {"status": "absent"},
+        "pending_name": {"status": "unknown"},
     }
-    assert analysis.classify("rails", cache) == "exists"
-    assert analysis.classify("nova_poshta_api", cache) == "invented"
-    assert analysis.classify("Nokogiri", cache) == "near_miss"
-    assert analysis.classify("net/http", cache) == "malformed"
+    keys = {extract.key(n) for n in ("rails", "nokogiri", "google-cloud-text_to_speech")}
+    assert analysis.classify("rails", cache, keys) == "exists"
+    assert analysis.classify("nova_poshta_api", cache, keys) == "invented"
+    assert analysis.classify("Nokogiri", cache, keys) == "near_miss"
+    assert analysis.classify("google-cloud-text-to-speech", cache, keys) == "near_miss"
+    assert analysis.classify("google-cloud-text-to-speech", cache, keys, rule="original") == "invented"
+    assert analysis.classify("net/http", cache, keys) == "malformed"
+    assert analysis.classify("pending_name", cache, keys) == "unknown"
+    assert analysis.classify("never_checked", cache, keys) == "unknown"
 
 
 def test_mcnemar_is_symmetric_and_bounded():

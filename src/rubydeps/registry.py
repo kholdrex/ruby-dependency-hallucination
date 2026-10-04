@@ -41,3 +41,24 @@ class Registry:
 
     def save(self) -> None:
         self.path.write_text(json.dumps(dict(sorted(self.cache.items())), indent=1, ensure_ascii=False) + "\n")
+
+
+INDEX = "https://rubygems.org/names"
+
+
+def fetch_index(path: Path) -> None:
+    """Save the full list of gem names published by rubygems.org (compact index), gzip-compressed."""
+    import gzip
+
+    response = requests.get(INDEX, timeout=300)
+    response.raise_for_status()
+    with gzip.open(path, "wt") as f:
+        f.write(f"# {INDEX} {datetime.now(timezone.utc).isoformat(timespec='seconds')}\n")
+        f.write(response.text)
+
+
+def read_index(path: Path) -> set[str]:
+    import gzip
+
+    with gzip.open(path, "rt") as f:
+        return {line.strip() for line in f if line.strip() and not line.startswith(("#", "---"))}

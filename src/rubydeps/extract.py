@@ -3,11 +3,15 @@
 import re
 from dataclasses import dataclass
 
-GEM_LINE = re.compile(r"""^[ \t]*gem[ \t]*\(?[ \t]*["']([^"']+)["']([^\n]*)""", re.MULTILINE)
+GEM_LINE = re.compile(r"""^(?:echo[ \t]+["'])?[ \t]*gem[ \t]*\(?[ \t]*["']([^"']+)["'](.*)$""")
+SOURCE_BLOCK = re.compile(r"""^(?:git|github|gitlab|bitbucket|path)\b.*\bdo\s*(\|.*\|)?\s*$""")
+BLOCK_END = re.compile(r"^end\b")
 INSTALL = re.compile(r"""\b(?:gem install|bundle add)[ \t]+([^\n`]+)""")
 REQUIRE = re.compile(r"""^[ \t]*require[ \t]*\(?[ \t]*["']([^"']+)["']""", re.MULTILINE)
 EXTERNAL_SOURCE = re.compile(r"""\b(?:git|github|gitlab|bitbucket|path)\s*(?::|=>)""")
 VALID_NAME = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*$")
+SHELL_STOP = {"&&", "||", ";", "|", ">", ">>", "2>&1"}
+FLAGS_WITH_VALUE = {"-v", "--version", "-i", "--install-dir", "-s", "--source", "--platform", "-g", "--group"}
 
 
 @dataclass(frozen=True)
@@ -22,18 +26,46 @@ def unique(names) -> tuple[str, ...]:
 
 
 def install_names(arguments: str) -> list[str]:
-    names = []
+    """Gem names after `gem install` or `bundle add`, skipping options and stopping at shell operators."""
+    names, skip = [], False
     for word in arguments.split():
-        if word.startswith("-") or word.startswith("#"):
+        if skip:
+            skip = False
+            continue
+        if word in SHELL_STOP or word.startswith("#"):
             break
-        names.append(word.strip("'\"`;,"))
+        if word.startswith("-"):
+            skip = word in FLAGS_WITH_VALUE
+            continue
+        name = word.strip("'\"`,")
+        if name.endswith(";"):
+            names.append(name.rstrip(";"))
+            break
+        names.append(name)
     return [n for n in names if n]
 
 
+def gem_lines(text: str) -> tuple[list[str], list[str]]:
+    """Names from `gem` lines; gems inside a git/github/path block or with such an option are external."""
+    declared, external, depth = [], [], 0
+    for raw in text.splitlines():
+        line = raw.strip()
+        if SOURCE_BLOCK.match(line):
+            depth += 1
+            continue
+        if depth and BLOCK_END.match(line):
+            depth -= 1
+            continue
+        m = GEM_LINE.match(line)
+        if not m:
+            continue
+        name, rest = m.group(1).strip(), m.group(2).split("#", 1)[0]
+        (external if depth or EXTERNAL_SOURCE.search(rest) else declared).append(name)
+    return declared, external
+
+
 def parse(text: str) -> Dependencies:
-    declared, external = [], []
-    for name, rest in GEM_LINE.findall(text):
-        (external if EXTERNAL_SOURCE.search(rest) else declared).append(name.strip())
+    declared, external = gem_lines(text)
     for arguments in INSTALL.findall(text):
         declared += install_names(arguments)
     required = [r.strip() for r in REQUIRE.findall(text)]
@@ -44,8 +76,13 @@ def valid(name: str) -> bool:
     return bool(VALID_NAME.match(name))
 
 
-def variants(name: str) -> list[str]:
-    """Spellings that differ only in letter case or in hyphens and underscores (including their omission)."""
+def key(name: str) -> str:
+    """Spelling-insensitive form of a name: letter case, hyphens and underscores are ignored."""
+    return re.sub(r"[-_]", "", name.lower())
+
+
+def original_variants(name: str) -> list[str]:
+    """The near-miss rule of the first protocol version: case and a wholesale hyphen/underscore swap."""
     lower = name.lower()
     candidates = [
         lower,
@@ -53,6 +90,5 @@ def variants(name: str) -> list[str]:
         name.replace("-", "_"),
         lower.replace("_", "-"),
         lower.replace("-", "_"),
-        lower.replace("_", "").replace("-", ""),
     ]
     return [c for c in dict.fromkeys(candidates) if c != name]
