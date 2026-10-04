@@ -38,8 +38,14 @@ def key(row: dict) -> tuple:
 
 def run(models: list[str], tasks: list[Task], samples: range, path: Path) -> None:
     done = {key(r) for r in load_rows(path)}
-    jobs = [(m, t, lang, s) for m in models for t in tasks for lang in LANGS for s in samples
-            if (m, t.id, lang, s) not in done]
+    jobs = [
+        (m, t, lang, s)
+        for m in models
+        for t in tasks
+        for lang in LANGS
+        for s in samples
+        if (m, t.id, lang, s) not in done
+    ]
     client = OpenRouter()
     lock = threading.Lock()
 

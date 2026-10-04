@@ -28,6 +28,8 @@ source are counted separately and not checked. A declared name is looked up once
 the date of every lookup is stored). An absent name is classified as:
 - malformed: not a valid gem name (e.g. contains "/" or spaces), so it cannot be registered;
 - near miss: a case or hyphen/underscore variant of an existing gem;
+  clarified on 2026-10-04 after reading the interim list of absent names and before the final analysis: omitting
+  the separators counts as such a variant, so `active_support` (a require path) is a near miss of `activesupport`;
 - invented: any other absent name; these are the names an attacker could register.
 `require` calls are recorded and reported descriptively only.
 

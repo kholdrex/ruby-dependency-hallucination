@@ -25,8 +25,9 @@ class OpenRouter:
         self.session = requests.Session()
         self.session.headers["Authorization"] = f"Bearer {os.environ['OPENROUTER_API_KEY']}"
 
-    def chat(self, model: str, provider: str, messages: list[dict], temperature: float, max_tokens: int,
-             seed: int) -> Reply:
+    def chat(
+        self, model: str, provider: str, messages: list[dict], temperature: float, max_tokens: int, seed: int
+    ) -> Reply:
         body = {
             "model": model,
             "messages": messages,

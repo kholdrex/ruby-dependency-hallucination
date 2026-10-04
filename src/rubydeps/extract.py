@@ -45,7 +45,14 @@ def valid(name: str) -> bool:
 
 
 def variants(name: str) -> list[str]:
-    """Spellings that RubyGems users commonly confuse: letter case and hyphen versus underscore."""
-    candidates = [name.lower(), name.replace("_", "-"), name.replace("-", "_"),
-                  name.lower().replace("_", "-"), name.lower().replace("-", "_")]
+    """Spellings that differ only in letter case or in hyphens and underscores (including their omission)."""
+    lower = name.lower()
+    candidates = [
+        lower,
+        name.replace("_", "-"),
+        name.replace("-", "_"),
+        lower.replace("_", "-"),
+        lower.replace("-", "_"),
+        lower.replace("_", "").replace("-", ""),
+    ]
     return [c for c in dict.fromkeys(candidates) if c != name]
