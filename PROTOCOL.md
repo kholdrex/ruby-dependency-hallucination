@@ -21,6 +21,10 @@ seed = sample number: GPT-4o mini, Gemini 2.5 Flash-Lite, DeepSeek V3.1, Llama 3
 Mistral Small 3.2 24B, Gemma 3 12B, Llama 3.1 8B. Main run: one sample (0) for all tasks and both languages.
 Repeats: samples 1 and 2 for 60 tasks (6 per category × context cell, seed 2026), both languages.
 
+Change on 2026-10-04, before any analysis of Qwen3 Coder: its pinned provider (Novita) returned empty message
+content for 194 of the 400 main-run replies while billing the generated tokens; all Qwen3 Coder replies were
+discarded and the model was run again through SiliconFlow (FP8).
+
 ## Dependency extraction and registry check
 Declared dependencies: `gem '<name>'` lines, `gem install` and `bundle add` commands; gems with a git/github/path
 source are counted separately and not checked. A declared name is looked up once at
