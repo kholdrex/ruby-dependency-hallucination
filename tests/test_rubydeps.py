@@ -1,3 +1,5 @@
+import pytest
+
 from rubydeps import analysis, extract, tasks
 from rubydeps.cli import DATA
 
@@ -102,3 +104,14 @@ def test_task_set_is_balanced_and_bilingual():
     subset = tasks.repeat_subset(all_tasks, 6, 2026)
     assert len(subset) == 60
     assert subset == tasks.repeat_subset(all_tasks, 6, 2026)
+
+
+def test_outcome_matrix_rejects_missing_and_duplicate_records():
+    task = tasks.Task("t1", "web", "global", {"en": "", "uk": ""})
+    rows = [{"model": m, "lang": lang, "task": "t1", "sample": 0, "classes": {}} for m in analysis.MODELS
+            for lang in tasks.LANGS]
+    assert analysis.outcome_matrix(rows, [task])
+    with pytest.raises(ValueError, match="missing"):
+        analysis.outcome_matrix(rows[1:], [task])
+    with pytest.raises(ValueError, match="duplicate"):
+        analysis.outcome_matrix(rows + rows[:1], [task])

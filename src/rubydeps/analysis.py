@@ -108,9 +108,18 @@ def outcome_matrix(labelled: list[dict], tasks: list[Task]) -> dict:
     """invented[model][lang] = 0/1 vector over tasks (sample 0)."""
     index = {t.id: i for i, t in enumerate(tasks)}
     out = {m: {lang: np.full(len(tasks), np.nan) for lang in LANGS} for m in MODELS}
+    seen = set()
     for r in labelled:
         if r["sample"] == 0:
+            key = (r["model"], r["lang"], r["task"])
+            if key in seen:
+                raise ValueError(f"duplicate main-run record {key}")
+            seen.add(key)
             out[r["model"]][r["lang"]][index[r["task"]]] = float("invented" in r["classes"].values())
+    missing = {f"{m}/{lang}": int(np.isnan(out[m][lang]).sum()) for m in MODELS for lang in LANGS
+               if np.isnan(out[m][lang]).any()}
+    if missing:
+        raise ValueError(f"missing main-run records: {missing}")
     return out
 
 
