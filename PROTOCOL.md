@@ -59,3 +59,5 @@ Primary outcome: a reply declares at least one invented gem.
 - Descriptive counts quoted in the paper (`descriptive`): tasks set in a Rails application, invented-gem rates by finish
   status, truncated replies by model and language, Rails component paths among near misses, and dependencies declared
   for Ukrainian payment and delivery tasks.
+- Clarification of the first paragraph: the "pilot of 20 tasks" was 10 distinct tasks (the first task of every
+  category × context cell), each in both languages, that is 20 requests per model.
