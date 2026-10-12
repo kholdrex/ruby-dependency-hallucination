@@ -1,6 +1,7 @@
 """Registry classification of declared gems, rates by model, language and context, contrasts and figures."""
 
 import json
+import re
 from collections import Counter, defaultdict
 from math import comb
 from pathlib import Path
@@ -104,8 +105,8 @@ def interval(values: np.ndarray) -> list[float]:
     return [float(v) for v in np.percentile(values, [2.5, 97.5])]
 
 
-def outcome_matrix(labelled: list[dict], tasks: list[Task]) -> dict:
-    """invented[model][lang] = 0/1 vector over tasks (sample 0)."""
+def outcome_matrix(labelled: list[dict], tasks: list[Task], outcome: tuple[str, ...] = ("invented",)) -> dict:
+    """outcome[model][lang] = 0/1 vector over tasks (sample 0): a reply declares a name of one of the given classes."""
     index = {t.id: i for i, t in enumerate(tasks)}
     out = {m: {lang: np.full(len(tasks), np.nan) for lang in LANGS} for m in MODELS}
     seen = set()
@@ -115,7 +116,7 @@ def outcome_matrix(labelled: list[dict], tasks: list[Task]) -> dict:
             if key in seen:
                 raise ValueError(f"duplicate main-run record {key}")
             seen.add(key)
-            out[r["model"]][r["lang"]][index[r["task"]]] = float("invented" in r["classes"].values())
+            out[r["model"]][r["lang"]][index[r["task"]]] = float(any(c in outcome for c in r["classes"].values()))
     missing = {f"{m}/{lang}": int(np.isnan(out[m][lang]).sum()) for m in MODELS for lang in LANGS
                if np.isnan(out[m][lang]).any()}
     if missing:
@@ -131,9 +132,9 @@ def gap_interval(values: np.ndarray, context: np.ndarray, boots: np.ndarray) -> 
     return interval(np.array([gap(values[b], context[b]) for b in boots]))
 
 
-def rates(labelled: list[dict], tasks: list[Task]) -> dict:
+def rates(labelled: list[dict], tasks: list[Task], outcome: tuple[str, ...] = ("invented",)) -> dict:
     rng = np.random.default_rng(SEED)
-    matrix = outcome_matrix(labelled, tasks)
+    matrix = outcome_matrix(labelled, tasks, outcome)
     context = np.array([t.context for t in tasks])
     category = np.array([t.category for t in tasks])
     boots = rng.integers(0, len(tasks), (RESAMPLES, len(tasks)))
@@ -240,6 +241,45 @@ def recurrence(labelled: list[dict]) -> dict:
     }
 
 
+RAILS_COMPONENTS = {"active_support", "active_record", "active_model", "active_storage", "active_job", "action_cable",
+                    "action_mailer", "action_mailbox", "action_text", "action_view", "action_pack", "action_controller"}
+RAILS_TASK = re.compile(r"\bRails\b|ActiveRecord|Action Cable|Devise")
+
+
+def secondary(labelled: list[dict], tasks: list[Task]) -> dict:
+    """Exploratory outcome added after the main analysis: a reply declares any absent name (invented, near miss or
+    malformed)."""
+    res = rates(labelled, tasks, ("invented", "near_miss", "malformed"))
+    return {"pooled": res["pooled"],
+            "models": {m: {"rate": v["rate"], "uk_minus_en": v["uk_minus_en"]} for m, v in res["models"].items()}}
+
+
+def descriptive(labelled: list[dict], tasks: list[Task]) -> dict:
+    """Counts quoted in the paper that are not part of the planned analysis (main run)."""
+    main = [r for r in labelled if r["sample"] == 0]
+    invented = lambda r: "invented" in r["classes"].values()  # noqa: E731
+    by_finish = {}
+    for finish in ("stop", "length"):
+        group = [r for r in main if r["finish"] == finish]
+        by_finish[finish] = {"replies": len(group), "with_invented": sum(map(invented, group))}
+    truncated = {m: {lang: sum(r["finish"] == "length" for r in main if r["model"] == m and r["lang"] == lang)
+                     for lang in LANGS} for m in MODELS}
+    near = Counter(n for r in main for n, c in r["classes"].items() if c == "near_miss")
+    by_id = {t.id: t for t in tasks}
+    local = [r for r in main if by_id[r["task"]].context == "ukraine" and by_id[r["task"]].category in ("payments", "commerce")]
+    return {
+        "rails_tasks": sum(bool(RAILS_TASK.search(t.text["en"])) for t in tasks),
+        "invented_by_finish": by_finish,
+        "truncated_by_model": truncated,
+        "rails_component_near_misses": {n: near[n] for n in sorted(RAILS_COMPONENTS) if near[n]},
+        "ukrainian_payment_delivery": {
+            "replies": len(local),
+            "httparty": sum("httparty" in r["classes"] for r in local),
+            "liqpay": sum("liqpay" in r["classes"] for r in local),
+        },
+    }
+
+
 def completeness(rows: list[dict]) -> dict:
     """Whether the first code block with gem lines was closed before the reply ended (main run)."""
     out = defaultdict(Counter)
@@ -298,10 +338,12 @@ def main(tasks: list[Task], results: Path, figures: Path) -> None:
         "names": names(labelled),
         "recurrence": recurrence(labelled),
         "completeness": completeness(rows),
+        "descriptive": descriptive(labelled, tasks),
         "sensitivity_original_near_miss_rule": {
             "pooled": original["pooled"],
             "models": {m: {"rate": v["rate"], "uk_minus_en": v["uk_minus_en"]} for m, v in original["models"].items()},
         },
+        "secondary_any_absent": secondary(labelled, tasks),
         "index": {"names": len(index), "api_exists_missing_from_index": sorted(exists - index)},
     }
     (results / "summary.json").write_text(json.dumps(summary, indent=1, ensure_ascii=False) + "\n")

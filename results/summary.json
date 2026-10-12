@@ -744,6 +744,68 @@
    "only_in_unclosed_block": 12
   }
  },
+ "descriptive": {
+  "rails_tasks": 24,
+  "invented_by_finish": {
+   "stop": {
+    "replies": 1528,
+    "with_invented": 202
+   },
+   "length": {
+    "replies": 1672,
+    "with_invented": 219
+   }
+  },
+  "truncated_by_model": {
+   "openai/gpt-4o-mini": {
+    "en": 6,
+    "uk": 3
+   },
+   "google/gemini-2.5-flash-lite": {
+    "en": 198,
+    "uk": 198
+   },
+   "deepseek/deepseek-chat-v3.1": {
+    "en": 184,
+    "uk": 200
+   },
+   "meta-llama/llama-3.3-70b-instruct": {
+    "en": 4,
+    "uk": 7
+   },
+   "qwen/qwen3-coder-30b-a3b-instruct": {
+    "en": 182,
+    "uk": 60
+   },
+   "mistralai/mistral-small-3.2-24b-instruct": {
+    "en": 102,
+    "uk": 111
+   },
+   "google/gemma-3-12b-it": {
+    "en": 194,
+    "uk": 195
+   },
+   "meta-llama/llama-3.1-8b-instruct": {
+    "en": 7,
+    "uk": 21
+   }
+  },
+  "rails_component_near_misses": {
+   "action_cable": 5,
+   "action_mailbox": 1,
+   "action_mailer": 4,
+   "active_job": 2,
+   "active_model": 10,
+   "active_record": 38,
+   "active_storage": 2,
+   "active_support": 51
+  },
+  "ukrainian_payment_delivery": {
+   "replies": 640,
+   "httparty": 448,
+   "liqpay": 15
+  }
+ },
  "sensitivity_original_near_miss_rule": {
   "pooled": {
    "en": 0.18625,
@@ -969,6 +1031,235 @@
      "en_only": 42,
      "p": 0.11960933562988493,
      "p_holm": 0.8372653494091945
+    }
+   }
+  }
+ },
+ "secondary_any_absent": {
+  "pooled": {
+   "en": 0.199375,
+   "uk": 0.186875,
+   "uk_minus_en": {
+    "value": -0.0125,
+    "ci": [
+     -0.033125,
+     0.008125
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.035,
+    "ci": [
+     -0.08746254315120984,
+     0.0164802721615999
+    ]
+   },
+   "interaction": {
+    "value": 0.012499999999999999,
+    "ci": [
+     -0.02933786784937158,
+     0.051328659987549374
+    ]
+   },
+   "by_context": {
+    "global": {
+     "en": 0.22,
+     "uk": 0.20125
+    },
+    "ukraine": {
+     "en": 0.17875,
+     "uk": 0.1725
+    }
+   },
+   "by_category": {
+    "commerce": {
+     "global": 0.2625,
+     "ukraine": 0.103125
+    },
+    "government": {
+     "global": 0.190625,
+     "ukraine": 0.175
+    },
+    "language": {
+     "global": 0.278125,
+     "ukraine": 0.309375
+    },
+    "messaging": {
+     "global": 0.13125,
+     "ukraine": 0.175
+    },
+    "payments": {
+     "global": 0.190625,
+     "ukraine": 0.115625
+    }
+   }
+  },
+  "models": {
+   "openai/gpt-4o-mini": {
+    "rate": {
+     "en": 0.1,
+     "en|global": 0.08,
+     "en|ukraine": 0.12,
+     "uk": 0.07,
+     "uk|global": 0.08,
+     "uk|ukraine": 0.06
+    },
+    "uk_minus_en": {
+     "value": -0.03,
+     "ci": [
+      -0.075,
+      0.015
+     ],
+     "uk_only": 8,
+     "en_only": 14,
+     "p": 0.28627872467041016,
+     "p_holm": 1.0
+    }
+   },
+   "google/gemini-2.5-flash-lite": {
+    "rate": {
+     "en": 0.165,
+     "en|global": 0.22,
+     "en|ukraine": 0.11,
+     "uk": 0.22,
+     "uk|global": 0.25,
+     "uk|ukraine": 0.19
+    },
+    "uk_minus_en": {
+     "value": 0.055,
+     "ci": [
+      -0.005,
+      0.115
+     ],
+     "uk_only": 24,
+     "en_only": 13,
+     "p": 0.09887174959294498,
+     "p_holm": 0.7909739967435598
+    }
+   },
+   "deepseek/deepseek-chat-v3.1": {
+    "rate": {
+     "en": 0.085,
+     "en|global": 0.05,
+     "en|ukraine": 0.12,
+     "uk": 0.08,
+     "uk|global": 0.07,
+     "uk|ukraine": 0.09
+    },
+    "uk_minus_en": {
+     "value": -0.005,
+     "ci": [
+      -0.045,
+      0.035
+     ],
+     "uk_only": 8,
+     "en_only": 9,
+     "p": 1.0,
+     "p_holm": 1.0
+    }
+   },
+   "meta-llama/llama-3.3-70b-instruct": {
+    "rate": {
+     "en": 0.125,
+     "en|global": 0.15,
+     "en|ukraine": 0.1,
+     "uk": 0.09,
+     "uk|global": 0.11,
+     "uk|ukraine": 0.07
+    },
+    "uk_minus_en": {
+     "value": -0.035,
+     "ci": [
+      -0.08,
+      0.005
+     ],
+     "uk_only": 6,
+     "en_only": 13,
+     "p": 0.1670684814453125,
+     "p_holm": 1.0
+    }
+   },
+   "qwen/qwen3-coder-30b-a3b-instruct": {
+    "rate": {
+     "en": 0.19,
+     "en|global": 0.22,
+     "en|ukraine": 0.16,
+     "uk": 0.175,
+     "uk|global": 0.18,
+     "uk|ukraine": 0.17
+    },
+    "uk_minus_en": {
+     "value": -0.015,
+     "ci": [
+      -0.08,
+      0.045
+     ],
+     "uk_only": 19,
+     "en_only": 22,
+     "p": 0.755228657504631,
+     "p_holm": 1.0
+    }
+   },
+   "mistralai/mistral-small-3.2-24b-instruct": {
+    "rate": {
+     "en": 0.26,
+     "en|global": 0.34,
+     "en|ukraine": 0.18,
+     "uk": 0.26,
+     "uk|global": 0.27,
+     "uk|ukraine": 0.25
+    },
+    "uk_minus_en": {
+     "value": 0.0,
+     "ci": [
+      -0.075,
+      0.08
+     ],
+     "uk_only": 32,
+     "en_only": 32,
+     "p": 1.0,
+     "p_holm": 1.0
+    }
+   },
+   "google/gemma-3-12b-it": {
+    "rate": {
+     "en": 0.29,
+     "en|global": 0.29,
+     "en|ukraine": 0.29,
+     "uk": 0.29,
+     "uk|global": 0.28,
+     "uk|ukraine": 0.3
+    },
+    "uk_minus_en": {
+     "value": 0.0,
+     "ci": [
+      -0.065,
+      0.06
+     ],
+     "uk_only": 21,
+     "en_only": 21,
+     "p": 1.0,
+     "p_holm": 1.0
+    }
+   },
+   "meta-llama/llama-3.1-8b-instruct": {
+    "rate": {
+     "en": 0.38,
+     "en|global": 0.41,
+     "en|ukraine": 0.35,
+     "uk": 0.31,
+     "uk|global": 0.37,
+     "uk|ukraine": 0.25
+    },
+    "uk_minus_en": {
+     "value": -0.07,
+     "ci": [
+      -0.155,
+      0.015
+     ],
+     "uk_only": 30,
+     "en_only": 44,
+     "p": 0.13017768031912763,
+     "p_holm": 0.9112437622338934
     }
    }
   }

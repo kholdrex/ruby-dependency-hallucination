@@ -51,3 +51,11 @@ Primary outcome: a reply declares at least one invented gem.
    truncated replies.
 5. Recurrence: for invented names in the repeat subset, the share that appears again in another sample of the same
    model, task and language; names proposed by two or more models.
+
+## Additions after the main analysis (2026-10-12)
+
+- Exploratory secondary outcome: a reply declares any absent name (invented, near miss or malformed), with the same
+  contrasts as the primary outcome (`secondary_any_absent` in `results/summary.json`).
+- Descriptive counts quoted in the paper (`descriptive`): tasks set in a Rails application, invented-gem rates by finish
+  status, truncated replies by model and language, Rails component paths among near misses, and dependencies declared
+  for Ukrainian payment and delivery tasks.
