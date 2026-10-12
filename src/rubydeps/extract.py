@@ -71,7 +71,7 @@ def gem_lines(text: str) -> tuple[list[str], list[str]]:
         m = GEM_LINE.match(line)
         if not m:
             continue
-        name, rest = m.group(1).strip(), m.group(2).split("#", 1)[0]
+        name, rest = m.group(1), m.group(2).split("#", 1)[0]
         (external if depth or EXTERNAL_SOURCE.search(rest) else declared).append(name)
     return declared, external
 
@@ -80,7 +80,7 @@ def parse(text: str) -> Dependencies:
     declared, external = gem_lines(text)
     for arguments in INSTALL.findall(text):
         declared += install_names(arguments)
-    required = [r.strip() for r in REQUIRE.findall(text)]
+    required = REQUIRE.findall(text)
     return Dependencies(unique(declared), unique(external), unique(required))
 
 

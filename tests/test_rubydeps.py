@@ -115,3 +115,10 @@ def test_outcome_matrix_rejects_missing_and_duplicate_records():
         analysis.outcome_matrix(rows[1:], [task])
     with pytest.raises(ValueError, match="duplicate"):
         analysis.outcome_matrix(rows + rows[:1], [task])
+
+
+def test_spaces_inside_quotes_make_a_name_malformed():
+    deps = extract.parse("gem ' Chronic '\nrequire ' json '")
+    assert deps.declared == (" Chronic ",)
+    assert not extract.valid(deps.declared[0])
+    assert deps.required == (" json ",)

@@ -3155,7 +3155,7 @@
 {"empty": false, "model": "google/gemini-2.5-flash-lite", "task": "lng-g19", "lang": "uk", "sample": 1, "finish": "length", "classes": {"anthropic": "exists", "dotenv": "exists"}, "external": [], "required": ["anthropic", "dotenv/load"]}
 {"empty": false, "model": "google/gemini-2.5-flash-lite", "task": "lng-g20", "lang": "uk", "sample": 1, "finish": "stop", "classes": {"chronic": "exists"}, "external": [], "required": ["chronic"]}
 {"empty": false, "model": "google/gemini-2.5-flash-lite", "task": "lng-g20", "lang": "en", "sample": 2, "finish": "length", "classes": {"chronic": "exists"}, "external": [], "required": ["chronic"]}
-{"empty": false, "model": "google/gemini-2.5-flash-lite", "task": "lng-g20", "lang": "uk", "sample": 2, "finish": "stop", "classes": {"Chronic": "near_miss"}, "external": [], "required": ["chronic"]}
+{"empty": false, "model": "google/gemini-2.5-flash-lite", "task": "lng-g20", "lang": "uk", "sample": 2, "finish": "stop", "classes": {" Chronic ": "malformed"}, "external": [], "required": ["chronic"]}
 {"empty": false, "model": "google/gemini-2.5-flash-lite", "task": "lng-g19", "lang": "en", "sample": 1, "finish": "length", "classes": {"anthropic": "exists", "dotenv-rails": "exists"}, "external": [], "required": ["anthropic", "dotenv/load"]}
 {"empty": false, "model": "google/gemini-2.5-flash-lite", "task": "lng-u03", "lang": "en", "sample": 2, "finish": "length", "classes": {"rails-i18n": "exists"}, "external": [], "required": []}
 {"empty": false, "model": "google/gemini-2.5-flash-lite", "task": "lng-u08", "lang": "en", "sample": 1, "finish": "length", "classes": {"phonelib": "exists"}, "external": [], "required": ["phonelib"]}
