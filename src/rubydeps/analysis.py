@@ -267,7 +267,17 @@ def descriptive(labelled: list[dict], tasks: list[Task]) -> dict:
     near = Counter(n for r in main for n, c in r["classes"].items() if c == "near_miss")
     by_id = {t.id: t for t in tasks}
     local = [r for r in main if by_id[r["task"]].context == "ukraine" and by_id[r["task"]].category in ("payments", "commerce")]
+    absent, absent_models = Counter(), defaultdict(set)
+    for r in main:
+        for n, c in r["classes"].items():
+            if c in ("invented", "near_miss"):
+                absent[(n, c)] += 1
+                absent_models[(n, c)].add(r["model"])
+    rails_models = {r["model"] for r in main for n, c in r["classes"].items() if c == "near_miss" and n in RAILS_COMPONENTS}
     return {
+        "most_frequent_absent": [{"name": n, "class": c, "replies": k, "models": len(absent_models[(n, c)])}
+                                 for (n, c), k in absent.most_common(12)],
+        "rails_component_models": sorted(rails_models),
         "rails_tasks": sum(bool(RAILS_TASK.search(t.text["en"])) for t in tasks),
         "invented_by_finish": by_finish,
         "truncated_by_model": truncated,

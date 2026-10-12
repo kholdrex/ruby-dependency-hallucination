@@ -745,6 +745,89 @@
   }
  },
  "descriptive": {
+  "most_frequent_absent": [
+   {
+    "name": "active_support",
+    "class": "near_miss",
+    "replies": 51,
+    "models": 7
+   },
+   {
+    "name": "active_record",
+    "class": "near_miss",
+    "replies": 38,
+    "models": 6
+   },
+   {
+    "name": "pcsc",
+    "class": "invented",
+    "replies": 10,
+    "models": 7
+   },
+   {
+    "name": "linguist",
+    "class": "invented",
+    "replies": 10,
+    "models": 5
+   },
+   {
+    "name": "active_model",
+    "class": "near_miss",
+    "replies": 10,
+    "models": 4
+   },
+   {
+    "name": "viber-bot",
+    "class": "invented",
+    "replies": 8,
+    "models": 6
+   },
+   {
+    "name": "ebay-api",
+    "class": "near_miss",
+    "replies": 6,
+    "models": 4
+   },
+   {
+    "name": "langdetect",
+    "class": "invented",
+    "replies": 5,
+    "models": 3
+   },
+   {
+    "name": "hyphenator",
+    "class": "invented",
+    "replies": 5,
+    "models": 3
+   },
+   {
+    "name": "iban",
+    "class": "near_miss",
+    "replies": 5,
+    "models": 3
+   },
+   {
+    "name": "action_cable",
+    "class": "near_miss",
+    "replies": 5,
+    "models": 3
+   },
+   {
+    "name": "mailchimp_marketing",
+    "class": "near_miss",
+    "replies": 4,
+    "models": 2
+   }
+  ],
+  "rails_component_models": [
+   "deepseek/deepseek-chat-v3.1",
+   "google/gemma-3-12b-it",
+   "meta-llama/llama-3.1-8b-instruct",
+   "meta-llama/llama-3.3-70b-instruct",
+   "mistralai/mistral-small-3.2-24b-instruct",
+   "openai/gpt-4o-mini",
+   "qwen/qwen3-coder-30b-a3b-instruct"
+  ],
   "rails_tasks": 24,
   "invented_by_finish": {
    "stop": {
