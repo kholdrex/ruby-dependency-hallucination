@@ -108,7 +108,7 @@ Changes after the run B pilot (2026-10-13, before the main run; only finish reas
 Corrections after the run B analysis (2026-10-13):
 - `gem install` arguments: a closing parenthesis or quote of a surrounding call (`system('gem install pcsc smartcard')`)
   was kept in the name, and placeholders (`gem install ...`) and paths (`gem install -r ./`) were counted as malformed
-  names. They are now stripped or skipped. The change affects only malformed names (17 to 11 in the main run) and the
-  secondary outcome; the primary outcome is unchanged.
+  names. They are now stripped or skipped. All removed entries were malformed (17 to 11 in the main run); the name
+  counts, the exposure analyses and the secondary outcome were recomputed, and the primary outcome is unchanged.
 - The extraction rules above overstate the implementation in two respects: a `gem` line with mismatched quotes is
   counted, and `=begin`/`=end` block comments are not recognised. No run B declaration is affected by either.
