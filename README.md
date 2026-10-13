@@ -17,11 +17,17 @@ language) × 20 – each with an English and a Ukrainian wording.
 
 ## Models
 
-Called through OpenRouter with temperature 0.7, at most 1200 completion tokens, seed = sample number and one fixed
+Called through OpenRouter with temperature 0.7, at most 8192 completion tokens, seed = sample number and one fixed
 provider each (`src/rubydeps/experiment.py`): GPT-4o mini (OpenAI), Gemini 2.5 Flash-Lite (Google AI Studio),
 DeepSeek V3.1 (SiliconFlow), Llama 3.3 70B (Novita), Qwen3 Coder 30B-A3B (SiliconFlow), Mistral Small 3.2 24B,
 Gemma 3 12B and Llama 3.1 8B (DeepInfra). Main run: one sample per task and language; repeats: two more samples for
 60 tasks (6 per category × context, seed 2026).
+
+## Runs
+
+Run A, the initial experiment, capped replies at 1200 tokens and 52% of them were cut off; it informed the protocol
+revision and is kept in `archive/run-a/`. Run B repeats the whole experiment with an 8192-token cap and supplies the
+paper's results.
 
 ## Layout
 
@@ -32,8 +38,9 @@ results/        replies.jsonl (every reply with tokens, provider and finish reas
                 of every lookup), rubygems_names.txt.gz (all published gem names, 4 October 2026),
                 labelled.jsonl (declared names with their class), summary.json
 figures/        figure of the paper
+archive/run-a/  initial experiment with a 1200-token cap (git tag run-a): replies, lookups, labels, summary, figure
 tests/          unit tests
-PROTOCOL.md     analysis plan fixed before the main run, with the two dated changes made before the analysis
+PROTOCOL.md     analysis plan; run B (the paper's results) follows the revision of 13 October 2026
 ```
 
 ## Usage

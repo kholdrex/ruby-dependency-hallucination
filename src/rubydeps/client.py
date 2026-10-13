@@ -18,6 +18,9 @@ class Reply:
     completion_tokens: int
     provider: str
     seconds: float
+    response_id: str
+    served_model: str
+    created: int
 
 
 class OpenRouter:
@@ -54,6 +57,9 @@ class OpenRouter:
                     usage.get("completion_tokens", 0),
                     data.get("provider", ""),
                     time.perf_counter() - start,
+                    data.get("id", ""),
+                    data.get("model", ""),
+                    data.get("created", 0),
                 )
             time.sleep(min(2**attempt, 60))
         raise RuntimeError(f"{model}: no reply after {RETRIES} attempts")

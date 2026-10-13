@@ -61,3 +61,38 @@ Primary outcome: a reply declares at least one invented gem.
   for Ukrainian payment and delivery tasks.
 - Clarification of the first paragraph: the "pilot of 20 tasks" was 10 distinct tasks (the first task of every
   category × context cell), each in both languages, that is 20 requests per model.
+
+## Run B: revised protocol, fixed on 2026-10-13 before generation
+
+The experiment above (run A, git tag `run-a`, data in `archive/run-a/`) was run and analysed. 1672 of its 3200 main-run
+replies (52%) stopped at the 1200-token cap: from 1.5% to 100% per model and language, over 90% for three models in
+both languages, so for those models it measured the start of a reply rather than a complete answer. The whole
+experiment is run again as run B, and run B supplies the reported results whatever they show. Run A informed this
+revision and is kept unchanged for reference; it is not pooled with run B.
+
+Changes:
+- At most 8192 completion tokens (every pinned endpoint allows at least 11059). Before the main run, the pilot (the same
+  10 tasks in both languages, 160 requests) is repeated and only finish reasons are inspected; if any pilot reply stops
+  at the cap, the cap becomes 16384, or the endpoint maximum where that is lower. Replies still stopped at the cap are
+  kept and reported; no request is repeated to obtain a complete reply.
+- Every reply also records the requested cap, the response id, the model name returned by OpenRouter and the creation
+  time.
+- Registry lookups and the list of published names are made afresh after generation (`results/registry.json`,
+  `results/rubygems_names.txt.gz`), so all labels refer to one snapshot.
+
+Unchanged: tasks and wordings, prompt, models and pinned providers with their quantisation, temperature 0.7, seed =
+sample number, the main run and the repeat subset, the extraction rules, the final near-miss rule (the first rule
+kept as a sensitivity analysis), outcomes and the analyses 1–5 above, and the secondary outcome and descriptive counts
+added on 2026-10-12.
+
+Extraction rules made explicit (the same code as run A): a name counts as declared when it appears in a `gem` line, a
+`gem install` or a `bundle add` command anywhere in the reply, including a declaration the reply later replaces or
+calls unavailable; `gem` lines inside Ruby comments are not counted; a line whose quotes do not match is not counted.
+
+Added analyses (sensitivity, reported with the main results):
+- declared names per reply by model and language, and the paired Ukrainian minus English contrast at the name level
+  (invented names among declared names, bootstrap over tasks);
+- the primary contrast restricted to task × model pairs that declare the same number of names in both languages;
+- the primary contrast using all three samples of the repeat subset, averaged within task, model and language;
+- the primary contrast per model and pooled with the first near-miss rule;
+- the share of replies stopped at the cap by model and language.
