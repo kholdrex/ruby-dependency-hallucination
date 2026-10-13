@@ -37,7 +37,8 @@ data/           tasks.jsonl
 results/        run B: replies.jsonl (every reply with tokens, provider, finish reason and response id),
                 pilot.jsonl (operational pilot, not analysed), registry.json (status and date of every lookup),
                 rubygems_names.txt.gz (all published gem names, 13 October 2026), labelled.jsonl (declared names
-                with their class), summary.json
+                with their class), summary.json, extraction_check.csv (48 replies, stratified by model and
+                language, whose extracted names were compared with the raw text)
 figures/        figure of the paper
 archive/run-a/  initial experiment with a 1200-token cap (git tag run-a): replies, lookups, labels, summary, figure
 tests/          unit tests
