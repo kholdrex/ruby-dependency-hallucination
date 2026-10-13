@@ -11,6 +11,7 @@ INSTALL = re.compile(r"""\b(?:gem install|bundle add)[ \t]+([^\n`]+)""")
 REQUIRE = re.compile(r"""^[ \t]*require[ \t]*\(?[ \t]*["']([^"']+)["']""", re.MULTILINE)
 EXTERNAL_SOURCE = re.compile(r"""\b(?:git|github|gitlab|bitbucket|path)\s*(?::|=>)""")
 VALID_NAME = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*$")
+ALNUM = re.compile(r"[A-Za-z0-9]")
 SHELL_STOP = {"&&", "||", ";", "|", ">", ">>", "2>&1"}
 FLAGS_WITH_VALUE = {"-v", "--version", "-i", "--install-dir", "-s", "--source", "--platform", "-g", "--group"}
 
@@ -27,7 +28,8 @@ def unique(names) -> tuple[str, ...]:
 
 
 def install_names(arguments: str) -> list[str]:
-    """Gem names after `gem install` or `bundle add`, skipping options and stopping at shell operators."""
+    """Gem names after `gem install` or `bundle add`, skipping options, placeholders and paths and stopping at shell
+    operators."""
     names, skip = [], False
     for word in arguments.split():
         if skip:
@@ -38,12 +40,12 @@ def install_names(arguments: str) -> list[str]:
         if word.startswith("-"):
             skip = word in FLAGS_WITH_VALUE
             continue
-        name = word.strip("'\"`,")
+        name = word.strip("'\"`,()")
         if name.endswith(";"):
             names.append(name.rstrip(";"))
             break
         names.append(name)
-    return [n for n in names if n]
+    return [n for n in names if ALNUM.search(n) and not n.startswith((".", "/"))]
 
 
 def logical_lines(text: str) -> list[str]:

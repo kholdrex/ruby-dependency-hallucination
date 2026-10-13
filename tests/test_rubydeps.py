@@ -139,3 +139,8 @@ def test_exposure_contrasts():
     assert res["equal_count_pairs_uk_minus_en"]["value"] == 0
     assert res["repeat_subset_all_samples_uk_minus_en"]["tasks"] == 1
     assert res["repeat_subset_all_samples_uk_minus_en"]["value"] == -0.5
+
+
+def test_install_commands_skip_placeholders_paths_and_call_syntax():
+    text = "system('gem install pcsc smartcard')\nRun `gem install ...` and `gem install -r ./`."
+    assert extract.parse(text).declared == ("pcsc", "smartcard")

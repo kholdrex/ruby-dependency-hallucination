@@ -523,8 +523,7 @@
    "external": 0,
    "invented": 26,
    "near_miss": 6,
-   "no_dependency": 2,
-   "malformed": 1
+   "no_dependency": 2
   },
   "meta-llama/llama-3.3-70b-instruct": {
    "exists": 896,
@@ -563,7 +562,7 @@
    "empty": 0,
    "external": 0,
    "near_miss": 53,
-   "malformed": 7
+   "malformed": 2
   },
   "meta-llama/llama-3.1-8b-instruct": {
    "exists": 1075,
@@ -1126,36 +1125,36 @@
  },
  "secondary_any_absent": {
   "pooled": {
-   "en": 0.18875,
+   "en": 0.1875,
    "uk": 0.198125,
    "uk_minus_en": {
-    "value": 0.009375,
+    "value": 0.010625,
     "ci": [
-     -0.01375,
-     0.031875
+     -0.0125,
+     0.033125
     ]
    },
    "ukraine_minus_global": {
-    "value": -0.03562499999999999,
+    "value": -0.03562500000000002,
     "ci": [
-     -0.08661494274427442,
-     0.015208662579402345
+     -0.08653947765700483,
+     0.015327484041274365
     ]
    },
    "interaction": {
     "value": 0.04375,
     "ci": [
-     -0.001087962612367006,
-     0.08750022053634438
+     -0.0009880698214749007,
+     0.08704246183507942
     ]
    },
    "by_context": {
     "global": {
-     "en": 0.2175,
+     "en": 0.21625,
      "uk": 0.205
     },
     "ukraine": {
-     "en": 0.16,
+     "en": 0.15875,
      "uk": 0.19125
     }
    },
@@ -1169,12 +1168,12 @@
      "ukraine": 0.165625
     },
     "language": {
-     "global": 0.275,
+     "global": 0.271875,
      "ukraine": 0.309375
     },
     "messaging": {
      "global": 0.128125,
-     "ukraine": 0.175
+     "ukraine": 0.171875
     },
     "payments": {
      "global": 0.18125,
@@ -1311,21 +1310,21 @@
    },
    "google/gemma-3-12b-it": {
     "rate": {
-     "en": 0.3,
-     "en|global": 0.31,
-     "en|ukraine": 0.29,
+     "en": 0.29,
+     "en|global": 0.3,
+     "en|ukraine": 0.28,
      "uk": 0.295,
      "uk|global": 0.28,
      "uk|ukraine": 0.31
     },
     "uk_minus_en": {
-     "value": -0.005,
+     "value": 0.005,
      "ci": [
-      -0.07,
-      0.06
+      -0.06,
+      0.07
      ],
      "uk_only": 22,
-     "en_only": 23,
+     "en_only": 21,
      "p": 1.0,
      "p_holm": 1.0
     }
@@ -1365,7 +1364,7 @@
    },
    "deepseek/deepseek-chat-v3.1": {
     "en": 4.045,
-    "uk": 4.255
+    "uk": 4.25
    },
    "meta-llama/llama-3.3-70b-instruct": {
     "en": 2.575,
@@ -1380,7 +1379,7 @@
     "uk": 4.84
    },
    "google/gemma-3-12b-it": {
-    "en": 3.385,
+    "en": 3.36,
     "uk": 2.99
    },
    "meta-llama/llama-3.1-8b-instruct": {
@@ -1389,15 +1388,15 @@
    }
   },
   "declared_per_reply_pooled": {
-   "en": 3.71375,
-   "uk": 3.36125
+   "en": 3.710625,
+   "uk": 3.360625
   },
   "name_level_uk_minus_en": {
    "pooled": {
-    "value": 0.005723356021559094,
+    "value": 0.005697916274123603,
     "ci": [
-     -0.0025752498083257756,
-     0.013805930013369955
+     -0.00258745303763391,
+     0.013773976899660638
     ]
    },
    "openai/gpt-4o-mini": {
@@ -1415,10 +1414,10 @@
     ]
    },
    "deepseek/deepseek-chat-v3.1": {
-    "value": 0.0016181065248620473,
+    "value": 0.001637460917617975,
     "ci": [
-     -0.005708486673092176,
-     0.00914803574239629
+     -0.00569270036560961,
+     0.009182335267065517
     ]
    },
    "meta-llama/llama-3.3-70b-instruct": {
@@ -1443,10 +1442,10 @@
     ]
    },
    "google/gemma-3-12b-it": {
-    "value": 0.005241499236746813,
+    "value": 0.004757923236184097,
     "ci": [
-     -0.034903093413719534,
-     0.03634383869054743
+     -0.03561616111830899,
+     0.03602176275553885
     ]
    },
    "meta-llama/llama-3.1-8b-instruct": {
@@ -1458,11 +1457,11 @@
    }
   },
   "equal_count_pairs_uk_minus_en": {
-   "pairs": 485,
-   "value": 0.020618556701030927,
+   "pairs": 483,
+   "value": 0.020703933747412008,
    "ci": [
-    -0.006012933124313141,
-    0.04625606059263066
+    -0.006048999281703016,
+    0.046511627906976744
    ]
   },
   "repeat_subset_all_samples_uk_minus_en": {

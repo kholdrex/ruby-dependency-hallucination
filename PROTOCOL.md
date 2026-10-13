@@ -104,3 +104,11 @@ Changes after the run B pilot (2026-10-13, before the main run; only finish reas
 - Llama 3.3 70B on its pinned provider (Novita, bf16) broke off 9 of its 20 pilot replies into an endless run of "!"
   until the cap; the same fault is present in 21 of its run A replies. As with Qwen3 Coder in run A, the model is moved
   to another provider, CoreWeave (fp16), where 20 trial requests (the pilot tasks, not stored) showed no such output.
+
+Corrections after the run B analysis (2026-10-13):
+- `gem install` arguments: a closing parenthesis or quote of a surrounding call (`system('gem install pcsc smartcard')`)
+  was kept in the name, and placeholders (`gem install ...`) and paths (`gem install -r ./`) were counted as malformed
+  names. They are now stripped or skipped. The change affects only malformed names (17 to 11 in the main run) and the
+  secondary outcome; the primary outcome is unchanged.
+- The extraction rules above overstate the implementation in two respects: a `gem` line with mismatched quotes is
+  counted, and `=begin`/`=end` block comments are not recognised. No run B declaration is affected by either.
