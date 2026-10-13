@@ -34,9 +34,10 @@ paper's results.
 ```
 src/rubydeps/   task loading, prompt, OpenRouter client, runner, dependency extraction, registry lookup, analysis
 data/           tasks.jsonl
-results/        replies.jsonl (every reply with tokens, provider and finish reason), registry.json (status and date
-                of every lookup), rubygems_names.txt.gz (all published gem names, 4 October 2026),
-                labelled.jsonl (declared names with their class), summary.json
+results/        run B: replies.jsonl (every reply with tokens, provider, finish reason and response id),
+                pilot.jsonl (operational pilot, not analysed), registry.json (status and date of every lookup),
+                rubygems_names.txt.gz (all published gem names, 13 October 2026), labelled.jsonl (declared names
+                with their class), summary.json
 figures/        figure of the paper
 archive/run-a/  initial experiment with a 1200-token cap (git tag run-a): replies, lookups, labels, summary, figure
 tests/          unit tests

@@ -1,0 +1,1481 @@
+{
+ "rates": {
+  "models": {
+   "openai/gpt-4o-mini": {
+    "rate": {
+     "en": 0.03,
+     "en|global": 0.03,
+     "en|ukraine": 0.03,
+     "uk": 0.045,
+     "uk|global": 0.03,
+     "uk|ukraine": 0.06
+    },
+    "rate_ci": {
+     "en": [
+      0.01,
+      0.055
+     ],
+     "en|global": [
+      0.0,
+      0.07
+     ],
+     "en|ukraine": [
+      0.0,
+      0.07
+     ],
+     "uk": [
+      0.02,
+      0.075
+     ],
+     "uk|global": [
+      0.0,
+      0.07
+     ],
+     "uk|ukraine": [
+      0.02,
+      0.11
+     ]
+    },
+    "uk_minus_en": {
+     "value": 0.015,
+     "ci": [
+      -0.01,
+      0.04
+     ],
+     "uk_only": 5,
+     "en_only": 2,
+     "p": 0.453125,
+     "p_holm": 1.0
+    },
+    "ukraine_minus_global": {
+     "value": 0.015,
+     "ci": [
+      -0.031203351417036528,
+      0.06060675077529009
+     ]
+    }
+   },
+   "google/gemini-2.5-flash-lite": {
+    "rate": {
+     "en": 0.13,
+     "en|global": 0.18,
+     "en|ukraine": 0.08,
+     "uk": 0.165,
+     "uk|global": 0.18,
+     "uk|ukraine": 0.15
+    },
+    "rate_ci": {
+     "en": [
+      0.085,
+      0.175
+     ],
+     "en|global": [
+      0.11,
+      0.26
+     ],
+     "en|ukraine": [
+      0.03,
+      0.14
+     ],
+     "uk": [
+      0.115,
+      0.22
+     ],
+     "uk|global": [
+      0.11,
+      0.26
+     ],
+     "uk|ukraine": [
+      0.08,
+      0.22
+     ]
+    },
+    "uk_minus_en": {
+     "value": 0.035,
+     "ci": [
+      -0.025,
+      0.09
+     ],
+     "uk_only": 21,
+     "en_only": 14,
+     "p": 0.31050465907901525,
+     "p_holm": 1.0
+    },
+    "ukraine_minus_global": {
+     "value": -0.06499999999999999,
+     "ci": [
+      -0.14461641045539037,
+      0.012701270127012693
+     ]
+    }
+   },
+   "deepseek/deepseek-chat-v3.1": {
+    "rate": {
+     "en": 0.055,
+     "en|global": 0.04,
+     "en|ukraine": 0.07,
+     "uk": 0.07,
+     "uk|global": 0.04,
+     "uk|ukraine": 0.1
+    },
+    "rate_ci": {
+     "en": [
+      0.025,
+      0.09
+     ],
+     "en|global": [
+      0.01,
+      0.08
+     ],
+     "en|ukraine": [
+      0.029750000000000228,
+      0.12
+     ],
+     "uk": [
+      0.035,
+      0.105
+     ],
+     "uk|global": [
+      0.01,
+      0.08
+     ],
+     "uk|ukraine": [
+      0.04,
+      0.16
+     ]
+    },
+    "uk_minus_en": {
+     "value": 0.015,
+     "ci": [
+      -0.015,
+      0.045
+     ],
+     "uk_only": 6,
+     "en_only": 3,
+     "p": 0.5078125,
+     "p_holm": 1.0
+    },
+    "ukraine_minus_global": {
+     "value": 0.045000000000000005,
+     "ci": [
+      -0.014823717948717945,
+      0.10697364267676765
+     ]
+    }
+   },
+   "meta-llama/llama-3.3-70b-instruct": {
+    "rate": {
+     "en": 0.08,
+     "en|global": 0.09,
+     "en|ukraine": 0.07,
+     "uk": 0.085,
+     "uk|global": 0.08,
+     "uk|ukraine": 0.09
+    },
+    "rate_ci": {
+     "en": [
+      0.045,
+      0.12
+     ],
+     "en|global": [
+      0.04,
+      0.15
+     ],
+     "en|ukraine": [
+      0.02,
+      0.12
+     ],
+     "uk": [
+      0.05,
+      0.125
+     ],
+     "uk|global": [
+      0.03,
+      0.14
+     ],
+     "uk|ukraine": [
+      0.04,
+      0.15
+     ]
+    },
+    "uk_minus_en": {
+     "value": 0.005,
+     "ci": [
+      -0.035,
+      0.045
+     ],
+     "uk_only": 8,
+     "en_only": 7,
+     "p": 1.0,
+     "p_holm": 1.0
+    },
+    "ukraine_minus_global": {
+     "value": -0.0050000000000000044,
+     "ci": [
+      -0.07073254465533611,
+      0.059508352188443886
+     ]
+    }
+   },
+   "qwen/qwen3-coder-30b-a3b-instruct": {
+    "rate": {
+     "en": 0.08,
+     "en|global": 0.08,
+     "en|ukraine": 0.08,
+     "uk": 0.08,
+     "uk|global": 0.07,
+     "uk|ukraine": 0.09
+    },
+    "rate_ci": {
+     "en": [
+      0.045,
+      0.12
+     ],
+     "en|global": [
+      0.03,
+      0.13
+     ],
+     "en|ukraine": [
+      0.03,
+      0.14
+     ],
+     "uk": [
+      0.045,
+      0.12
+     ],
+     "uk|global": [
+      0.02,
+      0.12
+     ],
+     "uk|ukraine": [
+      0.04,
+      0.15
+     ]
+    },
+    "uk_minus_en": {
+     "value": 0.0,
+     "ci": [
+      -0.04,
+      0.04
+     ],
+     "uk_only": 8,
+     "en_only": 8,
+     "p": 1.0,
+     "p_holm": 1.0
+    },
+    "ukraine_minus_global": {
+     "value": 0.010000000000000009,
+     "ci": [
+      -0.05349579514664155,
+      0.07528572336638692
+     ]
+    }
+   },
+   "mistralai/mistral-small-3.2-24b-instruct": {
+    "rate": {
+     "en": 0.16,
+     "en|global": 0.23,
+     "en|ukraine": 0.09,
+     "uk": 0.2,
+     "uk|global": 0.24,
+     "uk|ukraine": 0.16
+    },
+    "rate_ci": {
+     "en": [
+      0.11,
+      0.21
+     ],
+     "en|global": [
+      0.15,
+      0.31024999999999636
+     ],
+     "en|ukraine": [
+      0.04,
+      0.15
+     ],
+     "uk": [
+      0.145,
+      0.255
+     ],
+     "uk|global": [
+      0.16,
+      0.33
+     ],
+     "uk|ukraine": [
+      0.09,
+      0.23
+     ]
+    },
+    "uk_minus_en": {
+     "value": 0.04,
+     "ci": [
+      -0.02,
+      0.105
+     ],
+     "uk_only": 25,
+     "en_only": 17,
+     "p": 0.27995623852893914,
+     "p_holm": 1.0
+    },
+    "ukraine_minus_global": {
+     "value": -0.10999999999999999,
+     "ci": [
+      -0.19599071561291467,
+      -0.024999999999999994
+     ]
+    }
+   },
+   "google/gemma-3-12b-it": {
+    "rate": {
+     "en": 0.16,
+     "en|global": 0.2,
+     "en|ukraine": 0.12,
+     "uk": 0.2,
+     "uk|global": 0.23,
+     "uk|ukraine": 0.17
+    },
+    "rate_ci": {
+     "en": [
+      0.11,
+      0.21
+     ],
+     "en|global": [
+      0.12,
+      0.28
+     ],
+     "en|ukraine": [
+      0.06,
+      0.19
+     ],
+     "uk": [
+      0.145,
+      0.255
+     ],
+     "uk|global": [
+      0.15,
+      0.31
+     ],
+     "uk|ukraine": [
+      0.1,
+      0.25
+     ]
+    },
+    "uk_minus_en": {
+     "value": 0.04,
+     "ci": [
+      -0.015,
+      0.095
+     ],
+     "uk_only": 21,
+     "en_only": 13,
+     "p": 0.22948101302608848,
+     "p_holm": 1.0
+    },
+    "ukraine_minus_global": {
+     "value": -0.07,
+     "ci": [
+      -0.1624869478100353,
+      0.01918310002355929
+     ]
+    }
+   },
+   "meta-llama/llama-3.1-8b-instruct": {
+    "rate": {
+     "en": 0.29,
+     "en|global": 0.33,
+     "en|ukraine": 0.25,
+     "uk": 0.27,
+     "uk|global": 0.28,
+     "uk|ukraine": 0.26
+    },
+    "rate_ci": {
+     "en": [
+      0.23,
+      0.355
+     ],
+     "en|global": [
+      0.24,
+      0.42
+     ],
+     "en|ukraine": [
+      0.17,
+      0.34
+     ],
+     "uk": [
+      0.21,
+      0.33
+     ],
+     "uk|global": [
+      0.19,
+      0.37
+     ],
+     "uk|ukraine": [
+      0.18,
+      0.35
+     ]
+    },
+    "uk_minus_en": {
+     "value": -0.02,
+     "ci": [
+      -0.1,
+      0.06
+     ],
+     "uk_only": 32,
+     "en_only": 36,
+     "p": 0.7163007601543369,
+     "p_holm": 1.0
+    },
+    "ukraine_minus_global": {
+     "value": -0.04999999999999999,
+     "ci": [
+      -0.1410569701063638,
+      0.0441114931044995
+     ]
+    }
+   }
+  },
+  "pooled": {
+   "en": 0.123125,
+   "uk": 0.139375,
+   "uk_minus_en": {
+    "value": 0.01625,
+    "ci": [
+     -0.003125,
+     0.03625
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.028749999999999998,
+    "ci": [
+     -0.07500157828282829,
+     0.017305522983859914
+    ]
+   },
+   "interaction": {
+    "value": 0.039999999999999994,
+    "ci": [
+     0.0008178277460206111,
+     0.07792484181172468
+    ]
+   },
+   "by_context": {
+    "global": {
+     "en": 0.1475,
+     "uk": 0.14375
+    },
+    "ukraine": {
+     "en": 0.09875,
+     "uk": 0.135
+    }
+   },
+   "by_category": {
+    "commerce": {
+     "global": 0.171875,
+     "ukraine": 0.059375
+    },
+    "government": {
+     "global": 0.159375,
+     "ukraine": 0.14375
+    },
+    "language": {
+     "global": 0.225,
+     "ukraine": 0.215625
+    },
+    "messaging": {
+     "global": 0.0625,
+     "ukraine": 0.128125
+    },
+    "payments": {
+     "global": 0.109375,
+     "ukraine": 0.0375
+    }
+   }
+  }
+ },
+ "names": {
+  "openai/gpt-4o-mini": {
+   "near_miss": 15,
+   "exists": 1203,
+   "replies": 400,
+   "truncated": 0,
+   "empty": 0,
+   "external": 1,
+   "invented": 16,
+   "no_dependency": 6,
+   "malformed": 1
+  },
+  "google/gemini-2.5-flash-lite": {
+   "exists": 923,
+   "invented": 62,
+   "replies": 400,
+   "truncated": 5,
+   "empty": 0,
+   "external": 1,
+   "near_miss": 19,
+   "no_dependency": 11,
+   "malformed": 3
+  },
+  "deepseek/deepseek-chat-v3.1": {
+   "exists": 1627,
+   "replies": 400,
+   "truncated": 0,
+   "empty": 0,
+   "external": 0,
+   "invented": 26,
+   "near_miss": 6,
+   "no_dependency": 2,
+   "malformed": 1
+  },
+  "meta-llama/llama-3.3-70b-instruct": {
+   "exists": 896,
+   "replies": 400,
+   "truncated": 0,
+   "empty": 0,
+   "external": 0,
+   "invented": 34,
+   "no_dependency": 5,
+   "near_miss": 11
+  },
+  "qwen/qwen3-coder-30b-a3b-instruct": {
+   "exists": 2061,
+   "replies": 400,
+   "truncated": 2,
+   "empty": 0,
+   "external": 0,
+   "near_miss": 34,
+   "invented": 38
+  },
+  "mistralai/mistral-small-3.2-24b-instruct": {
+   "near_miss": 54,
+   "exists": 1670,
+   "replies": 400,
+   "truncated": 4,
+   "empty": 0,
+   "external": 0,
+   "invented": 87,
+   "no_dependency": 1
+  },
+  "google/gemma-3-12b-it": {
+   "exists": 1129,
+   "invented": 86,
+   "replies": 400,
+   "truncated": 0,
+   "empty": 0,
+   "external": 0,
+   "near_miss": 53,
+   "malformed": 7
+  },
+  "meta-llama/llama-3.1-8b-instruct": {
+   "exists": 1075,
+   "replies": 400,
+   "truncated": 18,
+   "empty": 0,
+   "external": 1,
+   "invented": 139,
+   "malformed": 5,
+   "near_miss": 39,
+   "no_dependency": 10
+  }
+ },
+ "recurrence": {
+  "distinct_in_repeat_groups": 391,
+  "distinct_in_two_or_more_samples": 51,
+  "share_distinct_recurring": 0.13043478260869565,
+  "first_sample_invented": 129,
+  "first_sample_seen_again": 38,
+  "share_first_seen_again": 0.29457364341085274,
+  "distinct_invented": 576,
+  "proposed_by_two_or_more_models": 46,
+  "shared_examples": {
+   "pcsc": [
+    "deepseek/deepseek-chat-v3.1",
+    "google/gemma-3-12b-it",
+    "meta-llama/llama-3.1-8b-instruct",
+    "mistralai/mistral-small-3.2-24b-instruct",
+    "openai/gpt-4o-mini",
+    "qwen/qwen3-coder-30b-a3b-instruct"
+   ],
+   "linguist": [
+    "google/gemini-2.5-flash-lite",
+    "google/gemma-3-12b-it",
+    "meta-llama/llama-3.1-8b-instruct",
+    "mistralai/mistral-small-3.2-24b-instruct",
+    "openai/gpt-4o-mini",
+    "qwen/qwen3-coder-30b-a3b-instruct"
+   ],
+   "asn1": [
+    "deepseek/deepseek-chat-v3.1",
+    "google/gemma-3-12b-it",
+    "meta-llama/llama-3.1-8b-instruct",
+    "meta-llama/llama-3.3-70b-instruct",
+    "mistralai/mistral-small-3.2-24b-instruct",
+    "qwen/qwen3-coder-30b-a3b-instruct"
+   ],
+   "viber-bot": [
+    "deepseek/deepseek-chat-v3.1",
+    "google/gemma-3-12b-it",
+    "meta-llama/llama-3.3-70b-instruct",
+    "mistralai/mistral-small-3.2-24b-instruct",
+    "openai/gpt-4o-mini"
+   ],
+   "text-statistics": [
+    "deepseek/deepseek-chat-v3.1",
+    "google/gemini-2.5-flash-lite",
+    "mistralai/mistral-small-3.2-24b-instruct",
+    "qwen/qwen3-coder-30b-a3b-instruct"
+   ],
+   "fedex-api": [
+    "google/gemma-3-12b-it",
+    "meta-llama/llama-3.1-8b-instruct",
+    "mistralai/mistral-small-3.2-24b-instruct",
+    "qwen/qwen3-coder-30b-a3b-instruct"
+   ],
+   "kalyna": [
+    "deepseek/deepseek-chat-v3.1",
+    "meta-llama/llama-3.3-70b-instruct",
+    "openai/gpt-4o-mini"
+   ],
+   "coinbase-commerce-ruby": [
+    "google/gemma-3-12b-it",
+    "meta-llama/llama-3.1-8b-instruct",
+    "openai/gpt-4o-mini"
+   ],
+   "fedex_api": [
+    "google/gemini-2.5-flash-lite",
+    "google/gemma-3-12b-it",
+    "meta-llama/llama-3.1-8b-instruct"
+   ],
+   "webauthn-ruby": [
+    "google/gemini-2.5-flash-lite",
+    "google/gemma-3-12b-it",
+    "qwen/qwen3-coder-30b-a3b-instruct"
+   ],
+   "viber-ruby": [
+    "deepseek/deepseek-chat-v3.1",
+    "google/gemini-2.5-flash-lite",
+    "meta-llama/llama-3.1-8b-instruct"
+   ],
+   "address_parser": [
+    "google/gemini-2.5-flash-lite",
+    "meta-llama/llama-3.1-8b-instruct",
+    "qwen/qwen3-coder-30b-a3b-instruct"
+   ],
+   "bigcommerce-api-ruby": [
+    "google/gemini-2.5-flash-lite",
+    "mistralai/mistral-small-3.2-24b-instruct",
+    "qwen/qwen3-coder-30b-a3b-instruct"
+   ],
+   "diia_signature": [
+    "meta-llama/llama-3.1-8b-instruct",
+    "meta-llama/llama-3.3-70b-instruct",
+    "mistralai/mistral-small-3.2-24b-instruct"
+   ],
+   "langdetect": [
+    "google/gemma-3-12b-it",
+    "meta-llama/llama-3.3-70b-instruct",
+    "mistralai/mistral-small-3.2-24b-instruct"
+   ],
+   "commerce_ml": [
+    "google/gemma-3-12b-it",
+    "mistralai/mistral-small-3.2-24b-instruct",
+    "qwen/qwen3-coder-30b-a3b-instruct"
+   ],
+   "tabula-ruby": [
+    "google/gemini-2.5-flash-lite",
+    "openai/gpt-4o-mini"
+   ],
+   "ups-api": [
+    "google/gemini-2.5-flash-lite",
+    "mistralai/mistral-small-3.2-24b-instruct"
+   ],
+   "ebay-sdk": [
+    "google/gemini-2.5-flash-lite",
+    "google/gemma-3-12b-it"
+   ],
+   "ruby-pcsc": [
+    "google/gemini-2.5-flash-lite",
+    "mistralai/mistral-small-3.2-24b-instruct"
+   ],
+   "fcm-ruby": [
+    "google/gemini-2.5-flash-lite",
+    "meta-llama/llama-3.1-8b-instruct"
+   ],
+   "infobip": [
+    "google/gemini-2.5-flash-lite",
+    "meta-llama/llama-3.1-8b-instruct"
+   ],
+   "deepl": [
+    "google/gemini-2.5-flash-lite",
+    "google/gemma-3-12b-it"
+   ],
+   "ukrainian-morphology": [
+    "google/gemini-2.5-flash-lite",
+    "google/gemma-3-12b-it"
+   ],
+   "ukrainian_stemmer": [
+    "google/gemini-2.5-flash-lite",
+    "qwen/qwen3-coder-30b-a3b-instruct"
+   ],
+   "mrz_parser": [
+    "deepseek/deepseek-chat-v3.1",
+    "qwen/qwen3-coder-30b-a3b-instruct"
+   ],
+   "ofac_sanctions": [
+    "deepseek/deepseek-chat-v3.1",
+    "google/gemma-3-12b-it"
+   ],
+   "mollie-api": [
+    "google/gemma-3-12b-it",
+    "meta-llama/llama-3.3-70b-instruct"
+   ],
+   "pcsc-lite": [
+    "meta-llama/llama-3.1-8b-instruct",
+    "meta-llama/llama-3.3-70b-instruct"
+   ],
+   "usaddress": [
+    "meta-llama/llama-3.3-70b-instruct",
+    "mistralai/mistral-small-3.2-24b-instruct"
+   ]
+  }
+ },
+ "completeness": {
+  "stop": {
+   "replies": 3171,
+   "closed_gem_block": 3134,
+   "only_in_unclosed_block": 0
+  },
+  "length": {
+   "replies": 29,
+   "closed_gem_block": 24,
+   "only_in_unclosed_block": 2
+  }
+ },
+ "descriptive": {
+  "most_frequent_absent": [
+   {
+    "name": "active_support",
+    "class": "near_miss",
+    "replies": 41,
+    "models": 4
+   },
+   {
+    "name": "active_record",
+    "class": "near_miss",
+    "replies": 30,
+    "models": 6
+   },
+   {
+    "name": "active_model",
+    "class": "near_miss",
+    "replies": 16,
+    "models": 4
+   },
+   {
+    "name": "pcsc",
+    "class": "invented",
+    "replies": 10,
+    "models": 6
+   },
+   {
+    "name": "linguist",
+    "class": "invented",
+    "replies": 8,
+    "models": 5
+   },
+   {
+    "name": "viber-bot",
+    "class": "invented",
+    "replies": 7,
+    "models": 5
+   },
+   {
+    "name": "iban",
+    "class": "near_miss",
+    "replies": 6,
+    "models": 3
+   },
+   {
+    "name": "unicode-utils",
+    "class": "near_miss",
+    "replies": 6,
+    "models": 2
+   },
+   {
+    "name": "address_parser",
+    "class": "invented",
+    "replies": 5,
+    "models": 3
+   },
+   {
+    "name": "coinbase-commerce",
+    "class": "near_miss",
+    "replies": 5,
+    "models": 3
+   },
+   {
+    "name": "action_mailer",
+    "class": "near_miss",
+    "replies": 5,
+    "models": 4
+   },
+   {
+    "name": "action_cable",
+    "class": "near_miss",
+    "replies": 5,
+    "models": 3
+   }
+  ],
+  "rails_component_models": [
+   "deepseek/deepseek-chat-v3.1",
+   "google/gemma-3-12b-it",
+   "meta-llama/llama-3.1-8b-instruct",
+   "meta-llama/llama-3.3-70b-instruct",
+   "mistralai/mistral-small-3.2-24b-instruct",
+   "openai/gpt-4o-mini",
+   "qwen/qwen3-coder-30b-a3b-instruct"
+  ],
+  "rails_tasks": 24,
+  "invented_by_finish": {
+   "stop": {
+    "replies": 3171,
+    "with_invented": 412
+   },
+   "length": {
+    "replies": 29,
+    "with_invented": 8
+   }
+  },
+  "truncated_by_model": {
+   "openai/gpt-4o-mini": {
+    "en": 0,
+    "uk": 0
+   },
+   "google/gemini-2.5-flash-lite": {
+    "en": 1,
+    "uk": 4
+   },
+   "deepseek/deepseek-chat-v3.1": {
+    "en": 0,
+    "uk": 0
+   },
+   "meta-llama/llama-3.3-70b-instruct": {
+    "en": 0,
+    "uk": 0
+   },
+   "qwen/qwen3-coder-30b-a3b-instruct": {
+    "en": 0,
+    "uk": 2
+   },
+   "mistralai/mistral-small-3.2-24b-instruct": {
+    "en": 3,
+    "uk": 1
+   },
+   "google/gemma-3-12b-it": {
+    "en": 0,
+    "uk": 0
+   },
+   "meta-llama/llama-3.1-8b-instruct": {
+    "en": 2,
+    "uk": 16
+   }
+  },
+  "rails_component_near_misses": {
+   "action_cable": 5,
+   "action_mailbox": 2,
+   "action_mailer": 5,
+   "active_job": 3,
+   "active_model": 16,
+   "active_record": 30,
+   "active_storage": 1,
+   "active_support": 41
+  },
+  "ukrainian_payment_delivery": {
+   "replies": 640,
+   "httparty": 443,
+   "liqpay": 13
+  }
+ },
+ "sensitivity_original_near_miss_rule": {
+  "pooled": {
+   "en": 0.173125,
+   "uk": 0.175625,
+   "uk_minus_en": {
+    "value": 0.0025,
+    "ci": [
+     -0.019375,
+     0.023140624999999772
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.02250000000000002,
+    "ci": [
+     -0.07172063500064205,
+     0.026580589132204607
+    ]
+   },
+   "interaction": {
+    "value": 0.042499999999999996,
+    "ci": [
+     0.0002519911230965835,
+     0.08453708652115209
+    ]
+   },
+   "by_context": {
+    "global": {
+     "en": 0.195,
+     "uk": 0.17625
+    },
+    "ukraine": {
+     "en": 0.15125,
+     "uk": 0.175
+    }
+   },
+   "by_category": {
+    "commerce": {
+     "global": 0.228125,
+     "ukraine": 0.11875
+    },
+    "government": {
+     "global": 0.190625,
+     "ukraine": 0.165625
+    },
+    "language": {
+     "global": 0.25625,
+     "ukraine": 0.275
+    },
+    "messaging": {
+     "global": 0.09375,
+     "ukraine": 0.165625
+    },
+    "payments": {
+     "global": 0.159375,
+     "ukraine": 0.090625
+    }
+   }
+  },
+  "models": {
+   "openai/gpt-4o-mini": {
+    "rate": {
+     "en": 0.08,
+     "en|global": 0.07,
+     "en|ukraine": 0.09,
+     "uk": 0.065,
+     "uk|global": 0.05,
+     "uk|ukraine": 0.08
+    },
+    "uk_minus_en": {
+     "value": -0.015,
+     "ci": [
+      -0.055,
+      0.025
+     ],
+     "uk_only": 7,
+     "en_only": 10,
+     "p": 0.629058837890625,
+     "p_holm": 1.0
+    }
+   },
+   "google/gemini-2.5-flash-lite": {
+    "rate": {
+     "en": 0.145,
+     "en|global": 0.2,
+     "en|ukraine": 0.09,
+     "uk": 0.175,
+     "uk|global": 0.18,
+     "uk|ukraine": 0.17
+    },
+    "uk_minus_en": {
+     "value": 0.03,
+     "ci": [
+      -0.025,
+      0.085
+     ],
+     "uk_only": 20,
+     "en_only": 14,
+     "p": 0.39152830513194203,
+     "p_holm": 1.0
+    }
+   },
+   "deepseek/deepseek-chat-v3.1": {
+    "rate": {
+     "en": 0.06,
+     "en|global": 0.04,
+     "en|ukraine": 0.08,
+     "uk": 0.08,
+     "uk|global": 0.05,
+     "uk|ukraine": 0.11
+    },
+    "uk_minus_en": {
+     "value": 0.02,
+     "ci": [
+      -0.01,
+      0.05
+     ],
+     "uk_only": 7,
+     "en_only": 3,
+     "p": 0.34375,
+     "p_holm": 1.0
+    }
+   },
+   "meta-llama/llama-3.3-70b-instruct": {
+    "rate": {
+     "en": 0.09,
+     "en|global": 0.11,
+     "en|ukraine": 0.07,
+     "uk": 0.11,
+     "uk|global": 0.09,
+     "uk|ukraine": 0.13
+    },
+    "uk_minus_en": {
+     "value": 0.02,
+     "ci": [
+      -0.02,
+      0.065
+     ],
+     "uk_only": 12,
+     "en_only": 8,
+     "p": 0.5034446716308594,
+     "p_holm": 1.0
+    }
+   },
+   "qwen/qwen3-coder-30b-a3b-instruct": {
+    "rate": {
+     "en": 0.165,
+     "en|global": 0.17,
+     "en|ukraine": 0.16,
+     "uk": 0.125,
+     "uk|global": 0.1,
+     "uk|ukraine": 0.15
+    },
+    "uk_minus_en": {
+     "value": -0.04,
+     "ci": [
+      -0.095,
+      0.015
+     ],
+     "uk_only": 12,
+     "en_only": 20,
+     "p": 0.21532714972272515,
+     "p_holm": 1.0
+    }
+   },
+   "mistralai/mistral-small-3.2-24b-instruct": {
+    "rate": {
+     "en": 0.24,
+     "en|global": 0.33,
+     "en|ukraine": 0.15,
+     "uk": 0.29,
+     "uk|global": 0.35,
+     "uk|ukraine": 0.23
+    },
+    "uk_minus_en": {
+     "value": 0.05,
+     "ci": [
+      -0.03,
+      0.125
+     ],
+     "uk_only": 36,
+     "en_only": 26,
+     "p": 0.2528543941881108,
+     "p_holm": 1.0
+    }
+   },
+   "google/gemma-3-12b-it": {
+    "rate": {
+     "en": 0.27,
+     "en|global": 0.27,
+     "en|ukraine": 0.27,
+     "uk": 0.255,
+     "uk|global": 0.26,
+     "uk|ukraine": 0.25
+    },
+    "uk_minus_en": {
+     "value": -0.015,
+     "ci": [
+      -0.08,
+      0.045
+     ],
+     "uk_only": 19,
+     "en_only": 22,
+     "p": 0.755228657504631,
+     "p_holm": 1.0
+    }
+   },
+   "meta-llama/llama-3.1-8b-instruct": {
+    "rate": {
+     "en": 0.335,
+     "en|global": 0.37,
+     "en|ukraine": 0.3,
+     "uk": 0.305,
+     "uk|global": 0.33,
+     "uk|ukraine": 0.28
+    },
+    "uk_minus_en": {
+     "value": -0.03,
+     "ci": [
+      -0.11,
+      0.05
+     ],
+     "uk_only": 32,
+     "en_only": 38,
+     "p": 0.5504125118224712,
+     "p_holm": 1.0
+    }
+   }
+  }
+ },
+ "secondary_any_absent": {
+  "pooled": {
+   "en": 0.18875,
+   "uk": 0.198125,
+   "uk_minus_en": {
+    "value": 0.009375,
+    "ci": [
+     -0.01375,
+     0.031875
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.03562499999999999,
+    "ci": [
+     -0.08661494274427442,
+     0.015208662579402345
+    ]
+   },
+   "interaction": {
+    "value": 0.04375,
+    "ci": [
+     -0.001087962612367006,
+     0.08750022053634438
+    ]
+   },
+   "by_context": {
+    "global": {
+     "en": 0.2175,
+     "uk": 0.205
+    },
+    "ukraine": {
+     "en": 0.16,
+     "uk": 0.19125
+    }
+   },
+   "by_category": {
+    "commerce": {
+     "global": 0.253125,
+     "ukraine": 0.11875
+    },
+    "government": {
+     "global": 0.21875,
+     "ukraine": 0.165625
+    },
+    "language": {
+     "global": 0.275,
+     "ukraine": 0.309375
+    },
+    "messaging": {
+     "global": 0.128125,
+     "ukraine": 0.175
+    },
+    "payments": {
+     "global": 0.18125,
+     "ukraine": 0.109375
+    }
+   }
+  },
+  "models": {
+   "openai/gpt-4o-mini": {
+    "rate": {
+     "en": 0.09,
+     "en|global": 0.09,
+     "en|ukraine": 0.09,
+     "uk": 0.065,
+     "uk|global": 0.05,
+     "uk|ukraine": 0.08
+    },
+    "uk_minus_en": {
+     "value": -0.025,
+     "ci": [
+      -0.065,
+      0.015
+     ],
+     "uk_only": 6,
+     "en_only": 11,
+     "p": 0.332305908203125,
+     "p_holm": 1.0
+    }
+   },
+   "google/gemini-2.5-flash-lite": {
+    "rate": {
+     "en": 0.165,
+     "en|global": 0.22,
+     "en|ukraine": 0.11,
+     "uk": 0.22,
+     "uk|global": 0.25,
+     "uk|ukraine": 0.19
+    },
+    "uk_minus_en": {
+     "value": 0.055,
+     "ci": [
+      -0.005,
+      0.115
+     ],
+     "uk_only": 24,
+     "en_only": 13,
+     "p": 0.09887174959294498,
+     "p_holm": 0.7909739967435598
+    }
+   },
+   "deepseek/deepseek-chat-v3.1": {
+    "rate": {
+     "en": 0.07,
+     "en|global": 0.06,
+     "en|ukraine": 0.08,
+     "uk": 0.085,
+     "uk|global": 0.06,
+     "uk|ukraine": 0.11
+    },
+    "uk_minus_en": {
+     "value": 0.015,
+     "ci": [
+      -0.015,
+      0.05
+     ],
+     "uk_only": 7,
+     "en_only": 4,
+     "p": 0.548828125,
+     "p_holm": 1.0
+    }
+   },
+   "meta-llama/llama-3.3-70b-instruct": {
+    "rate": {
+     "en": 0.1,
+     "en|global": 0.13,
+     "en|ukraine": 0.07,
+     "uk": 0.115,
+     "uk|global": 0.09,
+     "uk|ukraine": 0.14
+    },
+    "uk_minus_en": {
+     "value": 0.015,
+     "ci": [
+      -0.03,
+      0.06
+     ],
+     "uk_only": 13,
+     "en_only": 10,
+     "p": 0.6776394844055176,
+     "p_holm": 1.0
+    }
+   },
+   "qwen/qwen3-coder-30b-a3b-instruct": {
+    "rate": {
+     "en": 0.18,
+     "en|global": 0.2,
+     "en|ukraine": 0.16,
+     "uk": 0.135,
+     "uk|global": 0.12,
+     "uk|ukraine": 0.15
+    },
+    "uk_minus_en": {
+     "value": -0.045,
+     "ci": [
+      -0.1,
+      0.01
+     ],
+     "uk_only": 12,
+     "en_only": 21,
+     "p": 0.16275565745308995,
+     "p_holm": 0.9765339447185397
+    }
+   },
+   "mistralai/mistral-small-3.2-24b-instruct": {
+    "rate": {
+     "en": 0.25,
+     "en|global": 0.34,
+     "en|ukraine": 0.16,
+     "uk": 0.32,
+     "uk|global": 0.4,
+     "uk|ukraine": 0.24
+    },
+    "uk_minus_en": {
+     "value": 0.07,
+     "ci": [
+      -0.01,
+      0.145
+     ],
+     "uk_only": 40,
+     "en_only": 26,
+     "p": 0.1088569644097161,
+     "p_holm": 0.7909739967435598
+    }
+   },
+   "google/gemma-3-12b-it": {
+    "rate": {
+     "en": 0.3,
+     "en|global": 0.31,
+     "en|ukraine": 0.29,
+     "uk": 0.295,
+     "uk|global": 0.28,
+     "uk|ukraine": 0.31
+    },
+    "uk_minus_en": {
+     "value": -0.005,
+     "ci": [
+      -0.07,
+      0.06
+     ],
+     "uk_only": 22,
+     "en_only": 23,
+     "p": 1.0,
+     "p_holm": 1.0
+    }
+   },
+   "meta-llama/llama-3.1-8b-instruct": {
+    "rate": {
+     "en": 0.355,
+     "en|global": 0.39,
+     "en|ukraine": 0.32,
+     "uk": 0.35,
+     "uk|global": 0.39,
+     "uk|ukraine": 0.31
+    },
+    "uk_minus_en": {
+     "value": -0.005,
+     "ci": [
+      -0.085,
+      0.075
+     ],
+     "uk_only": 34,
+     "en_only": 35,
+     "p": 1.0,
+     "p_holm": 1.0
+    }
+   }
+  }
+ },
+ "exposure": {
+  "declared_per_reply": {
+   "openai/gpt-4o-mini": {
+    "en": 3.305,
+    "uk": 2.87
+   },
+   "google/gemini-2.5-flash-lite": {
+    "en": 2.195,
+    "uk": 2.84
+   },
+   "deepseek/deepseek-chat-v3.1": {
+    "en": 4.045,
+    "uk": 4.255
+   },
+   "meta-llama/llama-3.3-70b-instruct": {
+    "en": 2.575,
+    "uk": 2.13
+   },
+   "qwen/qwen3-coder-30b-a3b-instruct": {
+    "en": 6.64,
+    "uk": 4.025
+   },
+   "mistralai/mistral-small-3.2-24b-instruct": {
+    "en": 4.215,
+    "uk": 4.84
+   },
+   "google/gemma-3-12b-it": {
+    "en": 3.385,
+    "uk": 2.99
+   },
+   "meta-llama/llama-3.1-8b-instruct": {
+    "en": 3.35,
+    "uk": 2.94
+   }
+  },
+  "declared_per_reply_pooled": {
+   "en": 3.71375,
+   "uk": 3.36125
+  },
+  "name_level_uk_minus_en": {
+   "pooled": {
+    "value": 0.005723356021559094,
+    "ci": [
+     -0.0025752498083257756,
+     0.013805930013369955
+    ]
+   },
+   "openai/gpt-4o-mini": {
+    "value": 0.005089427380117761,
+    "ci": [
+     -0.0037745532701020977,
+     0.014420418460656732
+    ]
+   },
+   "google/gemini-2.5-flash-lite": {
+    "value": 0.0041547691616670365,
+    "ci": [
+     -0.021083243831434454,
+     0.029176967912539993
+    ]
+   },
+   "deepseek/deepseek-chat-v3.1": {
+    "value": 0.0016181065248620473,
+    "ci": [
+     -0.005708486673092176,
+     0.00914803574239629
+    ]
+   },
+   "meta-llama/llama-3.3-70b-instruct": {
+    "value": 0.01118555996171202,
+    "ci": [
+     -0.005675588356759199,
+     0.0294293791037544
+    ]
+   },
+   "qwen/qwen3-coder-30b-a3b-instruct": {
+    "value": 0.005304759410312058,
+    "ci": [
+     -0.005970533209475455,
+     0.017329699732651277
+    ]
+   },
+   "mistralai/mistral-small-3.2-24b-instruct": {
+    "value": 0.009981324078703564,
+    "ci": [
+     -0.00782853322258401,
+     0.02870079554112127
+    ]
+   },
+   "google/gemma-3-12b-it": {
+    "value": 0.005241499236746813,
+    "ci": [
+     -0.034903093413719534,
+     0.03634383869054743
+    ]
+   },
+   "meta-llama/llama-3.1-8b-instruct": {
+    "value": -0.012676413849121729,
+    "ci": [
+     -0.04732339501220126,
+     0.021656900688538365
+    ]
+   }
+  },
+  "equal_count_pairs_uk_minus_en": {
+   "pairs": 485,
+   "value": 0.020618556701030927,
+   "ci": [
+    -0.006012933124313141,
+    0.04625606059263066
+   ]
+  },
+  "repeat_subset_all_samples_uk_minus_en": {
+   "tasks": 60,
+   "value": -0.006250000000000001,
+   "ci": [
+    -0.02638888888888889,
+    0.014583333333333327
+   ]
+  }
+ },
+ "index": {
+  "names": 197449,
+  "api_exists_missing_from_index": []
+ }
+}
