@@ -14,14 +14,14 @@ MODELS = {
     "openai/gpt-4o-mini": "openai",
     "google/gemini-2.5-flash-lite": "google-ai-studio",
     "deepseek/deepseek-chat-v3.1": "siliconflow/fp8",
-    "meta-llama/llama-3.3-70b-instruct": "novita/bf16",
+    "meta-llama/llama-3.3-70b-instruct": "coreweave/fp16",
     "qwen/qwen3-coder-30b-a3b-instruct": "siliconflow/fp8",
     "mistralai/mistral-small-3.2-24b-instruct": "deepinfra/fp8",
     "google/gemma-3-12b-it": "deepinfra/bf16",
     "meta-llama/llama-3.1-8b-instruct": "deepinfra/fp8",
 }
 TEMPERATURE = 0.7
-MAX_TOKENS = 8192
+MAX_TOKENS = 16384
 WORKERS = 24
 
 

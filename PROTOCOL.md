@@ -96,3 +96,11 @@ Added analyses (sensitivity, reported with the main results):
 - the primary contrast using all three samples of the repeat subset, averaged within task, model and language;
 - the primary contrast per model and pooled with the first near-miss rule;
 - the share of replies stopped at the cap by model and language.
+
+Changes after the run B pilot (2026-10-13, before the main run; only finish reasons and output form were inspected,
+`results/pilot.jsonl`):
+- One pilot reply (Gemini 2.5 Flash-Lite, Ukrainian) stopped at 8192 tokens, so by the rule above the cap is 16384 for
+  every model.
+- Llama 3.3 70B on its pinned provider (Novita, bf16) broke off 9 of its 20 pilot replies into an endless run of "!"
+  until the cap; the same fault is present in 21 of its run A replies. As with Qwen3 Coder in run A, the model is moved
+  to another provider, CoreWeave (fp16), where 20 trial requests (the pilot tasks, not stored) showed no such output.
