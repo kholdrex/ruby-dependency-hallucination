@@ -122,3 +122,20 @@ def test_spaces_inside_quotes_make_a_name_malformed():
     assert deps.declared == (" Chronic ",)
     assert not extract.valid(deps.declared[0])
     assert deps.required == (" json ",)
+
+
+def test_exposure_contrasts():
+    task_list = [tasks.Task(f"t{k}", "web", "global", {"en": "", "uk": ""}) for k in range(2)]
+    en = {"t0": {"a": "exists", "b": "invented"}, "t1": {"a": "exists"}}
+    uk = {"t0": {"a": "exists", "x": "invented", "y": "exists", "z": "exists"}, "t1": {"a": "exists"}}
+    rows = [{"model": m, "lang": lang, "task": t, "sample": 0, "classes": classes[t]}
+            for m in analysis.MODELS for lang, classes in (("en", en), ("uk", uk)) for t in ("t0", "t1")]
+    rows += [dict(r, sample=1, classes={}) for r in rows if r["task"] == "t0" and r["lang"] == "uk"]
+    rows += [dict(r, sample=1) for r in rows if r["task"] == "t0" and r["lang"] == "en" and r["sample"] == 0]
+    res = analysis.exposure(rows, task_list)
+    assert res["declared_per_reply_pooled"] == {"en": 1.5, "uk": 2.5}
+    assert res["name_level_uk_minus_en"]["pooled"]["value"] == pytest.approx(1 / 5 - 1 / 3)
+    assert res["equal_count_pairs_uk_minus_en"]["pairs"] == len(analysis.MODELS)
+    assert res["equal_count_pairs_uk_minus_en"]["value"] == 0
+    assert res["repeat_subset_all_samples_uk_minus_en"]["tasks"] == 1
+    assert res["repeat_subset_all_samples_uk_minus_en"]["value"] == -0.5

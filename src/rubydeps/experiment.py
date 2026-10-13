@@ -52,7 +52,8 @@ def run(models: list[str], tasks: list[Task], samples: range, path: Path) -> Non
     def call(job):
         model, task, lang, sample = job
         reply = client.chat(model, MODELS[model], prompts.messages(task, lang), TEMPERATURE, MAX_TOKENS, seed=sample)
-        row = {"model": model, "task": task.id, "lang": lang, "sample": sample, "max_tokens": MAX_TOKENS, **asdict(reply)}
+        row = {"model": model, "task": task.id, "lang": lang, "sample": sample, "max_tokens": MAX_TOKENS}
+        row |= asdict(reply)
         with lock, path.open("a") as f:
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
 

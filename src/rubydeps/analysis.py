@@ -266,14 +266,16 @@ def descriptive(labelled: list[dict], tasks: list[Task]) -> dict:
                      for lang in LANGS} for m in MODELS}
     near = Counter(n for r in main for n, c in r["classes"].items() if c == "near_miss")
     by_id = {t.id: t for t in tasks}
-    local = [r for r in main if by_id[r["task"]].context == "ukraine" and by_id[r["task"]].category in ("payments", "commerce")]
+    local = [r for r in main
+             if by_id[r["task"]].context == "ukraine" and by_id[r["task"]].category in ("payments", "commerce")]
     absent, absent_models = Counter(), defaultdict(set)
     for r in main:
         for n, c in r["classes"].items():
             if c in ("invented", "near_miss"):
                 absent[(n, c)] += 1
                 absent_models[(n, c)].add(r["model"])
-    rails_models = {r["model"] for r in main for n, c in r["classes"].items() if c == "near_miss" and n in RAILS_COMPONENTS}
+    rails_models = {r["model"] for r in main for n, c in r["classes"].items()
+                    if c == "near_miss" and n in RAILS_COMPONENTS}
     return {
         "most_frequent_absent": [{"name": n, "class": c, "replies": k, "models": len(absent_models[(n, c)])}
                                  for (n, c), k in absent.most_common(12)],
@@ -287,6 +289,63 @@ def descriptive(labelled: list[dict], tasks: list[Task]) -> dict:
             "httparty": sum("httparty" in r["classes"] for r in local),
             "liqpay": sum("liqpay" in r["classes"] for r in local),
         },
+    }
+
+
+def exposure(labelled: list[dict], tasks: list[Task]) -> dict:
+    """Sensitivity analyses of the protocol revision for run B: declared names per reply, the language contrast at
+    the name level, among task-model pairs with equally many declared names, and over all samples of the repeat
+    subset."""
+    rng = np.random.default_rng(SEED)
+    index = {t.id: i for i, t in enumerate(tasks)}
+    shape = (len(MODELS), len(tasks))
+    models = list(MODELS)
+    declared = {lang: np.zeros(shape) for lang in LANGS}
+    invented = {lang: np.zeros(shape) for lang in LANGS}
+    samples = defaultdict(list)
+    for r in labelled:
+        hit = float("invented" in r["classes"].values())
+        samples[(r["model"], r["task"], r["lang"])].append(hit)
+        if r["sample"] == 0:
+            i, j = models.index(r["model"]), index[r["task"]]
+            declared[r["lang"]][i, j] = len(r["classes"])
+            invented[r["lang"]][i, j] = sum(c == "invented" for c in r["classes"].values())
+    boots = rng.integers(0, len(tasks), (RESAMPLES, len(tasks)))
+
+    def name_gap(rows, cols):
+        return (invented["uk"][rows][:, cols].sum() / declared["uk"][rows][:, cols].sum()
+                - invented["en"][rows][:, cols].sum() / declared["en"][rows][:, cols].sum())
+
+    every = np.arange(len(models))
+    name_level = {"pooled": {"value": float(name_gap(every, slice(None))),
+                             "ci": interval(np.array([name_gap(every, b) for b in boots]))}}
+    for i, m in enumerate(models):
+        name_level[m] = {"value": float(name_gap([i], slice(None))),
+                         "ci": interval(np.array([name_gap([i], b) for b in boots]))}
+
+    reply = {lang: (invented[lang] > 0).astype(float) for lang in LANGS}
+    same = declared["uk"] == declared["en"]
+    d = np.where(same, reply["uk"] - reply["en"], 0.0)
+
+    def same_gap(cols):
+        return d[:, cols].sum() / same[:, cols].sum()
+
+    equal_count = {"pairs": int(same.sum()), "value": float(same_gap(slice(None))),
+                   "ci": interval(np.array([same_gap(b) for b in boots]))}
+
+    repeat_ids = sorted({t for (m, t, lang), v in samples.items() if len(v) > 1}, key=index.get)
+    mean = {lang: np.array([[np.mean(samples[(m, t, lang)]) for t in repeat_ids] for m in models]) for lang in LANGS}
+    diff = (mean["uk"] - mean["en"]).mean(axis=0)
+    rb = rng.integers(0, len(repeat_ids), (RESAMPLES, len(repeat_ids)))
+    all_samples = {"tasks": len(repeat_ids), "value": float(diff.mean()), "ci": interval(diff[rb].mean(axis=1))}
+
+    return {
+        "declared_per_reply": {m: {lang: float(declared[lang][i].mean()) for lang in LANGS}
+                               for i, m in enumerate(models)},
+        "declared_per_reply_pooled": {lang: float(declared[lang].mean()) for lang in LANGS},
+        "name_level_uk_minus_en": name_level,
+        "equal_count_pairs_uk_minus_en": equal_count,
+        "repeat_subset_all_samples_uk_minus_en": all_samples,
     }
 
 
@@ -354,6 +413,7 @@ def main(tasks: list[Task], results: Path, figures: Path) -> None:
             "models": {m: {"rate": v["rate"], "uk_minus_en": v["uk_minus_en"]} for m, v in original["models"].items()},
         },
         "secondary_any_absent": secondary(labelled, tasks),
+        "exposure": exposure(labelled, tasks),
         "index": {"names": len(index), "api_exists_missing_from_index": sorted(exists - index)},
     }
     (results / "summary.json").write_text(json.dumps(summary, indent=1, ensure_ascii=False) + "\n")
