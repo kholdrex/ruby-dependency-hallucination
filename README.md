@@ -25,7 +25,7 @@ Gemma 3 12B and Llama 3.1 8B (DeepInfra). Main run: one sample per task and lang
 
 ## Runs
 
-Run A, the initial experiment, capped replies at 1200 tokens and 52% of them were cut off; it informed the protocol
+Run A, the initial experiment, capped replies at 1200 tokens, and 52% of its main-run replies reached the cap; it informed the protocol
 revision and is kept in `archive/run-a/`. Run B repeats the whole experiment with a 16384-token cap and supplies the
 paper's results.
 
