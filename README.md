@@ -1,5 +1,7 @@
 # Nonexistent RubyGems dependencies in LLM-generated code
 
+Archived on Zenodo: [doi:10.5281/zenodo.23383531](https://doi.org/10.5281/zenodo.23383531).
+
 Tasks, code, model replies, registry lookups and analysis for the paper *Nonexistent Gem Dependencies in LLM-Generated
 Ruby Code: Effects of Request Language and Task Context* (O. Kholodniak).
 
