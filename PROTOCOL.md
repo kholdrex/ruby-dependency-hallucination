@@ -211,7 +211,7 @@ to the 100 Ukrainian-service tasks before any part 2 main request is sent; if it
 to DeepSeek V4 Pro. Nothing else is changed after the pilot. The runner stops sending requests when the recorded cost
 of all run C files reaches 17 USD; the replies stored by then are analysed and the stop is reported.
 
-Pilot outcome (2026-10-19, before any main request): 76 pilot replies cost 0.71 USD, none empty or stopped at the cap.
+Pilot outcome (2026-10-19, before any main request): 68 pilot replies cost 0.71 USD, none empty or stopped at the cap.
 Mean cost per reply was 0.0586 USD for Claude Sonnet 5.5 (about 5800 completion tokens, of them about 1800 reasoning
 tokens at the provider default) and 0.0096 USD for DeepSeek V4 Pro. The projection was 33.61 USD for the full design and
 19.97 USD with part 2 reduced to the Ukrainian-service tasks, so by the rule above part 2 is limited to DeepSeek V4 Pro
@@ -223,3 +223,8 @@ stream (finish reason "error": 8 DeepSeek V4 Pro, 1 Gemini 2.5 Flash-Lite) and 5
 empty because reasoning used the whole token limit; as prescribed they are kept. The invented names of the script
 replies were classified without arm labels by an LLM annotator (GPT via Codex), `data/script_run_c_invented_names.csv`.
 The cost recorded for run C, pilot included, was 3.53 USD.
+
+Correction (2026-10-19, after the analysis): the pilot had 68 replies, not 76 as first written above. The budget rule
+reduced part 2 only; dropping Claude Sonnet 5.5 also from the script requests of part 1 was the authors' reading of
+"the two models of part 2" and was stricter than the rule required: keeping its 72 script requests was projected at
+8.26 USD in total. This reading was recorded in commit 39c1cd7 before any main request was sent.
