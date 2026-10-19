@@ -217,3 +217,9 @@ tokens at the provider default) and 0.0096 USD for DeepSeek V4 Pro. The projecti
 19.97 USD with part 2 reduced to the Ukrainian-service tasks, so by the rule above part 2 is limited to DeepSeek V4 Pro
 on the 100 Ukrainian-service tasks (projection 4.04 USD), and Claude Sonnet 5.5 is dropped from run C, including its
 script requests in part 1.
+
+Run C notes (after generation, 2026-10-19): all planned requests returned a reply; 9 replies ended with a broken
+stream (finish reason "error": 8 DeepSeek V4 Pro, 1 Gemini 2.5 Flash-Lite) and 5 DeepSeek V4 Pro main-run replies were
+empty because reasoning used the whole token limit; as prescribed they are kept. The invented names of the script
+replies were classified without arm labels by an LLM annotator (GPT via Codex), `data/script_run_c_invented_names.csv`.
+The cost recorded for run C, pilot included, was 3.53 USD.

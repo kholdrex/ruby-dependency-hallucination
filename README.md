@@ -45,6 +45,8 @@ results/        run B: replies.jsonl (every reply with tokens, provider, finish 
                 gem_details.json (post hoc analyses after the review, see PROTOCOL.md)
 figures/        figure of the paper
 archive/run-a/  initial experiment with a 1200-token cap (git tag run-a): replies, lookups, labels, summary, figure
+results/run-c/  run C (protocol of 19 October 2026): script experiment and DeepSeek V4 Pro – pilot, replies, lookups,
+                labels, summary
 tests/          unit tests
 PROTOCOL.md     analysis plan; run B (the paper's results) follows the revision of 13 October 2026
 ```
@@ -58,6 +60,7 @@ uv venv && uv pip install -e ".[dev]"
 uv run pytest
 uv run rubydeps analyze      # labelled.jsonl, summary.json and the figure from the stored replies and lookups
 uv run rubydeps revision     # revision.json: post hoc analyses after the review
+uv run rubydeps runc-analyze # results/run-c/summary.json from the stored run C replies and lookups
 ```
 
 `uv run rubydeps check` looks up names that are not yet in `results/registry.json` (stored lookups are reused, so the
