@@ -20,10 +20,11 @@ SCRIPT_SAMPLES = (10, 11)
 PILOT_SAMPLE = 99
 SCHEDULE_SEED = 2026
 BUDGET_STOP = 17.0
-ADDED = {
+PILOTED = {
     "anthropic/claude-sonnet-5.5": {"provider": "anthropic", "temperature": None, "seed": False},
     "deepseek/deepseek-v4-pro": {"provider": "gmicloud/fp8", "temperature": TEMPERATURE, "seed": True},
 }
+ADDED = {"deepseek/deepseek-v4-pro": PILOTED["deepseek/deepseek-v4-pro"]}
 
 
 class BudgetExceeded(RuntimeError):
@@ -31,8 +32,8 @@ class BudgetExceeded(RuntimeError):
 
 
 def settings(model: str) -> dict:
-    if model in ADDED:
-        return ADDED[model]
+    if model in PILOTED:
+        return PILOTED[model]
     return {"provider": MODELS[model], "temperature": TEMPERATURE, "seed": True}
 
 
@@ -64,7 +65,8 @@ def jobs_script(models: list[str], variants: dict, pilot: bool = False) -> list[
 
 def jobs_main(models: list[str], tasks: list[Task], pilot: bool = False) -> list[tuple]:
     sample = PILOT_SAMPLE if pilot else 0
-    return [("main", m, t, lang, "original", sample) for m in models if m in ADDED for t in tasks for lang in LANGS]
+    added = PILOTED if pilot else ADDED
+    return [("main", m, t, lang, "original", sample) for m in models if m in added for t in tasks for lang in LANGS]
 
 
 def schedule(jobs: list[tuple]) -> list[tuple]:
