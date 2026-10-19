@@ -1,0 +1,2034 @@
+{
+ "1c-enterprise-sdk": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:41+00:00"
+ },
+ "1s-commerce-ml": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:41+00:00"
+ },
+ "aasm": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:42+00:00"
+ },
+ "action_cable": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:42+00:00"
+ },
+ "action_controller": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:42+00:00"
+ },
+ "action_mailer": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:43+00:00"
+ },
+ "action_view": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:43+00:00"
+ },
+ "actioncable": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:43+00:00"
+ },
+ "actioncontroller": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:43+00:00"
+ },
+ "actionmailbox": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:44+00:00"
+ },
+ "actionmailer": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:44+00:00"
+ },
+ "actionpack": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:44+00:00"
+ },
+ "actiontext": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:45+00:00"
+ },
+ "actionview": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:45+00:00"
+ },
+ "active_merchant": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:46+00:00"
+ },
+ "active_model": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:46+00:00"
+ },
+ "active_model_serializers": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:46+00:00"
+ },
+ "active_record": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:47+00:00"
+ },
+ "active_support": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:47+00:00"
+ },
+ "active_support-core_ext": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:47+00:00"
+ },
+ "activejob": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:47+00:00"
+ },
+ "activemerchant": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:48+00:00"
+ },
+ "activemodel": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:48+00:00"
+ },
+ "activemodel-railties": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:48+00:00"
+ },
+ "activerecord": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:49+00:00"
+ },
+ "activerecord-import": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:49+00:00"
+ },
+ "activerecord-postgresql": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:49+00:00"
+ },
+ "activerecord-railties": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:49+00:00"
+ },
+ "activestorage": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:50+00:00"
+ },
+ "activesupport": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:50+00:00"
+ },
+ "acts_as_list": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:51+00:00"
+ },
+ "addressable": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:51+00:00"
+ },
+ "amatch": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:51+00:00"
+ },
+ "asn1": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:52+00:00"
+ },
+ "asn1tools": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:52+00:00"
+ },
+ "aws-sdk-apigateway": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:52+00:00"
+ },
+ "aws-sdk-appsync": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:53+00:00"
+ },
+ "aws-sdk-billing": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:53+00:00"
+ },
+ "aws-sdk-chime": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:54+00:00"
+ },
+ "aws-sdk-cloudformation": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:54+00:00"
+ },
+ "aws-sdk-cloudformation-proxy": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:55+00:00"
+ },
+ "aws-sdk-cloudhsmv2": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:55+00:00"
+ },
+ "aws-sdk-cloudsearch": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:55+00:00"
+ },
+ "aws-sdk-codebuild": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:56+00:00"
+ },
+ "aws-sdk-codecommit": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:56+00:00"
+ },
+ "aws-sdk-codeguru-recommendations": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:57+00:00"
+ },
+ "aws-sdk-codepipeline": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:57+00:00"
+ },
+ "aws-sdk-codepipeline-requests": {
+  "status": "absent",
+  "checked": "2026-10-19T04:04:57+00:00"
+ },
+ "aws-sdk-codestar": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:58+00:00"
+ },
+ "aws-sdk-devicefarm": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:58+00:00"
+ },
+ "aws-sdk-dynamodb": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:58+00:00"
+ },
+ "aws-sdk-ec2": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:59+00:00"
+ },
+ "aws-sdk-finspace": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:59+00:00"
+ },
+ "aws-sdk-iam": {
+  "status": "exists",
+  "checked": "2026-10-19T04:04:59+00:00"
+ },
+ "aws-sdk-iot": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:00+00:00"
+ },
+ "aws-sdk-iot-data-plane": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:00+00:00"
+ },
+ "aws-sdk-iot-data-plane-proxy": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:00+00:00"
+ },
+ "aws-sdk-iot-device-client": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:01+00:00"
+ },
+ "aws-sdk-iot-device-client-proxy": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:01+00:00"
+ },
+ "aws-sdk-iot-device-management": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:01+00:00"
+ },
+ "aws-sdk-iot-device-management-proxy": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:01+00:00"
+ },
+ "aws-sdk-iot-job-data-plane": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:02+00:00"
+ },
+ "aws-sdk-iot-jobs-data-plane": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:02+00:00"
+ },
+ "aws-sdk-iot-jobs-data-plane-proxy": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:03+00:00"
+ },
+ "aws-sdk-iot-ops-data-plane": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:03+00:00"
+ },
+ "aws-sdk-iot-ops-data-plane-proxy": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:03+00:00"
+ },
+ "aws-sdk-iot-proxy": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:04+00:00"
+ },
+ "aws-sdk-iot-proxy-credentials": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:04+00:00"
+ },
+ "aws-sdk-monitoring": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:04+00:00"
+ },
+ "aws-sdk-s3": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:04+00:00"
+ },
+ "aws-sdk-ses": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:04+00:00"
+ },
+ "aws-sdk-snowflake": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:05+00:00"
+ },
+ "aws-sdk-stepfunctions": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:05+00:00"
+ },
+ "aws-sdk-sts": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:05+00:00"
+ },
+ "aws-sdk-xray": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:06+00:00"
+ },
+ "axlsx": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:06+00:00"
+ },
+ "babosa": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:06+00:00"
+ },
+ "bankid": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:07+00:00"
+ },
+ "bankid-nbu": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:07+00:00"
+ },
+ "bankid_client": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:07+00:00"
+ },
+ "bankid_nbu": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:07+00:00"
+ },
+ "barby": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:08+00:00"
+ },
+ "base64": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:08+00:00"
+ },
+ "bcrypt": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:08+00:00"
+ },
+ "bcrypt-ruby": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:08+00:00"
+ },
+ "benchmark-ips": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:09+00:00"
+ },
+ "better_errors": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:09+00:00"
+ },
+ "bigdecimal": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:09+00:00"
+ },
+ "binary.struct": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:10+00:00"
+ },
+ "bindata": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:10+00:00"
+ },
+ "binding_of_caller": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:11+00:00"
+ },
+ "bitcoin": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:11+00:00"
+ },
+ "bootsnap": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:11+00:00"
+ },
+ "bootstrap": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:12+00:00"
+ },
+ "bootstrap-datepicker": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:12+00:00"
+ },
+ "bootstrap-sass": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:12+00:00"
+ },
+ "builder": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:12+00:00"
+ },
+ "bundler": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:12+00:00"
+ },
+ "byebug": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:13+00:00"
+ },
+ "cache_exchange_rates": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:13+00:00"
+ },
+ "cades": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:13+00:00"
+ },
+ "capybara": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:13+00:00"
+ },
+ "carrierwave": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:13+00:00"
+ },
+ "category": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:14+00:00"
+ },
+ "category-transaction": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:14+00:00"
+ },
+ "certificate_authority": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:14+00:00"
+ },
+ "chronic": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:15+00:00"
+ },
+ "chunky_png": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:15+00:00"
+ },
+ "ckan": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:15+00:00"
+ },
+ "classifier-reborn": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:16+00:00"
+ },
+ "coffee-rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:16+00:00"
+ },
+ "coffee_script": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:16+00:00"
+ },
+ "coinbase-commerce": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:17+00:00"
+ },
+ "coinbase-commerce-api": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:17+00:00"
+ },
+ "coinbase-commerce-sdk": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:17+00:00"
+ },
+ "coinbase_commerce": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:18+00:00"
+ },
+ "colorize": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:18+00:00"
+ },
+ "combine_pdf": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:18+00:00"
+ },
+ "commerce-ml-parser": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:18+00:00"
+ },
+ "commerce_ml": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:19+00:00"
+ },
+ "concurrent-ruby": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:19+00:00"
+ },
+ "config": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:19+00:00"
+ },
+ "credit_card_validations": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:20+00:00"
+ },
+ "cryptography": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:20+00:00"
+ },
+ "csv": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:20+00:00"
+ },
+ "csv-import": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:21+00:00"
+ },
+ "csv_parser": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:21+00:00"
+ },
+ "cupyna": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:21+00:00"
+ },
+ "dalli": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:22+00:00"
+ },
+ "damerau-levenshtein": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:22+00:00"
+ },
+ "database_cleaner": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:23+00:00"
+ },
+ "database_cleaner-active_record": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:23+00:00"
+ },
+ "database_cleaner-sequel": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:23+00:00"
+ },
+ "date": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:24+00:00"
+ },
+ "dbf": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:24+00:00"
+ },
+ "debug": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:24+00:00"
+ },
+ "delayed_job": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:24+00:00"
+ },
+ "devise": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:24+00:00"
+ },
+ "dhl_delivery_api": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:25+00:00"
+ },
+ "diaspora": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:25+00:00"
+ },
+ "diaspora-protocol": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:26+00:00"
+ },
+ "did_you_mean": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:26+00:00"
+ },
+ "digest": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:27+00:00"
+ },
+ "digest-const": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:27+00:00"
+ },
+ "digital_signature": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:27+00:00"
+ },
+ "diia": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:27+00:00"
+ },
+ "diia-signature": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:28+00:00"
+ },
+ "diia-signature-client": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:28+00:00"
+ },
+ "diia_client": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:28+00:00"
+ },
+ "diia_signature": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:29+00:00"
+ },
+ "diji-pidpis": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:29+00:00"
+ },
+ "docker-sync": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:29+00:00"
+ },
+ "docu_sign": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:30+00:00"
+ },
+ "docusign_net": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:30+00:00"
+ },
+ "dotenv": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:30+00:00"
+ },
+ "dotenv-rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:31+00:00"
+ },
+ "down": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:31+00:00"
+ },
+ "dry-configurable": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:31+00:00"
+ },
+ "dry-monads": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:31+00:00"
+ },
+ "dry-schema": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:32+00:00"
+ },
+ "dry-struct": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:32+00:00"
+ },
+ "dry-types": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:32+00:00"
+ },
+ "dry-validation": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:32+00:00"
+ },
+ "dstu4145": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:32+00:00"
+ },
+ "dstu_engine": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:33+00:00"
+ },
+ "dstu_sign": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:33+00:00"
+ },
+ "dstu_signer": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:33+00:00"
+ },
+ "ecdsa": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:34+00:00"
+ },
+ "elasticsearch": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:34+00:00"
+ },
+ "erb": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:34+00:00"
+ },
+ "eventmachine": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:35+00:00"
+ },
+ "factory_bot": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:35+00:00"
+ },
+ "factory_bot_rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:35+00:00"
+ },
+ "faker": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:35+00:00"
+ },
+ "faraday": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:35+00:00"
+ },
+ "faraday-http-cache": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:36+00:00"
+ },
+ "faraday-multipart": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:36+00:00"
+ },
+ "faraday-net_http": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:36+00:00"
+ },
+ "faraday-retry": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:37+00:00"
+ },
+ "faraday_middleware": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:37+00:00"
+ },
+ "fastimage": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:38+00:00"
+ },
+ "faye-websocket": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:38+00:00"
+ },
+ "ffi": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:38+00:00"
+ },
+ "ffi-openssl": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:39+00:00"
+ },
+ "fileutils": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:39+00:00"
+ },
+ "font-awesome": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:40+00:00"
+ },
+ "font-awesome-sass": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:40+00:00"
+ },
+ "fuzzy-string": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:40+00:00"
+ },
+ "fuzzy_match": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:41+00:00"
+ },
+ "fuzzy_string_match": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:41+00:00"
+ },
+ "fuzzystringmatch": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:41+00:00"
+ },
+ "geocoder": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:42+00:00"
+ },
+ "gmaps4rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:42+00:00"
+ },
+ "google-api-client": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:42+00:00"
+ },
+ "google-cloud-text_to_speech": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:43+00:00"
+ },
+ "google-geocode-ruby": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:43+00:00"
+ },
+ "google-maps": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:43+00:00"
+ },
+ "google-maps-ruby": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:43+00:00"
+ },
+ "google-maps-services": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:44+00:00"
+ },
+ "google-maps-services-ruby": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:44+00:00"
+ },
+ "google_maps": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:44+00:00"
+ },
+ "google_maps_service": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:45+00:00"
+ },
+ "google_maps_services": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:45+00:00"
+ },
+ "googleauth": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:45+00:00"
+ },
+ "googleauth-interactive": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:45+00:00"
+ },
+ "googleauth-oauth2": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:46+00:00"
+ },
+ "gost": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:46+00:00"
+ },
+ "gyoku": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:47+00:00"
+ },
+ "hex_string": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:47+00:00"
+ },
+ "http": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:47+00:00"
+ },
+ "httparty": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:47+00:00"
+ },
+ "httpclient": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:48+00:00"
+ },
+ "hunspell-ffi": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:48+00:00"
+ },
+ "i18n": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:48+00:00"
+ },
+ "ibanizator": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:49+00:00"
+ },
+ "image_processing": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:49+00:00"
+ },
+ "io-console": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:49+00:00"
+ },
+ "jaro_winkler": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:49+00:00"
+ },
+ "jarowinkler-distance": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:50+00:00"
+ },
+ "jbuilder": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:50+00:00"
+ },
+ "jquery-rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:50+00:00"
+ },
+ "json": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:50+00:00"
+ },
+ "json-schema": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:50+00:00"
+ },
+ "jsonapi-serializer": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:51+00:00"
+ },
+ "jwt": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:51+00:00"
+ },
+ "kali": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:51+00:00"
+ },
+ "kalina": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:51+00:00"
+ },
+ "kalina_cipher": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:52+00:00"
+ },
+ "kalyna": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:52+00:00"
+ },
+ "kalyna-rb": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:53+00:00"
+ },
+ "kupyna": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:53+00:00"
+ },
+ "leaflet-rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:53+00:00"
+ },
+ "letter_opener": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:53+00:00"
+ },
+ "levenshtein": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:54+00:00"
+ },
+ "levenshtein-distance": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:54+00:00"
+ },
+ "levenshtein-ffi": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:55+00:00"
+ },
+ "lingua": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:55+00:00"
+ },
+ "lingua-stemmer": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:56+00:00"
+ },
+ "liqpay": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:56+00:00"
+ },
+ "listen": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:56+00:00"
+ },
+ "logger": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:57+00:00"
+ },
+ "lograge": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:57+00:00"
+ },
+ "luhn_validator": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:57+00:00"
+ },
+ "lunatic": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:57+00:00"
+ },
+ "marcel": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:58+00:00"
+ },
+ "mechanize": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:58+00:00"
+ },
+ "meili": {
+  "status": "absent",
+  "checked": "2026-10-19T04:05:58+00:00"
+ },
+ "mimemagic": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:58+00:00"
+ },
+ "mini_magick": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:59+00:00"
+ },
+ "mini_mime": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:59+00:00"
+ },
+ "minitest": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:59+00:00"
+ },
+ "minitest-reporters": {
+  "status": "exists",
+  "checked": "2026-10-19T04:05:59+00:00"
+ },
+ "monetize": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:00+00:00"
+ },
+ "money": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:00+00:00"
+ },
+ "money-rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:00+00:00"
+ },
+ "morph": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:01+00:00"
+ },
+ "multi_json": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:01+00:00"
+ },
+ "multipart-post": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:01+00:00"
+ },
+ "mysql2": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:01+00:00"
+ },
+ "net-http": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:02+00:00"
+ },
+ "net-http-persistent": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:02+00:00"
+ },
+ "newpost": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:02+00:00"
+ },
+ "newrelic_rpm": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:02+00:00"
+ },
+ "nokogiri": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:02+00:00"
+ },
+ "nori": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:03+00:00"
+ },
+ "nova-poshta-api": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:03+00:00"
+ },
+ "nova_poshta_api2": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:04+00:00"
+ },
+ "novaposhta_api": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:04+00:00"
+ },
+ "novaposhta_sms": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:04+00:00"
+ },
+ "npoi": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:05+00:00"
+ },
+ "oauth2": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:05+00:00"
+ },
+ "oj": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:05+00:00"
+ },
+ "omniauth": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:05+00:00"
+ },
+ "omniauth-bankid-nbu": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:05+00:00"
+ },
+ "omniauth-camunda-connector": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:06+00:00"
+ },
+ "omniauth-coinbase-commerce": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:06+00:00"
+ },
+ "omniauth-dia": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:06+00:00"
+ },
+ "omniauth-diya": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:07+00:00"
+ },
+ "omniauth-facebook": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:07+00:00"
+ },
+ "omniauth-oauth2": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:07+00:00"
+ },
+ "omniauth-rails_csrf_protection": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:07+00:00"
+ },
+ "open-uri": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:08+00:00"
+ },
+ "openssl": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:08+00:00"
+ },
+ "openssl-ccm": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:09+00:00"
+ },
+ "openssl-digest": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:09+00:00"
+ },
+ "openssl-signature_algorithm": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:10+00:00"
+ },
+ "optparse": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:10+00:00"
+ },
+ "p7m": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:10+00:00"
+ },
+ "paper_trail": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:10+00:00"
+ },
+ "parallel": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:11+00:00"
+ },
+ "pdf-reader": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:11+00:00"
+ },
+ "pg": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:11+00:00"
+ },
+ "pg_adapter": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:12+00:00"
+ },
+ "pg_driver": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:12+00:00"
+ },
+ "pg_search": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:12+00:00"
+ },
+ "phonelib": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:13+00:00"
+ },
+ "pkcs11": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:13+00:00"
+ },
+ "pkcs7": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:13+00:00"
+ },
+ "pragmatic_segmenter": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:13+00:00"
+ },
+ "praw": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:14+00:00"
+ },
+ "prawn": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:14+00:00"
+ },
+ "prawn-svg": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:14+00:00"
+ },
+ "prawn-table": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:15+00:00"
+ },
+ "prawrt": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:15+00:00"
+ },
+ "prawrt-jaro-winkler": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:15+00:00"
+ },
+ "prawrt-levenshtein": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:16+00:00"
+ },
+ "privatbank": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:16+00:00"
+ },
+ "privatbank-pay": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:16+00:00"
+ },
+ "privatbank-payments": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:17+00:00"
+ },
+ "privatbank_api": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:17+00:00"
+ },
+ "pry": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:17+00:00"
+ },
+ "pry-byebug": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:17+00:00"
+ },
+ "pry-debugger": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:17+00:00"
+ },
+ "pry-rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:18+00:00"
+ },
+ "pry-railties": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:18+00:00"
+ },
+ "pry-remote": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:18+00:00"
+ },
+ "pry-rescue": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:18+00:00"
+ },
+ "pry-stack-exchange": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:19+00:00"
+ },
+ "public_suffix": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:19+00:00"
+ },
+ "puma": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:19+00:00"
+ },
+ "pundit": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:19+00:00"
+ },
+ "qr_code": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:20+00:00"
+ },
+ "qrify": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:20+00:00"
+ },
+ "rack": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:20+00:00"
+ },
+ "rack-contrib": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:20+00:00"
+ },
+ "rack-cors": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:21+00:00"
+ },
+ "rack-mini-profiler": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:21+00:00"
+ },
+ "rack-session": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:21+00:00"
+ },
+ "rack-test": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:21+00:00"
+ },
+ "rackup": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:21+00:00"
+ },
+ "rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:22+00:00"
+ },
+ "rails-api": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:22+00:00"
+ },
+ "rails-dom-testing": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:22+00:00"
+ },
+ "rails-dom-to-html": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:23+00:00"
+ },
+ "rails-html-sanitizer": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:23+00:00"
+ },
+ "rails-i18n": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:23+00:00"
+ },
+ "rails_12factor": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:23+00:00"
+ },
+ "rails_autoloader": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:24+00:00"
+ },
+ "railties": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:24+00:00"
+ },
+ "rake": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:24+00:00"
+ },
+ "ramaze": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:25+00:00"
+ },
+ "rb-faker": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:25+00:00"
+ },
+ "rb-kalyna": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:25+00:00"
+ },
+ "rbzip2": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:26+00:00"
+ },
+ "redis": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:26+00:00"
+ },
+ "redis-rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:26+00:00"
+ },
+ "redisc": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:27+00:00"
+ },
+ "regexp_parser": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:27+00:00"
+ },
+ "rescuable": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:27+00:00"
+ },
+ "rescue": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:27+00:00"
+ },
+ "rest-client": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:28+00:00"
+ },
+ "retryable": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:28+00:00"
+ },
+ "rexml": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:28+00:00"
+ },
+ "rmagick": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:28+00:00"
+ },
+ "roxml": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:29+00:00"
+ },
+ "rqrcode": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:29+00:00"
+ },
+ "rqrcode_core": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:29+00:00"
+ },
+ "rqrcode_png": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:30+00:00"
+ },
+ "rspec": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:30+00:00"
+ },
+ "rspec-rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:30+00:00"
+ },
+ "rubocop": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:30+00:00"
+ },
+ "rubocop-rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:30+00:00"
+ },
+ "rubocop-rspec": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:30+00:00"
+ },
+ "ruby": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:31+00:00"
+ },
+ "ruby-aes-gcm": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:31+00:00"
+ },
+ "ruby-dsa": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:31+00:00"
+ },
+ "ruby-dsu": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:32+00:00"
+ },
+ "ruby-filemagic": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:32+00:00"
+ },
+ "ruby-kalyna": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:32+00:00"
+ },
+ "ruby-kryptography": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:33+00:00"
+ },
+ "ruby-mp3info": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:33+00:00"
+ },
+ "ruby-openssl": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:33+00:00"
+ },
+ "ruby-pkcs7": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:34+00:00"
+ },
+ "ruby-progressbar": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:34+00:00"
+ },
+ "ruby-stemmer": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:34+00:00"
+ },
+ "ruby-unicode": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:35+00:00"
+ },
+ "ruby-xml-simple": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:35+00:00"
+ },
+ "ruby_linux_notifications": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:35+00:00"
+ },
+ "rubyasn1": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:36+00:00"
+ },
+ "rubyzip": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:36+00:00"
+ },
+ "rufus-scheduler": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:36+00:00"
+ },
+ "rugged": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:36+00:00"
+ },
+ "sass": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:37+00:00"
+ },
+ "sass-rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:37+00:00"
+ },
+ "sassc-rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:37+00:00"
+ },
+ "savon": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:37+00:00"
+ },
+ "schedule": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:38+00:00"
+ },
+ "searchkick": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:38+00:00"
+ },
+ "securerandom": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:39+00:00"
+ },
+ "selenium-webdriver": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:39+00:00"
+ },
+ "sentry-rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:39+00:00"
+ },
+ "sentry-ruby": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:39+00:00"
+ },
+ "sequel": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:40+00:00"
+ },
+ "shoulda-matchers": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:40+00:00"
+ },
+ "sidekiq": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:40+00:00"
+ },
+ "sidekiq-cron": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:40+00:00"
+ },
+ "sidekiq-scheduler": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:41+00:00"
+ },
+ "signet": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:41+00:00"
+ },
+ "simple_form": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:41+00:00"
+ },
+ "simplecov": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:42+00:00"
+ },
+ "sinatra": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:42+00:00"
+ },
+ "sinatra-activerecord": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:42+00:00"
+ },
+ "sinatra-async": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:43+00:00"
+ },
+ "sinatra-authorization": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:43+00:00"
+ },
+ "sinatra-configuration": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:43+00:00"
+ },
+ "sinatra-contrib": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:44+00:00"
+ },
+ "sinatra-cors": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:44+00:00"
+ },
+ "sinatra-credentials": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:44+00:00"
+ },
+ "sinatra-cross-origin": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:44+00:00"
+ },
+ "sinatra-cross-origin-headers": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:45+00:00"
+ },
+ "sinatra-extensions": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:45+00:00"
+ },
+ "sinatra-flash": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:45+00:00"
+ },
+ "sinatra-flash-store": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:46+00:00"
+ },
+ "sinatra-identity": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:46+00:00"
+ },
+ "sinatra-identity-provider": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:46+00:00"
+ },
+ "sinatra-identity-provider-cache": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:46+00:00"
+ },
+ "sinatra-identity-provider-cache-mongo": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:47+00:00"
+ },
+ "sinatra-identity-provider-cache-mongo-adapter": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:47+00:00"
+ },
+ "sinatra-identity-provider-cache-redis": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:47+00:00"
+ },
+ "sinatra-identity-provider-cache-redis-adapter": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:48+00:00"
+ },
+ "sinatra-identity-provider-mongo": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:48+00:00"
+ },
+ "sinatra-identity-provider-mongo-adapter": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:48+00:00"
+ },
+ "sinatra-identity-provider-redis": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:49+00:00"
+ },
+ "sinatra-identity-provider-redis-adapter": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:49+00:00"
+ },
+ "sinatra-inject": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:49+00:00"
+ },
+ "sinatra-load": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:50+00:00"
+ },
+ "sinatra-logger": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:50+00:00"
+ },
+ "sinatra-middleware": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:50+00:00"
+ },
+ "sinatra-namespace": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:51+00:00"
+ },
+ "sinatra-params": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:51+00:00"
+ },
+ "sinatra-partial": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:51+00:00"
+ },
+ "sinatra-redirect": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:52+00:00"
+ },
+ "sinatra-reloader": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:52+00:00"
+ },
+ "sinatra-reloading": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:52+00:00"
+ },
+ "sinatra-session": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:53+00:00"
+ },
+ "sinatra-session-store": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:53+00:00"
+ },
+ "sms": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:53+00:00"
+ },
+ "sms_magic": {
+  "status": "absent",
+  "checked": "2026-10-19T04:06:54+00:00"
+ },
+ "spring": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:54+00:00"
+ },
+ "spring-watcher-listen": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:54+00:00"
+ },
+ "sprockets": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:54+00:00"
+ },
+ "sprockets-rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:55+00:00"
+ },
+ "sqlite3": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:55+00:00"
+ },
+ "stanford-core-nlp": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:55+00:00"
+ },
+ "stimulus-rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:56+00:00"
+ },
+ "string_score": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:56+00:00"
+ },
+ "stripe": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:56+00:00"
+ },
+ "telegram-bot-ruby": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:57+00:00"
+ },
+ "terminal-notifier": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:57+00:00"
+ },
+ "terminal-table": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:57+00:00"
+ },
+ "text": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:58+00:00"
+ },
+ "text-hyphen": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:58+00:00"
+ },
+ "thin": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:58+00:00"
+ },
+ "thor": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:59+00:00"
+ },
+ "tilt": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:59+00:00"
+ },
+ "time": {
+  "status": "exists",
+  "checked": "2026-10-19T04:06:59+00:00"
+ },
+ "timecop": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:00+00:00"
+ },
+ "timeout": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:00+00:00"
+ },
+ "tmail": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:01+00:00"
+ },
+ "translit": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:01+00:00"
+ },
+ "transliteration": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:01+00:00"
+ },
+ "transliterator": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:01+00:00"
+ },
+ "tty-prompt": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:02+00:00"
+ },
+ "turbo-rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:02+00:00"
+ },
+ "turbolinks": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:02+00:00"
+ },
+ "twilio-ruby": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:02+00:00"
+ },
+ "typhoeus": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:03+00:00"
+ },
+ "tyranosaurus": {
+  "status": "absent",
+  "checked": "2026-10-19T04:07:03+00:00"
+ },
+ "tzinfo": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:03+00:00"
+ },
+ "tzinfo-data": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:04+00:00"
+ },
+ "ua-crypto": {
+  "status": "absent",
+  "checked": "2026-10-19T04:07:04+00:00"
+ },
+ "uglifier": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:04+00:00"
+ },
+ "ukrainian": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:05+00:00"
+ },
+ "ukrainian-transliterator": {
+  "status": "absent",
+  "checked": "2026-10-19T04:07:05+00:00"
+ },
+ "ukrainian_stemmer": {
+  "status": "absent",
+  "checked": "2026-10-19T04:07:05+00:00"
+ },
+ "ukrposhta-api": {
+  "status": "absent",
+  "checked": "2026-10-19T04:07:06+00:00"
+ },
+ "unicode": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:06+00:00"
+ },
+ "unicode-display_width": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:06+00:00"
+ },
+ "unicode-normalizer": {
+  "status": "absent",
+  "checked": "2026-10-19T04:07:06+00:00"
+ },
+ "unicode-transliterators": {
+  "status": "absent",
+  "checked": "2026-10-19T04:07:06+00:00"
+ },
+ "unicode_utils": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:07+00:00"
+ },
+ "unidecode": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:07+00:00"
+ },
+ "unisender": {
+  "status": "absent",
+  "checked": "2026-10-19T04:07:07+00:00"
+ },
+ "unisender-ruby": {
+  "status": "absent",
+  "checked": "2026-10-19T04:07:08+00:00"
+ },
+ "uri": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:08+00:00"
+ },
+ "validates_as_credit_card": {
+  "status": "absent",
+  "checked": "2026-10-19T04:07:08+00:00"
+ },
+ "validations": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:09+00:00"
+ },
+ "validator": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:09+00:00"
+ },
+ "vcr": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:10+00:00"
+ },
+ "viber-bot": {
+  "status": "absent",
+  "checked": "2026-10-19T04:07:10+00:00"
+ },
+ "web-console": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:10+00:00"
+ },
+ "webdrivers": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:10+00:00"
+ },
+ "webhook": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:11+00:00"
+ },
+ "webmock": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:11+00:00"
+ },
+ "webpack-dev-server": {
+  "status": "absent",
+  "checked": "2026-10-19T04:07:11+00:00"
+ },
+ "webpack-rails": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:11+00:00"
+ },
+ "webpacker": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:12+00:00"
+ },
+ "webrick": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:12+00:00"
+ },
+ "whenever": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:12+00:00"
+ },
+ "wicked_pdf": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:13+00:00"
+ },
+ "will_paginate": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:13+00:00"
+ },
+ "x509": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:13+00:00"
+ },
+ "xml-builder": {
+  "status": "absent",
+  "checked": "2026-10-19T04:07:13+00:00"
+ },
+ "xml-simple": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:14+00:00"
+ },
+ "xmlhash": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:14+00:00"
+ },
+ "yaml": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:14+00:00"
+ },
+ "zeitwerk": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:14+00:00"
+ },
+ "zip": {
+  "status": "exists",
+  "checked": "2026-10-19T04:07:15+00:00"
+ }
+}

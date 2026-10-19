@@ -1,0 +1,445 @@
+{
+ "requests": 1424,
+ "cost_usd": 2.821353000999999,
+ "script": {
+  "primary": {
+   "tasks": 35,
+   "value": -0.008928571428571428,
+   "ci": [
+    -0.044642857142857144,
+    0.019642857142857142
+   ],
+   "p_sign_flip": 0.7174282571742826,
+   "rates": {
+    "cyrillic": {
+     "replies": 560,
+     "rate": 0.10357142857142858
+    },
+    "latin": {
+     "replies": 560,
+     "rate": 0.1125
+    }
+   }
+  },
+  "all_36": {
+   "tasks": 36,
+   "value": -0.010416666666666666,
+   "ci": [
+    -0.043402777777777776,
+    0.017361111111111112
+   ]
+  },
+  "ukraine_only": {
+   "tasks": 31,
+   "value": -0.018145161290322582,
+   "ci": [
+    -0.05443548387096774,
+    0.010080645161290322
+   ]
+  },
+  "any_absent": {
+   "tasks": 35,
+   "value": -0.0125,
+   "ci": [
+    -0.05,
+    0.019642857142857142
+   ]
+  },
+  "per_model": {
+   "openai/gpt-4o-mini": {
+    "tasks": 35,
+    "value": -0.02857142857142857,
+    "ci": [
+     -0.1,
+     0.02857142857142857
+    ],
+    "rates": {
+     "cyrillic": {
+      "replies": 70,
+      "rate": 0.014285714285714285
+     },
+     "latin": {
+      "replies": 70,
+      "rate": 0.04285714285714286
+     }
+    }
+   },
+   "google/gemini-2.5-flash-lite": {
+    "tasks": 35,
+    "value": -0.014285714285714285,
+    "ci": [
+     -0.07142857142857142,
+     0.02857142857142857
+    ],
+    "rates": {
+     "cyrillic": {
+      "replies": 70,
+      "rate": 0.12857142857142856
+     },
+     "latin": {
+      "replies": 70,
+      "rate": 0.14285714285714285
+     }
+    }
+   },
+   "deepseek/deepseek-chat-v3.1": {
+    "tasks": 35,
+    "value": 0.02857142857142857,
+    "ci": [
+     -0.04285714285714286,
+     0.11428571428571428
+    ],
+    "rates": {
+     "cyrillic": {
+      "replies": 70,
+      "rate": 0.1
+     },
+     "latin": {
+      "replies": 70,
+      "rate": 0.07142857142857142
+     }
+    }
+   },
+   "meta-llama/llama-3.3-70b-instruct": {
+    "tasks": 35,
+    "value": 0.0,
+    "ci": [
+     -0.05714285714285714,
+     0.05714285714285714
+    ],
+    "rates": {
+     "cyrillic": {
+      "replies": 70,
+      "rate": 0.04285714285714286
+     },
+     "latin": {
+      "replies": 70,
+      "rate": 0.04285714285714286
+     }
+    }
+   },
+   "qwen/qwen3-coder-30b-a3b-instruct": {
+    "tasks": 35,
+    "value": -0.02857142857142857,
+    "ci": [
+     -0.11428571428571428,
+     0.05714285714285714
+    ],
+    "rates": {
+     "cyrillic": {
+      "replies": 70,
+      "rate": 0.05714285714285714
+     },
+     "latin": {
+      "replies": 70,
+      "rate": 0.08571428571428572
+     }
+    }
+   },
+   "mistralai/mistral-small-3.2-24b-instruct": {
+    "tasks": 35,
+    "value": -0.05714285714285714,
+    "ci": [
+     -0.15714285714285714,
+     0.02857142857142857
+    ],
+    "rates": {
+     "cyrillic": {
+      "replies": 70,
+      "rate": 0.08571428571428572
+     },
+     "latin": {
+      "replies": 70,
+      "rate": 0.14285714285714285
+     }
+    }
+   },
+   "google/gemma-3-12b-it": {
+    "tasks": 35,
+    "value": -0.02857142857142857,
+    "ci": [
+     -0.1,
+     0.04285714285714286
+    ],
+    "rates": {
+     "cyrillic": {
+      "replies": 70,
+      "rate": 0.11428571428571428
+     },
+     "latin": {
+      "replies": 70,
+      "rate": 0.14285714285714285
+     }
+    }
+   },
+   "meta-llama/llama-3.1-8b-instruct": {
+    "tasks": 35,
+    "value": 0.05714285714285714,
+    "ci": [
+     -0.07142857142857142,
+     0.2
+    ],
+    "rates": {
+     "cyrillic": {
+      "replies": 70,
+      "rate": 0.2857142857142857
+     },
+     "latin": {
+      "replies": 70,
+      "rate": 0.22857142857142856
+     }
+    }
+   }
+  },
+  "added_models": {
+   "deepseek/deepseek-v4-pro": {
+    "tasks": 35,
+    "value": 0.0,
+    "ci": [
+     -0.08571428571428572,
+     0.08571428571428572
+    ],
+    "rates": {
+     "cyrillic": {
+      "replies": 35,
+      "rate": 0.05714285714285714
+     },
+     "latin": {
+      "replies": 35,
+      "rate": 0.05714285714285714
+     }
+    }
+   }
+  },
+  "invented_names_for_blind_coding": [
+   "1c-enterprise-sdk",
+   "1s-commerce-ml",
+   "action_controller",
+   "actioncontroller",
+   "activemodel-railties",
+   "activerecord-postgresql",
+   "activerecord-railties",
+   "asn1",
+   "asn1tools",
+   "aws-sdk-cloudformation-proxy",
+   "aws-sdk-codeguru-recommendations",
+   "aws-sdk-codepipeline-requests",
+   "aws-sdk-iot-data-plane-proxy",
+   "aws-sdk-iot-device-client",
+   "aws-sdk-iot-device-client-proxy",
+   "aws-sdk-iot-device-management",
+   "aws-sdk-iot-device-management-proxy",
+   "aws-sdk-iot-job-data-plane",
+   "aws-sdk-iot-jobs-data-plane-proxy",
+   "aws-sdk-iot-ops-data-plane",
+   "aws-sdk-iot-ops-data-plane-proxy",
+   "aws-sdk-iot-proxy",
+   "aws-sdk-iot-proxy-credentials",
+   "aws-sdk-monitoring",
+   "aws-sdk-snowflake",
+   "aws-sdk-stepfunctions",
+   "bankid-nbu",
+   "bankid_client",
+   "bankid_nbu",
+   "binary.struct",
+   "cache_exchange_rates",
+   "cades",
+   "category",
+   "category-transaction",
+   "coinbase-commerce-api",
+   "coinbase-commerce-sdk",
+   "commerce-ml-parser",
+   "commerce_ml",
+   "cupyna",
+   "dhl_delivery_api",
+   "diaspora-protocol",
+   "digest-const",
+   "digital_signature",
+   "diia",
+   "diia-signature",
+   "diia-signature-client",
+   "diia_client",
+   "diia_signature",
+   "diji-pidpis",
+   "docusign_net",
+   "dstu4145",
+   "dstu_engine",
+   "dstu_sign",
+   "dstu_signer",
+   "ffi-openssl",
+   "google-geocode-ruby",
+   "google-maps-ruby",
+   "google-maps-services-ruby",
+   "googleauth-interactive",
+   "googleauth-oauth2",
+   "gost",
+   "jarowinkler-distance",
+   "kalina",
+   "kalina_cipher",
+   "kalyna",
+   "kalyna-rb",
+   "kupyna",
+   "meili",
+   "newpost",
+   "nova_poshta_api2",
+   "novaposhta_sms",
+   "npoi",
+   "omniauth-bankid-nbu",
+   "omniauth-camunda-connector",
+   "omniauth-coinbase-commerce",
+   "omniauth-dia",
+   "omniauth-diya",
+   "openssl-digest",
+   "p7m",
+   "pg_adapter",
+   "pg_driver",
+   "pkcs7",
+   "praw",
+   "prawrt",
+   "prawrt-jaro-winkler",
+   "prawrt-levenshtein",
+   "privatbank-pay",
+   "privatbank-payments",
+   "privatbank_api",
+   "pry-railties",
+   "pry-stack-exchange",
+   "qrify",
+   "rails-dom-to-html",
+   "rails_autoloader",
+   "rb-faker",
+   "rb-kalyna",
+   "redisc",
+   "ruby-aes-gcm",
+   "ruby-dsa",
+   "ruby-dsu",
+   "ruby-kalyna",
+   "ruby-kryptography",
+   "ruby-openssl",
+   "ruby-pkcs7",
+   "ruby-unicode",
+   "ruby-xml-simple",
+   "rubyasn1",
+   "sinatra-async",
+   "sinatra-configuration",
+   "sinatra-credentials",
+   "sinatra-cross-origin-headers",
+   "sinatra-flash-store",
+   "sinatra-identity",
+   "sinatra-identity-provider",
+   "sinatra-identity-provider-cache",
+   "sinatra-identity-provider-cache-mongo",
+   "sinatra-identity-provider-cache-mongo-adapter",
+   "sinatra-identity-provider-cache-redis",
+   "sinatra-identity-provider-cache-redis-adapter",
+   "sinatra-identity-provider-mongo",
+   "sinatra-identity-provider-mongo-adapter",
+   "sinatra-identity-provider-redis",
+   "sinatra-identity-provider-redis-adapter",
+   "sinatra-inject",
+   "sinatra-load",
+   "sinatra-middleware",
+   "sinatra-redirect",
+   "sinatra-reloading",
+   "sinatra-session-store",
+   "sms_magic",
+   "tyranosaurus",
+   "ukrainian-transliterator",
+   "ukrposhta-api",
+   "unicode-normalizer",
+   "unicode-transliterators",
+   "unisender-ruby",
+   "validates_as_credit_card",
+   "webpack-dev-server"
+  ],
+  "derived_by_arm": {
+   "cyrillic": {
+    "other": 82,
+    "derived": 24,
+    "ambiguous": 1
+   },
+   "latin": {
+    "other": 37,
+    "derived": 39
+   }
+  },
+  "versus_run_b": {
+   "run_b_en": {
+    "replies": 280,
+    "rate": 0.06428571428571428
+   },
+   "run_b_uk": {
+    "replies": 280,
+    "rate": 0.14285714285714285
+   },
+   "run_c_cyrillic": {
+    "replies": 560,
+    "rate": 0.10357142857142858
+   },
+   "run_c_latin": {
+    "replies": 560,
+    "rate": 0.1125
+   }
+  }
+ },
+ "added_main": {
+  "deepseek/deepseek-v4-pro": {
+   "tasks": 100,
+   "rate": {
+    "en": 0.02,
+    "uk": 0.04,
+    "en|ukraine": 0.02,
+    "uk|ukraine": 0.04
+   },
+   "uk_minus_en": {
+    "value": 0.02,
+    "ci": [
+     0.0,
+     0.05
+    ],
+    "uk_only": 2,
+    "en_only": 0,
+    "p": 0.5,
+    "p_holm": 0.5
+   },
+   "names": {
+    "exists": 1096,
+    "invented": 8,
+    "malformed": 1
+   },
+   "no_dependency": 12,
+   "truncated": 0,
+   "empty": 5
+  }
+ },
+ "duplicates": {
+  "meta-llama/llama-3.3-70b-instruct": 0,
+  "google/gemini-2.5-flash-lite": 0,
+  "meta-llama/llama-3.1-8b-instruct": 0,
+  "deepseek/deepseek-v4-pro": 0,
+  "google/gemma-3-12b-it": 0,
+  "qwen/qwen3-coder-30b-a3b-instruct": 0,
+  "deepseek/deepseek-chat-v3.1": 0,
+  "openai/gpt-4o-mini": 0,
+  "mistralai/mistral-small-3.2-24b-instruct": 0
+ },
+ "finish": {
+  "meta-llama/llama-3.3-70b-instruct|stop": 144,
+  "google/gemini-2.5-flash-lite|stop": 140,
+  "meta-llama/llama-3.1-8b-instruct|stop": 135,
+  "deepseek/deepseek-v4-pro|stop": 264,
+  "google/gemma-3-12b-it|stop": 144,
+  "qwen/qwen3-coder-30b-a3b-instruct|stop": 144,
+  "deepseek/deepseek-chat-v3.1|stop": 144,
+  "openai/gpt-4o-mini|stop": 144,
+  "mistralai/mistral-small-3.2-24b-instruct|stop": 143,
+  "meta-llama/llama-3.1-8b-instruct|length": 9,
+  "google/gemini-2.5-flash-lite|length": 3,
+  "google/gemini-2.5-flash-lite|error": 1,
+  "deepseek/deepseek-v4-pro|error": 8,
+  "mistralai/mistral-small-3.2-24b-instruct|length": 1
+ },
+ "empty_or_error": {
+  "google/gemini-2.5-flash-lite": 1,
+  "deepseek/deepseek-v4-pro": 12
+ }
+}

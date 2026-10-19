@@ -163,6 +163,33 @@ def duplicates(rows: list[dict]) -> dict:
     return dict(out)
 
 
+def derived_by_arm(labelled: list[dict], path: Path) -> dict:
+    """Invented-name occurrences in script replies of the eight run-B models by arm and by the class coded without
+    arm labels (derived from a switched name, other, ambiguous)."""
+    import csv
+
+    with path.open() as f:
+        classes = {r["name"]: r["class"] for r in csv.DictReader(f)}
+    out = {arm: Counter() for arm in ARMS}
+    for r in labelled:
+        if r["part"] == "script" and r["model"] in MODELS:
+            for n, c in r["classes"].items():
+                if c == "invented":
+                    out[r["arm"]][classes[n]] += 1
+    return {arm: dict(v) for arm, v in out.items()}
+
+
+def versus_run_b(labelled: list[dict], run_b: list[dict], task_ids: list[str]) -> dict:
+    """Descriptive: run B English and Ukrainian rates (sample 0) and run C arm rates on the same tasks and models."""
+    ids = set(task_ids)
+    out = {}
+    for lang in LANGS:
+        v = [hit(r, ("invented",)) for r in run_b if r["sample"] == 0 and r["lang"] == lang and r["task"] in ids]
+        out[f"run_b_{lang}"] = {"replies": len(v), "rate": float(np.mean(v))}
+    out |= {f"run_c_{k}": v for k, v in arm_rates(labelled, list(MODELS), ids, ("invented",)).items()}
+    return out
+
+
 def main(tasks: list[Task], root: Path) -> None:
     folder = root / "results" / "run-c"
     rows = load_rows(folder / "replies.jsonl")
@@ -183,4 +210,10 @@ def main(tasks: list[Task], root: Path) -> None:
         "finish": dict(Counter((r["model"], r["finish"]) for r in rows).items()),
     }
     summary["finish"] = {f"{m}|{f}": n for (m, f), n in summary["finish"].items()}
+    summary["script"]["derived_by_arm"] = derived_by_arm(labelled, root / "data" / "script_run_c_invented_names.csv")
+    run_b = [json.loads(line) for line in (root / "results" / "labelled.jsonl").open()]
+    primary_ids = [t for t in variant_ids if t not in PRIMARY_EXCLUDED]
+    summary["script"]["versus_run_b"] = versus_run_b(labelled, run_b, primary_ids)
+    broken = [r["model"] for r in rows if not r["text"].strip() or r["finish"] == "error"]
+    summary["empty_or_error"] = dict(Counter(broken))
     (folder / "summary.json").write_text(json.dumps(summary, indent=1, ensure_ascii=False) + "\n")
