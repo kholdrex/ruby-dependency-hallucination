@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rubydeps"
-version = "1.0.0"
+version = "1.1.0"
 description = "Nonexistent RubyGems dependencies in code written by language models for English and Ukrainian requests"
 readme = "README.md"
 license = { text = "MIT" }

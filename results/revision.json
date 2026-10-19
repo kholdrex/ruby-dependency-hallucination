@@ -1,0 +1,1931 @@
+{
+ "coding_agreement": {
+  "name_script_switch": {
+   "agreement": 0.99,
+   "kappa": 0.9653679653679653,
+   "counts": {
+    "00": 164,
+    "01": 1,
+    "10": 1,
+    "11": 34
+   }
+  },
+  "en_has_cyrillic": {
+   "agreement": 1.0,
+   "kappa": 1.0,
+   "counts": {
+    "00": 182,
+    "01": 0,
+    "10": 0,
+    "11": 18
+   }
+  },
+  "content_differs": {
+   "agreement": 0.935,
+   "kappa": 0.3473895582329324,
+   "counts": {
+    "00": 183,
+    "01": 8,
+    "10": 5,
+    "11": 4
+   }
+  }
+ },
+ "coding_counts": {
+  "name_script_switch": {
+   "global|0": 96,
+   "global|1": 4,
+   "ukraine|0": 68,
+   "ukraine|1": 32
+  },
+  "en_has_cyrillic": {
+   "global|0": 100,
+   "ukraine|0": 82,
+   "ukraine|1": 18
+  },
+  "content_differs": {
+   "global|0": 93,
+   "global|1": 7,
+   "ukraine|0": 90,
+   "ukraine|1": 10
+  }
+ },
+ "equivalence_run_b": {
+  "strata": {
+   "global|switch=0": {
+    "tasks": 96,
+    "en": 0.1484375,
+    "uk": 0.14322916666666666,
+    "uk_minus_en": {
+     "value": -0.005208333333333333,
+     "ci": [
+      -0.032552083333333336,
+      0.0234375
+     ]
+    }
+   },
+   "global|switch=1": {
+    "tasks": 4,
+    "en": 0.125,
+    "uk": 0.15625,
+    "uk_minus_en": {
+     "value": 0.03125,
+     "ci": [
+      -0.0625,
+      0.125
+     ]
+    }
+   },
+   "ukraine|switch=0": {
+    "tasks": 68,
+    "en": 0.11948529411764706,
+    "uk": 0.13419117647058823,
+    "uk_minus_en": {
+     "value": 0.014705882352941176,
+     "ci": [
+      -0.02022058823529412,
+      0.04963235294117647
+     ]
+    }
+   },
+   "ukraine|switch=1": {
+    "tasks": 32,
+    "en": 0.0546875,
+    "uk": 0.13671875,
+    "uk_minus_en": {
+     "value": 0.08203125,
+     "ci": [
+      0.04296875,
+      0.125
+     ]
+    }
+   }
+  },
+  "all_tasks": {
+   "tasks": {
+    "global": 100,
+    "ukraine": 100
+   },
+   "uk_minus_en": {
+    "value": 0.01625,
+    "ci": [
+     -0.0025,
+     0.035
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.028749999999999998,
+    "ci": [
+     -0.071875,
+     0.015625
+    ]
+   },
+   "interaction": {
+    "value": 0.039999999999999994,
+    "ci": [
+     0.0025000000000000022,
+     0.0775
+    ]
+   }
+  },
+  "without_switch": {
+   "tasks": {
+    "global": 96,
+    "ukraine": 68
+   },
+   "uk_minus_en": {
+    "value": 0.003048780487804878,
+    "ci": [
+     -0.01753048780487805,
+     0.024390243902439025
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.018995098039215702,
+    "ci": [
+     -0.06893478094362746,
+     0.032515701593137214
+    ]
+   },
+   "interaction": {
+    "value": 0.01991421568627451,
+    "ci": [
+     -0.023207720588235295,
+     0.06250191482843134
+    ]
+   }
+  },
+  "without_any_flag": {
+   "tasks": {
+    "global": 90,
+    "ukraine": 53
+   },
+   "uk_minus_en": {
+    "value": 0.0017482517482517483,
+    "ci": [
+     -0.02097902097902098,
+     0.024475524475524476
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.003354297693920344,
+    "ci": [
+     -0.0590811713836478,
+     0.05598925576519915
+    ]
+   },
+   "interaction": {
+    "value": 0.012211740041928721,
+    "ci": [
+     -0.03592832809224319,
+     0.061766902515723254
+    ]
+   }
+  }
+ },
+ "equivalence_run_a": {
+  "strata": {
+   "global|switch=0": {
+    "tasks": 96,
+    "en": 0.15104166666666666,
+    "uk": 0.13541666666666666,
+    "uk_minus_en": {
+     "value": -0.015625,
+     "ci": [
+      -0.041666666666666664,
+      0.010416666666666666
+     ]
+    }
+   },
+   "global|switch=1": {
+    "tasks": 4,
+    "en": 0.125,
+    "uk": 0.15625,
+    "uk_minus_en": {
+     "value": 0.03125,
+     "ci": [
+      -0.0625,
+      0.125
+     ]
+    }
+   },
+   "ukraine|switch=0": {
+    "tasks": 68,
+    "en": 0.13419117647058823,
+    "uk": 0.12316176470588236,
+    "uk_minus_en": {
+     "value": -0.011029411764705883,
+     "ci": [
+      -0.042279411764705885,
+      0.02022058823529412
+     ]
+    }
+   },
+   "ukraine|switch=1": {
+    "tasks": 32,
+    "en": 0.078125,
+    "uk": 0.125,
+    "uk_minus_en": {
+     "value": 0.046875,
+     "ci": [
+      0.015625,
+      0.08203125
+     ]
+    }
+   }
+  },
+  "all_tasks": {
+   "tasks": {
+    "global": 100,
+    "ukraine": 100
+   },
+   "uk_minus_en": {
+    "value": -0.003125,
+    "ci": [
+     -0.019375,
+     0.013125
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.023125000000000007,
+    "ci": [
+     -0.06812499999999999,
+     0.021875000000000006
+    ]
+   },
+   "interaction": {
+    "value": 0.021249999999999998,
+    "ci": [
+     -0.011250000000000001,
+     0.055
+    ]
+   }
+  },
+  "without_switch": {
+   "tasks": {
+    "global": 96,
+    "ukraine": 68
+   },
+   "uk_minus_en": {
+    "value": -0.013719512195121951,
+    "ci": [
+     -0.03277439024390244,
+     0.005335365853658537
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.014552696078431376,
+    "ci": [
+     -0.06529564950980393,
+     0.03714862898284313
+    ]
+   },
+   "interaction": {
+    "value": 0.004595588235294117,
+    "ci": [
+     -0.03331801470588235,
+     0.04327512254901961
+    ]
+   }
+  },
+  "without_any_flag": {
+   "tasks": {
+    "global": 90,
+    "ukraine": 53
+   },
+   "uk_minus_en": {
+    "value": -0.008741258741258742,
+    "ci": [
+     -0.027972027972027972,
+     0.011363636363636364
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": 0.004140461215932922,
+    "ci": [
+     -0.0514412997903564,
+     0.06396848794549263
+    ]
+   },
+   "interaction": {
+    "value": -0.0011006289308176098,
+    "ci": [
+     -0.04342243186582809,
+     0.042610062893081765
+    ]
+   }
+  }
+ },
+ "equivalence_run_b_any_absent": {
+  "strata": {
+   "global|switch=0": {
+    "tasks": 96,
+    "en": 0.21223958333333334,
+    "uk": 0.203125,
+    "uk_minus_en": {
+     "value": -0.009114583333333334,
+     "ci": [
+      -0.040364583333333336,
+      0.020833333333333332
+     ]
+    }
+   },
+   "global|switch=1": {
+    "tasks": 4,
+    "en": 0.3125,
+    "uk": 0.25,
+    "uk_minus_en": {
+     "value": -0.0625,
+     "ci": [
+      -0.1875,
+      0.0625
+     ]
+    }
+   },
+   "ukraine|switch=0": {
+    "tasks": 68,
+    "en": 0.1801470588235294,
+    "uk": 0.20036764705882354,
+    "uk_minus_en": {
+     "value": 0.02022058823529412,
+     "ci": [
+      -0.016590073529411723,
+      0.058823529411764705
+     ]
+    }
+   },
+   "ukraine|switch=1": {
+    "tasks": 32,
+    "en": 0.11328125,
+    "uk": 0.171875,
+    "uk_minus_en": {
+     "value": 0.05859375,
+     "ci": [
+      0.0,
+      0.1171875
+     ]
+    }
+   }
+  },
+  "all_tasks": {
+   "tasks": {
+    "global": 100,
+    "ukraine": 100
+   },
+   "uk_minus_en": {
+    "value": 0.010625,
+    "ci": [
+     -0.010625,
+     0.031875
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.03562500000000002,
+    "ci": [
+     -0.084375,
+     0.012499999999999983
+    ]
+   },
+   "interaction": {
+    "value": 0.04375,
+    "ci": [
+     0.00125,
+     0.08499999999999999
+    ]
+   }
+  },
+  "without_switch": {
+   "tasks": {
+    "global": 96,
+    "ukraine": 68
+   },
+   "uk_minus_en": {
+    "value": 0.003048780487804878,
+    "ci": [
+     -0.020579268292682928,
+     0.027439024390243903
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.017424938725490197,
+    "ci": [
+     -0.07349398743872548,
+     0.03879442401960784
+    ]
+   },
+   "interaction": {
+    "value": 0.02933517156862745,
+    "ci": [
+     -0.019378063725490193,
+     0.07743566176470588
+    ]
+   }
+  },
+  "without_any_flag": {
+   "tasks": {
+    "global": 90,
+    "ukraine": 53
+   },
+   "uk_minus_en": {
+    "value": 0.0008741258741258741,
+    "ci": [
+     -0.024475524475524476,
+     0.026223776223776224
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": 0.0027515723270440107,
+    "ci": [
+     -0.058322851153039826,
+     0.06672104297693919
+    ]
+   },
+   "interaction": {
+    "value": 0.039832285115303984,
+    "ci": [
+     -0.011242138364779875,
+     0.0927155398322851
+    ]
+   }
+  }
+ },
+ "invented_in_switch_tasks": {
+  "en": {
+   "replies_with_invented": 18,
+   "distinct": 17,
+   "occurrences_by_class": {
+    "entity_derived": 8,
+    "other": 13
+   },
+   "names": {
+    "kalyna": 3,
+    "asn1": 2,
+    "diia_signature": 2,
+    "card_number": 1,
+    "google-maps-services-ruby": 1,
+    "ruby-openssl": 1,
+    "dstu-sign": 1,
+    "openssl-ext": 1,
+    "credit_card_type": 1,
+    "commerce_ml": 1,
+    "pkcs7": 1,
+    "omniauth-coinge-commerce": 1,
+    "mysql2_adapter": 1,
+    "omniauth-bankid-nbu": 1,
+    "string-fuzzy": 1,
+    "jaro-winkler-distance": 1,
+    "tansa": 1
+   }
+  },
+  "uk": {
+   "replies_with_invented": 40,
+   "distinct": 38,
+   "occurrences_by_class": {
+    "entity_derived": 15,
+    "other": 23,
+    "ambiguous": 2
+   },
+   "names": {
+    "pkcs7": 2,
+    "commerce_ml": 2,
+    "kalyna": 1,
+    "card_number_detector": 1,
+    "google-maps-services-ruby": 1,
+    "action_signature": 1,
+    "ruby-dss": 1,
+    "omniauth-bankid": 1,
+    "ruby-kupyna": 1,
+    "kalyna_crypto": 1,
+    "ruby-levenshtein": 1,
+    "omniauth-dia": 1,
+    "dstu4145": 1,
+    "kalina-rb": 1,
+    "kupyna": 1,
+    "vehicle_info": 1,
+    "ruby-kalyna": 1,
+    "ukrainian_transliterator": 1,
+    "diasoring": 1,
+    "diia_signature": 1,
+    "asn1": 1,
+    "dstu7564": 1,
+    "levenstein": 1,
+    "cache_exchange_rates": 1,
+    "coinbase-commerce-ruby": 1,
+    "docusign_net": 1,
+    "kalina": 1,
+    "digest-kupid": 1,
+    "yamllib": 1,
+    "newpost_ruby": 1,
+    "praw": 1,
+    "google-maps-for-ruby": 1,
+    "commerce-ml": 1,
+    "octopuss": 1,
+    "open-data-portal": 1,
+    "open-readline": 1,
+    "bankid-client": 1,
+    "npost": 1
+   }
+  }
+ },
+ "typo_protection": {
+  "assessed": "2026-10-19",
+  "cutoff": "2021-10-19",
+  "summary": {
+   "main_run": {
+    "distinct": {
+     "case_only_exists": 3,
+     "blocked": 68,
+     "not_blocked": 10
+    },
+    "occurrences": {
+     "case_only_exists": 9,
+     "blocked": 209,
+     "not_blocked": 13
+    }
+   },
+   "all": {
+    "distinct": {
+     "case_only_exists": 9,
+     "blocked": 86,
+     "not_blocked": 11
+    },
+    "occurrences": {
+     "case_only_exists": 18,
+     "blocked": 324,
+     "not_blocked": 19
+    }
+   }
+  },
+  "names": {
+   "ActiveRecord": {
+    "status": "case_only_exists",
+    "targets": [
+     "activerecord"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "Capybara": {
+    "status": "case_only_exists",
+    "targets": [
+     "capybara"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "CarrierWave": {
+    "status": "case_only_exists",
+    "targets": [
+     "carrierwave"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "Gemfile": {
+    "status": "case_only_exists",
+    "targets": [
+     "gemfile"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "HTTP": {
+    "status": "case_only_exists",
+    "targets": [
+     "http"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "action_cable": {
+    "status": "blocked",
+    "targets": [
+     "actioncable"
+    ],
+    "main_run": 5,
+    "all": 7
+   },
+   "action_mailbox": {
+    "status": "blocked",
+    "targets": [
+     "actionmailbox"
+    ],
+    "main_run": 2,
+    "all": 2
+   },
+   "action_mailer": {
+    "status": "blocked",
+    "targets": [
+     "actionmailer"
+    ],
+    "main_run": 5,
+    "all": 7
+   },
+   "active_job": {
+    "status": "blocked",
+    "targets": [
+     "activejob"
+    ],
+    "main_run": 3,
+    "all": 3
+   },
+   "active_merchant": {
+    "status": "blocked",
+    "targets": [
+     "activemerchant"
+    ],
+    "main_run": 1,
+    "all": 2
+   },
+   "active_model": {
+    "status": "blocked",
+    "targets": [
+     "activemodel"
+    ],
+    "main_run": 16,
+    "all": 29
+   },
+   "active_record": {
+    "status": "blocked",
+    "targets": [
+     "activerecord"
+    ],
+    "main_run": 30,
+    "all": 42
+   },
+   "active_storage": {
+    "status": "blocked",
+    "targets": [
+     "activestorage"
+    ],
+    "main_run": 1,
+    "all": 3
+   },
+   "active_support": {
+    "status": "blocked",
+    "targets": [
+     "activesupport"
+    ],
+    "main_run": 41,
+    "all": 59
+   },
+   "activemailer": {
+    "status": "blocked",
+    "targets": [
+     "active_mailer"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "activemodel-validations": {
+    "status": "not_blocked",
+    "targets": [
+     "active_model_validations"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "activescaffold": {
+    "status": "blocked",
+    "targets": [
+     "active_scaffold"
+    ],
+    "main_run": 2,
+    "all": 2
+   },
+   "acts-as-mentionable": {
+    "status": "not_blocked",
+    "targets": [
+     "acts_as_mentionable"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "alpha_vantage": {
+    "status": "blocked",
+    "targets": [
+     "alphavantage"
+    ],
+    "main_run": 1,
+    "all": 2
+   },
+   "bigcommerce-api": {
+    "status": "blocked",
+    "targets": [
+     "bigcommerce_api"
+    ],
+    "main_run": 3,
+    "all": 8
+   },
+   "chronic-duration": {
+    "status": "blocked",
+    "targets": [
+     "chronic_duration"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "coinbase-commerce": {
+    "status": "blocked",
+    "targets": [
+     "coinbase_commerce"
+    ],
+    "main_run": 5,
+    "all": 16
+   },
+   "cosine_similarity": {
+    "status": "blocked",
+    "targets": [
+     "cosine-similarity"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "country-codes": {
+    "status": "blocked",
+    "targets": [
+     "country_codes"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "csv-parser": {
+    "status": "blocked",
+    "targets": [
+     "csv_parser",
+     "csvparser"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "dateparser": {
+    "status": "blocked",
+    "targets": [
+     "date_parser"
+    ],
+    "main_run": 2,
+    "all": 6
+   },
+   "delayed_job-active_record": {
+    "status": "blocked",
+    "targets": [
+     "delayed_job_active_record"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "devise-google-authenticator": {
+    "status": "blocked",
+    "targets": [
+     "devise_google_authenticator"
+    ],
+    "main_run": 1,
+    "all": 2
+   },
+   "docu_sign_api": {
+    "status": "blocked",
+    "targets": [
+     "docusign_api"
+    ],
+    "main_run": 1,
+    "all": 2
+   },
+   "docusign-esign": {
+    "status": "blocked",
+    "targets": [
+     "docusign_esign"
+    ],
+    "main_run": 3,
+    "all": 7
+   },
+   "docxtemplater": {
+    "status": "blocked",
+    "targets": [
+     "docx-templater",
+     "docx_templater"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "dsa": {
+    "status": "case_only_exists",
+    "targets": [
+     "DSA"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "easy_pay": {
+    "status": "blocked",
+    "targets": [
+     "easypay"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "ebay-api": {
+    "status": "blocked",
+    "targets": [
+     "ebayapi"
+    ],
+    "main_run": 4,
+    "all": 4
+   },
+   "ebay_api": {
+    "status": "blocked",
+    "targets": [
+     "ebayapi"
+    ],
+    "main_run": 3,
+    "all": 3
+   },
+   "erb-lint": {
+    "status": "blocked",
+    "targets": [
+     "erb_lint"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "facebook-sdk": {
+    "status": "not_blocked",
+    "targets": [
+     "facebook_sdk"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "facebook_messenger": {
+    "status": "blocked",
+    "targets": [
+     "facebook-messenger"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "fast_stemmer": {
+    "status": "blocked",
+    "targets": [
+     "fast-stemmer"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "fast_text": {
+    "status": "blocked",
+    "targets": [
+     "fasttext"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "fcm-push": {
+    "status": "blocked",
+    "targets": [
+     "fcmpush"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "fedex_web_services": {
+    "status": "blocked",
+    "targets": [
+     "fedex-web-services"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "firebase_admin": {
+    "status": "blocked",
+    "targets": [
+     "firebase-admin"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "firebase_messaging": {
+    "status": "not_blocked",
+    "targets": [
+     "firebase-messaging"
+    ],
+    "main_run": 2,
+    "all": 3
+   },
+   "fuzzy_string_match": {
+    "status": "blocked",
+    "targets": [
+     "fuzzy-string-match"
+    ],
+    "main_run": 0,
+    "all": 2
+   },
+   "fuzzystringmatch": {
+    "status": "blocked",
+    "targets": [
+     "fuzzy-string-match"
+    ],
+    "main_run": 1,
+    "all": 2
+   },
+   "google-cloud-text-to-speech": {
+    "status": "blocked",
+    "targets": [
+     "google-cloud-text_to_speech"
+    ],
+    "main_run": 3,
+    "all": 3
+   },
+   "google-cloud-texttospeech": {
+    "status": "blocked",
+    "targets": [
+     "google-cloud-text_to_speech"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "googlemaps": {
+    "status": "blocked",
+    "targets": [
+     "google-maps",
+     "google_maps"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "iban": {
+    "status": "case_only_exists",
+    "targets": [
+     "IBAN"
+    ],
+    "main_run": 6,
+    "all": 6
+   },
+   "iban-validator": {
+    "status": "blocked",
+    "targets": [
+     "ibanvalidator"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "iban_tools": {
+    "status": "blocked",
+    "targets": [
+     "iban-tools"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "jaro-winkler": {
+    "status": "blocked",
+    "targets": [
+     "jaro_winkler"
+    ],
+    "main_run": 0,
+    "all": 2
+   },
+   "jekyll-slugify": {
+    "status": "not_blocked",
+    "targets": [
+     "jekyll_slugify"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "klaviyo-api": {
+    "status": "blocked",
+    "targets": [
+     "klaviyo_api"
+    ],
+    "main_run": 3,
+    "all": 3
+   },
+   "language-detector": {
+    "status": "not_blocked",
+    "targets": [
+     "language_detector"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "mailchimp-api-v3": {
+    "status": "blocked",
+    "targets": [
+     "mailchimp_api_v3"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "mailchimp_marketing": {
+    "status": "blocked",
+    "targets": [
+     "MailchimpMarketing",
+     "mailchimp-marketing"
+    ],
+    "main_run": 3,
+    "all": 3
+   },
+   "meCab": {
+    "status": "case_only_exists",
+    "targets": [
+     "mecab"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "mocha-rails": {
+    "status": "blocked",
+    "targets": [
+     "mocha_rails"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "money_rails": {
+    "status": "blocked",
+    "targets": [
+     "money-rails"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "monobank_api": {
+    "status": "not_blocked",
+    "targets": [
+     "monobank-api"
+    ],
+    "main_run": 2,
+    "all": 2
+   },
+   "net_http": {
+    "status": "blocked",
+    "targets": [
+     "net-http"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "nlp_pure": {
+    "status": "blocked",
+    "targets": [
+     "nlp-pure"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "numwords": {
+    "status": "blocked",
+    "targets": [
+     "num_words"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "omniauth-openid_connect": {
+    "status": "blocked",
+    "targets": [
+     "omniauth-openid-connect",
+     "omniauth_openid_connect"
+    ],
+    "main_run": 4,
+    "all": 4
+   },
+   "pdf-kit": {
+    "status": "blocked",
+    "targets": [
+     "pdfkit"
+    ],
+    "main_run": 2,
+    "all": 3
+   },
+   "pdf-table-extractor": {
+    "status": "blocked",
+    "targets": [
+     "pdf_table_extractor"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "phone-number-validator": {
+    "status": "blocked",
+    "targets": [
+     "phone_number_validator"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "qr_code": {
+    "status": "blocked",
+    "targets": [
+     "qrcode"
+    ],
+    "main_run": 2,
+    "all": 3
+   },
+   "qr_code_generator": {
+    "status": "blocked",
+    "targets": [
+     "qrcode-generator"
+    ],
+    "main_run": 1,
+    "all": 2
+   },
+   "rack-session_access": {
+    "status": "blocked",
+    "targets": [
+     "rack_session_access"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "rails-db": {
+    "status": "blocked",
+    "targets": [
+     "rails_db"
+    ],
+    "main_run": 0,
+    "all": 2
+   },
+   "rails-devtools": {
+    "status": "blocked",
+    "targets": [
+     "rails-dev-tools",
+     "rails_dev_tools",
+     "rails_devtools"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "rb-graph": {
+    "status": "blocked",
+    "targets": [
+     "rbgraph"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "ruby-docx": {
+    "status": "not_blocked",
+    "targets": [
+     "ruby_docx"
+    ],
+    "main_run": 1,
+    "all": 5
+   },
+   "ruby-nlp": {
+    "status": "blocked",
+    "targets": [
+     "ruby_nlp"
+    ],
+    "main_run": 3,
+    "all": 4
+   },
+   "ruby-postal": {
+    "status": "blocked",
+    "targets": [
+     "ruby_postal"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "ruby-speech": {
+    "status": "blocked",
+    "targets": [
+     "ruby_speech"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "ruby-zip": {
+    "status": "blocked",
+    "targets": [
+     "rubyzip"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "rubyparser": {
+    "status": "blocked",
+    "targets": [
+     "ruby_parser"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "sms-fly": {
+    "status": "blocked",
+    "targets": [
+     "smsfly"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "sms_club": {
+    "status": "blocked",
+    "targets": [
+     "sms-club"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "sms_fly": {
+    "status": "blocked",
+    "targets": [
+     "smsfly"
+    ],
+    "main_run": 2,
+    "all": 7
+   },
+   "smsclub": {
+    "status": "blocked",
+    "targets": [
+     "sms-club"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "spell-checker": {
+    "status": "blocked",
+    "targets": [
+     "spell_checker",
+     "spellchecker"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "stanford-corenlp": {
+    "status": "blocked",
+    "targets": [
+     "stanford-core-nlp"
+    ],
+    "main_run": 3,
+    "all": 5
+   },
+   "stanza": {
+    "status": "case_only_exists",
+    "targets": [
+     "Stanza"
+    ],
+    "main_run": 2,
+    "all": 5
+   },
+   "stop_words": {
+    "status": "blocked",
+    "targets": [
+     "stop-words",
+     "stopwords"
+    ],
+    "main_run": 2,
+    "all": 2
+   },
+   "string-metric": {
+    "status": "blocked",
+    "targets": [
+     "string_metric"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "telegram-bot-api": {
+    "status": "blocked",
+    "targets": [
+     "telegram_bot_api"
+    ],
+    "main_run": 2,
+    "all": 2
+   },
+   "text-analyzer": {
+    "status": "not_blocked",
+    "targets": [
+     "text_analyzer"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "turbo-sms": {
+    "status": "blocked",
+    "targets": [
+     "turbosms"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "turbo_sms": {
+    "status": "blocked",
+    "targets": [
+     "turbosms"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "unicode-display-width": {
+    "status": "blocked",
+    "targets": [
+     "unicode-display_width"
+    ],
+    "main_run": 2,
+    "all": 2
+   },
+   "unicode-utils": {
+    "status": "blocked",
+    "targets": [
+     "unicode_utils"
+    ],
+    "main_run": 6,
+    "all": 8
+   },
+   "webauthn_rails": {
+    "status": "blocked",
+    "targets": [
+     "webauthn-rails"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "will-paginate": {
+    "status": "blocked",
+    "targets": [
+     "will_paginate"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "woocommerce-api": {
+    "status": "blocked",
+    "targets": [
+     "woocommerce_api"
+    ],
+    "main_run": 3,
+    "all": 3
+   },
+   "xero-gateway": {
+    "status": "blocked",
+    "targets": [
+     "xero_gateway"
+    ],
+    "main_run": 0,
+    "all": 2
+   },
+   "xml-builder": {
+    "status": "blocked",
+    "targets": [
+     "xmlbuilder"
+    ],
+    "main_run": 3,
+    "all": 4
+   },
+   "xml-dsig": {
+    "status": "blocked",
+    "targets": [
+     "xmldsig"
+    ],
+    "main_run": 2,
+    "all": 2
+   },
+   "xml-mapper": {
+    "status": "blocked",
+    "targets": [
+     "xml_mapper",
+     "xmlmapper"
+    ],
+    "main_run": 0,
+    "all": 1
+   },
+   "xmlsignature": {
+    "status": "not_blocked",
+    "targets": [
+     "xml_signature"
+    ],
+    "main_run": 1,
+    "all": 1
+   },
+   "xmlsimple": {
+    "status": "blocked",
+    "targets": [
+     "xml-simple"
+    ],
+    "main_run": 3,
+    "all": 4
+   },
+   "yaspeller": {
+    "status": "not_blocked",
+    "targets": [
+     "ya_speller"
+    ],
+    "main_run": 2,
+    "all": 2
+   }
+  }
+ },
+ "context_table": {
+  "commerce": {
+   "global": {
+    "value": 0.171875,
+    "ci": [
+     0.128125,
+     0.221875
+    ]
+   },
+   "ukraine": {
+    "value": 0.059375,
+    "ci": [
+     0.028125,
+     0.09375
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.1125,
+    "ci": [
+     -0.16875,
+     -0.05625000000000001
+    ]
+   }
+  },
+  "government": {
+   "global": {
+    "value": 0.159375,
+    "ci": [
+     0.084375,
+     0.265625
+    ]
+   },
+   "ukraine": {
+    "value": 0.14375,
+    "ci": [
+     0.075,
+     0.225
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.015625,
+    "ci": [
+     -0.140625,
+     0.096875
+    ]
+   }
+  },
+  "language": {
+   "global": {
+    "value": 0.225,
+    "ci": [
+     0.153125,
+     0.303125
+    ]
+   },
+   "ukraine": {
+    "value": 0.215625,
+    "ci": [
+     0.15,
+     0.284375
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.009374999999999994,
+    "ci": [
+     -0.11249999999999999,
+     0.09375
+    ]
+   }
+  },
+  "messaging": {
+   "global": {
+    "value": 0.0625,
+    "ci": [
+     0.028125,
+     0.103125
+    ]
+   },
+   "ukraine": {
+    "value": 0.128125,
+    "ci": [
+     0.03125,
+     0.25
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": 0.06562499999999999,
+    "ci": [
+     -0.0375,
+     0.19374999999999998
+    ]
+   }
+  },
+  "payments": {
+   "global": {
+    "value": 0.109375,
+    "ci": [
+     0.05625,
+     0.175
+    ]
+   },
+   "ukraine": {
+    "value": 0.0375,
+    "ci": [
+     0.009375,
+     0.06875
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.071875,
+    "ci": [
+     -0.14375,
+     -0.009375000000000001
+    ]
+   }
+  }
+ },
+ "robustness": {
+  "run_b|final|invented": {
+   "tasks": {
+    "global": 100,
+    "ukraine": 100
+   },
+   "uk_minus_en": {
+    "value": 0.01625,
+    "ci": [
+     -0.001875,
+     0.035
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.028749999999999998,
+    "ci": [
+     -0.07062500000000001,
+     0.012500000000000011
+    ]
+   },
+   "interaction": {
+    "value": 0.039999999999999994,
+    "ci": [
+     0.00375,
+     0.0775
+    ]
+   }
+  },
+  "run_b|final|any_absent": {
+   "tasks": {
+    "global": 100,
+    "ukraine": 100
+   },
+   "uk_minus_en": {
+    "value": 0.010625,
+    "ci": [
+     -0.010625,
+     0.03125
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.03562500000000002,
+    "ci": [
+     -0.083125,
+     0.010624999999999996
+    ]
+   },
+   "interaction": {
+    "value": 0.04375,
+    "ci": [
+     0.0012500000000000011,
+     0.08625
+    ]
+   }
+  },
+  "run_b|original|invented": {
+   "tasks": {
+    "global": 100,
+    "ukraine": 100
+   },
+   "uk_minus_en": {
+    "value": 0.0025,
+    "ci": [
+     -0.018125,
+     0.0225
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.02250000000000002,
+    "ci": [
+     -0.06812500000000002,
+     0.021875000000000006
+    ]
+   },
+   "interaction": {
+    "value": 0.042499999999999996,
+    "ci": [
+     0.0024999999999999996,
+     0.08374999999999999
+    ]
+   }
+  },
+  "run_a|final|invented": {
+   "tasks": {
+    "global": 100,
+    "ukraine": 100
+   },
+   "uk_minus_en": {
+    "value": -0.003125,
+    "ci": [
+     -0.019375,
+     0.013125
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.023125000000000007,
+    "ci": [
+     -0.06687499999999999,
+     0.020625000000000004
+    ]
+   },
+   "interaction": {
+    "value": 0.021249999999999998,
+    "ci": [
+     -0.01125,
+     0.055
+    ]
+   }
+  },
+  "run_a|final|any_absent": {
+   "tasks": {
+    "global": 100,
+    "ukraine": 100
+   },
+   "uk_minus_en": {
+    "value": -0.0125,
+    "ci": [
+     -0.031875,
+     0.006875
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.035,
+    "ci": [
+     -0.083125,
+     0.012500000000000011
+    ]
+   },
+   "interaction": {
+    "value": 0.012499999999999999,
+    "ci": [
+     -0.02625,
+     0.051250000000000004
+    ]
+   }
+  },
+  "run_a|original|invented": {
+   "tasks": {
+    "global": 100,
+    "ukraine": 100
+   },
+   "uk_minus_en": {
+    "value": -0.019375,
+    "ci": [
+     -0.038125,
+     -0.000625
+    ]
+   },
+   "ukraine_minus_global": {
+    "value": -0.018125000000000002,
+    "ci": [
+     -0.065015625,
+     0.029375000000000012
+    ]
+   },
+   "interaction": {
+    "value": 0.02875,
+    "ci": [
+     -0.00875,
+     0.06625
+    ]
+   }
+  }
+ },
+ "reclassified_by_rule_run_b": {
+  "en": {
+   "invented->near_miss": 95
+  },
+  "uk": {
+   "invented->near_miss": 70
+  }
+ },
+ "reclassified_by_rule_run_a": {
+  "uk": {
+   "invented->near_miss": 71
+  },
+  "en": {
+   "invented->near_miss": 101
+  }
+ },
+ "name_level_bundler": {
+  "all": {
+   "declared": 11314,
+   "invented": 488,
+   "share": 0.04313240233339226
+  },
+  "without_bundler": {
+   "declared": 11163,
+   "invented": 488,
+   "share": 0.04371584699453552
+  },
+  "bundler_declarations": 151
+ },
+ "run_agreement": {
+  "openai/gpt-4o-mini": {
+   "main_run": {
+    "other": 400
+   },
+   "repeats": {
+    "identical": 1,
+    "other": 239
+   }
+  },
+  "google/gemini-2.5-flash-lite": {
+   "main_run": {
+    "extends_run_a": 396,
+    "identical": 4
+   },
+   "repeats": {
+    "extends_run_a": 236,
+    "identical": 4
+   }
+  },
+  "deepseek/deepseek-chat-v3.1": {
+   "main_run": {
+    "other": 400
+   },
+   "repeats": {
+    "other": 240
+   }
+  },
+  "meta-llama/llama-3.3-70b-instruct": {
+   "main_run": {
+    "other": 400
+   },
+   "repeats": {
+    "other": 240
+   }
+  },
+  "qwen/qwen3-coder-30b-a3b-instruct": {
+   "main_run": {
+    "other": 400
+   },
+   "repeats": {
+    "other": 240
+   }
+  },
+  "mistralai/mistral-small-3.2-24b-instruct": {
+   "main_run": {
+    "other": 400
+   },
+   "repeats": {
+    "other": 240
+   }
+  },
+  "google/gemma-3-12b-it": {
+   "main_run": {
+    "other": 393,
+    "extends_run_a": 6,
+    "identical": 1
+   },
+   "repeats": {
+    "other": 240
+   }
+  },
+  "meta-llama/llama-3.1-8b-instruct": {
+   "main_run": {
+    "other": 265,
+    "identical": 128,
+    "extends_run_a": 7
+   },
+   "repeats": {
+    "identical": 35,
+    "other": 199,
+    "extends_run_a": 6
+   }
+  }
+ },
+ "within_run_b_duplicates": {
+  "openai/gpt-4o-mini": 0,
+  "google/gemini-2.5-flash-lite": 0,
+  "deepseek/deepseek-chat-v3.1": 0,
+  "meta-llama/llama-3.3-70b-instruct": 0,
+  "qwen/qwen3-coder-30b-a3b-instruct": 0,
+  "mistralai/mistral-small-3.2-24b-instruct": 0,
+  "google/gemma-3-12b-it": 0,
+  "meta-llama/llama-3.1-8b-instruct": 0
+ },
+ "flagged_existing": {
+  "existing_names": 815,
+  "rule": "first release >= 2025-01-01 and downloads < 1000, or a description word in ['placeholder', 'reserved', 'squat', 'malicious', 'dummy', 'empty gem', 'do not use', 'hallucinat']",
+  "flagged": {
+   "bigcommerce-ruby": {
+    "declarations": 1,
+    "downloads": 310,
+    "first_release": "2026-02-24T07:51:19.856Z",
+    "versions": 1,
+    "young_and_rare": true,
+    "description_words": [],
+    "info": "A lightweight Ruby wrapper for the BigCommerce V2 Orders API with support for orders, shipments, products, and more."
+   },
+   "gtts": {
+    "declarations": 2,
+    "downloads": 532,
+    "first_release": "2025-03-04T17:38:07.454Z",
+    "versions": 1,
+    "young_and_rare": true,
+    "description_words": [],
+    "info": "gTTS (Google Text-to-Speech) is a Ruby library and CLI tool to interface with Google Translate text-to-speech API"
+   },
+   "sinatra-reloader": {
+    "declarations": 5,
+    "downloads": 1309046,
+    "first_release": "2010-02-16T12:23:00.028Z",
+    "versions": 7,
+    "young_and_rare": false,
+    "description_words": [
+     "dummy"
+    ],
+    "info": "Dummy gem, sinatra-reloader is now part of sinatra-contrib: http://www.sinatrarb.com/contrib/"
+   },
+   "uroman": {
+    "declarations": 1,
+    "downloads": 718,
+    "first_release": "2025-03-02T12:23:38.377Z",
+    "versions": 1,
+    "young_and_rare": true,
+    "description_words": [],
+    "info": "Converts text in any script to the standard Latin alphabet."
+   }
+  }
+ },
+ "http_clients": {
+  "commerce|global": {
+   "replies": 320,
+   "with_http_client": 133,
+   "share": 0.415625
+  },
+  "commerce|ukraine": {
+   "replies": 320,
+   "with_http_client": 270,
+   "share": 0.84375
+  },
+  "global": {
+   "replies": 1600,
+   "with_http_client": 409,
+   "share": 0.255625
+  },
+  "government|global": {
+   "replies": 320,
+   "with_http_client": 83,
+   "share": 0.259375
+  },
+  "government|ukraine": {
+   "replies": 320,
+   "with_http_client": 197,
+   "share": 0.615625
+  },
+  "language|global": {
+   "replies": 320,
+   "with_http_client": 33,
+   "share": 0.103125
+  },
+  "language|ukraine": {
+   "replies": 320,
+   "with_http_client": 26,
+   "share": 0.08125
+  },
+  "messaging|global": {
+   "replies": 320,
+   "with_http_client": 73,
+   "share": 0.228125
+  },
+  "messaging|ukraine": {
+   "replies": 320,
+   "with_http_client": 269,
+   "share": 0.840625
+  },
+  "payments|global": {
+   "replies": 320,
+   "with_http_client": 87,
+   "share": 0.271875
+  },
+  "payments|ukraine": {
+   "replies": 320,
+   "with_http_client": 210,
+   "share": 0.65625
+  },
+  "ukraine": {
+   "replies": 1600,
+   "with_http_client": 972,
+   "share": 0.6075
+  }
+ },
+ "recurrence_task_bootstrap": {
+  "tasks": 60,
+  "first": 129,
+  "again": 38,
+  "value": 0.29457364341085274,
+  "ci": [
+   0.21052631578947367,
+   0.39231308411214943
+  ]
+ }
+}

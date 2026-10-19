@@ -144,3 +144,72 @@ def test_exposure_contrasts():
 def test_install_commands_skip_placeholders_paths_and_call_syntax():
     text = "system('gem install pcsc smartcard')\nRun `gem install ...` and `gem install -r ./`."
     assert extract.parse(text).declared == ("pcsc", "smartcard")
+
+
+def _near(name):
+    return {"model": "m", "task": "t", "lang": "en", "sample": 0, "classes": {name: "near_miss"}}
+
+
+def test_typo_protection_follows_gem_typo_predicate():
+    from datetime import datetime, timezone
+
+    from rubydeps import revision
+
+    assessed = datetime(2026, 10, 19, tzinfo=timezone.utc)
+    index = {"activesupport", "rare_old", "rare-new", "Capybara".lower(), "edge"}
+    details = {
+        "activesupport": {"downloads": 10_000, "latest_release": "2001-01-01T00:00:00Z"},
+        "rare_old": {"downloads": 9_999, "latest_release": "2021-10-18T23:59:59Z"},
+        "edge": {"downloads": 0, "latest_release": "2021-10-19T00:00:00Z"},
+        "rare-new": {"downloads": 5, "latest_release": "2021-10-20T00:00:00Z"},
+    }
+    labelled = [_near(n) for n in ("active_support", "rareold", "rare_new", "Capybara", "e-dge")]
+    names = revision.typo_protection(labelled, index, details, assessed)["names"]
+    assert names["active_support"]["status"] == "blocked"
+    assert names["rareold"]["status"] == "not_blocked"
+    assert names["rare_new"]["status"] == "blocked"
+    assert names["Capybara"]["status"] == "case_only_exists"
+    assert names["e-dge"]["status"] == "blocked"
+
+
+def test_agreement_kappa(tmp_path):
+    from rubydeps import revision
+
+    path = tmp_path / "a.csv"
+    rows = ["id,coder,name_script_switch,en_has_cyrillic,content_differs,note"]
+    for i, (a, b) in enumerate([(1, 1), (0, 0), (1, 0), (0, 0)]):
+        rows += [f"t{i},A,{a},0,0,", f"t{i},B,{b},0,0,"]
+    path.write_text("\n".join(rows) + "\n")
+    res = revision.agreement(path)["name_script_switch"]
+    assert res["agreement"] == 0.75
+    assert res["kappa"] == pytest.approx(0.5)
+
+
+def test_task_coding_covers_every_task():
+    from rubydeps import revision
+
+    coding = revision.load_coding(DATA / "task_coding.csv")
+    assert set(coding) == {t.id for t in tasks.load(DATA / "tasks.jsonl")}
+
+
+def test_script_estimate_and_sign_flip():
+    import numpy as np
+
+    from rubydeps import runc_analysis
+
+    res = runc_analysis.estimate(np.array([0.5] * 20), test=True)
+    assert res["value"] == 0.5
+    assert res["p_sign_flip"] < 0.001
+    null = runc_analysis.estimate(np.array([0.5, -0.5] * 10), test=True)
+    assert null["p_sign_flip"] > 0.5
+
+
+def test_script_variants_change_only_the_named_tasks():
+    from rubydeps import runc
+
+    variants = runc.script_tasks(tasks.load(DATA / "tasks.jsonl"), DATA / "script_tasks.jsonl")
+    coding = __import__("rubydeps.revision", fromlist=["load_coding"]).load_coding(DATA / "task_coding.csv")
+    assert set(variants) == {i for i, c in coding.items() if c["name_script_switch"]}
+    for arms in variants.values():
+        assert arms["latin"].text["uk"] != arms["cyrillic"].text["uk"]
+        assert arms["latin"].text["en"] == arms["cyrillic"].text["en"]

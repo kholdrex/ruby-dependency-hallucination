@@ -21,6 +21,8 @@ class Reply:
     response_id: str
     served_model: str
     created: int
+    cost: float = 0.0
+    reasoning_tokens: int = 0
 
 
 class OpenRouter:
@@ -29,16 +31,26 @@ class OpenRouter:
         self.session.headers["Authorization"] = f"Bearer {os.environ['OPENROUTER_API_KEY']}"
 
     def chat(
-        self, model: str, provider: str, messages: list[dict], temperature: float, max_tokens: int, seed: int
+        self,
+        model: str,
+        provider: str,
+        messages: list[dict],
+        temperature: float | None,
+        max_tokens: int,
+        seed: int | None,
     ) -> Reply:
+        """temperature or seed None: the parameter is not sent (endpoints that do not support it)."""
         body = {
             "model": model,
             "messages": messages,
-            "temperature": temperature,
             "max_tokens": max_tokens,
-            "seed": seed,
             "provider": {"order": [provider], "allow_fallbacks": False},
+            "usage": {"include": True},
         }
+        if temperature is not None:
+            body["temperature"] = temperature
+        if seed is not None:
+            body["seed"] = seed
         start = time.perf_counter()
         for attempt in range(RETRIES):
             try:
@@ -60,6 +72,8 @@ class OpenRouter:
                     data.get("id", ""),
                     data.get("model", ""),
                     data.get("created", 0),
+                    float(usage.get("cost") or 0.0),
+                    int((usage.get("completion_tokens_details") or {}).get("reasoning_tokens") or 0),
                 )
             time.sleep(min(2**attempt, 60))
         raise RuntimeError(f"{model}: no reply after {RETRIES} attempts")

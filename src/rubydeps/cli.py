@@ -35,6 +35,46 @@ def cmd_analyze(_):
     analysis.main(tasks.load(DATA / "tasks.jsonl"), RESULTS, ROOT / "figures")
 
 
+def cmd_revision(_):
+    from . import revision
+
+    revision.main(tasks.load(DATA / "tasks.jsonl"), ROOT)
+
+
+def cmd_runc(args):
+    from . import runc
+
+    all_tasks = tasks.load(DATA / "tasks.jsonl")
+    variants = runc.script_tasks(all_tasks, DATA / "script_tasks.jsonl")
+    folder = RESULTS / "run-c"
+    folder.mkdir(exist_ok=True)
+    pilot, replies = folder / "pilot.jsonl", folder / "replies.jsonl"
+    if args.stage == "pilot":
+        first = dict(list(variants.items())[:3])
+        pilot_main = [t for t in all_tasks if t.id.endswith("01")][:2]
+        jobs = runc.jobs_script(args.models, first, pilot=True) + runc.jobs_main(args.models, pilot_main, pilot=True)
+        runc.run(jobs, pilot, [pilot, replies])
+        return
+    if args.stage == "script":
+        jobs = runc.jobs_script(args.models, variants)
+    else:
+        main_tasks = [t for t in all_tasks if t.context == "ukraine"] if args.ukraine_only else all_tasks
+        jobs = runc.jobs_main(args.models, main_tasks)
+    runc.run(jobs, replies, [pilot, replies])
+
+
+def cmd_runc_check(_):
+    from . import runc_analysis
+
+    runc_analysis.check_registry(RESULTS / "run-c")
+
+
+def cmd_runc_analyze(_):
+    from . import runc_analysis
+
+    runc_analysis.main(tasks.load(DATA / "tasks.jsonl"), ROOT)
+
+
 def main():
     parser = argparse.ArgumentParser(prog="rubydeps")
     sub = parser.add_subparsers(required=True)
@@ -44,6 +84,14 @@ def main():
     run.set_defaults(func=cmd_run)
     sub.add_parser("check").set_defaults(func=cmd_check)
     sub.add_parser("analyze").set_defaults(func=cmd_analyze)
+    sub.add_parser("revision").set_defaults(func=cmd_revision)
+    runc_parser = sub.add_parser("runc")
+    runc_parser.add_argument("stage", choices=["pilot", "script", "main"])
+    runc_parser.add_argument("--models", nargs="+", required=True)
+    runc_parser.add_argument("--ukraine-only", action="store_true")
+    runc_parser.set_defaults(func=cmd_runc)
+    sub.add_parser("runc-check").set_defaults(func=cmd_runc_check)
+    sub.add_parser("runc-analyze").set_defaults(func=cmd_runc_analyze)
     args = parser.parse_args()
     args.func(args)
 

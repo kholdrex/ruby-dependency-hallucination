@@ -112,3 +112,101 @@ Corrections after the run B analysis (2026-10-13):
   counts, the exposure analyses and the secondary outcome were recomputed, and the primary outcome is unchanged.
 - The extraction rules above overstate the implementation in two respects: a `gem` line with mismatched quotes is
   counted, and `=begin`/`=end` block comments are not recognised. No run B declaration is affected by either.
+
+## Revision after the review (2026-10-19): post hoc analyses
+
+These analyses were specified after reviewers pointed out wording asymmetries and other issues; they are post hoc and
+exploratory, assess sensitivity to how the tasks were worded and to analysis choices, and do not replace the results
+above (`rubydeps revision` → `results/revision.json`).
+
+Task coding (`data/task_coding.csv`; both annotations in `data/task_coding_annotations.csv`). Two LLM annotators
+(A: Claude, B: GPT via Codex) coded the 200 pairs from the task texts only, without replies or results, by three rules:
+- name_script_switch: the English wording contains, in Latin script, the proper name of a specific service, company,
+  product, app, platform, standard, algorithm, register, organisation or institution (including its acronym), and the
+  Ukrainian wording does not contain that name in Latin script (it gives it in Cyrillic or not at all); not counted:
+  countries, languages, cities, nationalities, generic terms, formats and identifier types, and names the Ukrainian
+  wording keeps in Latin script;
+- en_has_cyrillic: the English wording contains Cyrillic;
+- content_differs: the wordings ask for something materially different beyond language and script.
+Disagreements on name_script_switch (2 of 200) were resolved by the rule text; content_differs is the union of the two
+annotations. Agreement and kappa per flag are reported.
+
+Analyses:
+- UK − EN by context × name_script_switch, with a bootstrap over the tasks of each stratum; the language contrast,
+  context gap and interaction without the name-switch tasks and without any flagged task, for run B, run A and the
+  any-absent outcome, with a bootstrap over tasks within category × context;
+- invented names in replies to name-switch tasks by language, coded by one LLM annotator (Claude) as derived from the
+  switched name (any spelling, transliteration or translation), other or ambiguous
+  (`data/switch_task_invented_names.csv`);
+- the share of main-run replies that declare a general HTTP client (httparty, faraday, rest-client, http, excon,
+  typhoeus, httpclient, net-http-persistent) by category and context;
+- the recurrence share of invented names from the first reply with an interval from resampling whole repeated tasks;
+- RubyGems typo protection (`app/models/gem_typo.rb`, commit fc87b0c) applied to near misses: a name with a published
+  case-insensitive exact match is refused by name uniqueness; otherwise it is blocked when a published gem with the
+  same name after upper-casing and removing `_` and `-` has at least 10000 downloads or a most recent version created
+  within five years; the exception list is unknown and a pusher owning none of the colliding gems is assumed;
+  downloads and release dates were looked up on 2026-10-19 (`results/gem_details.json`);
+- invented-gem rate per category × context and the context difference per category with pointwise intervals;
+- run A and run B under the final and the original near-miss rule and the any-absent outcome, with the same
+  bootstrap; names reclassified between the rules; the name-level share without `bundler`;
+- agreement between runs: run B replies identical to or extending the run A reply for the same task, language and seed;
+- existing declared names flagged for inspection (first release on or after 2025-01-01 with fewer than 1000 downloads,
+  or a placeholder word in the description).
+
+## Run C: script experiment and two current models, fixed on 2026-10-19 before generation
+
+Run C was planned after the review and the post hoc analyses above; it is a new, separately reported experiment and
+does not change run B or its analyses. Code: `src/rubydeps/runc.py`; replies: `results/run-c/replies.jsonl`.
+
+### Part 1: script experiment (confirmatory)
+Question: for the same Ukrainian request, does writing the name of the service, standard or algorithm in Cyrillic
+instead of Latin script change how often a model declares an invented gem?
+
+- Tasks: the 36 name-switch tasks of `data/task_coding.csv` (32 Ukrainian-service, 4 global).
+- Arms: *cyrillic* = the Ukrainian wording of the task set; *latin* = the same wording with each switched name replaced
+  by its Latin form from the English wording, with only the grammatical changes this requires
+  (`data/script_tasks.jsonl`; in gov-u02 the instrumental case is rephrased as "за допомогою Diia.Signature"; in lng-u01
+  the institution is written "Cabinet of Ministers", the English wording has "Cabinet"; in msg-u14 the omitted name
+  Unisender is added, so this task tests the presence of a name rather than its script and is excluded from the primary
+  analysis). The prompt template is the Ukrainian one of run B.
+- Models: the eight models of run B with the same pinned providers and settings (temperature 0.7, at most 16384
+  completion tokens, seed = sample number), samples 10 and 11 in both arms (1152 requests); and the two models of part
+  2 with sample 10 in both arms (144 requests).
+- Outcome: a reply declares at least one invented gem (final near-miss rule; extraction rules of run B). Registry
+  lookups and the list of published names are made afresh after generation.
+- Primary analysis: for each of the 35 tasks (all name-switch tasks except msg-u14), d = the difference cyrillic − latin
+  averaged over the two samples of each of the eight run-B models and then over the models (equal weights); the
+  estimate is the mean of d over tasks, with a 95% percentile interval from 10000 bootstrap resamples of tasks (seed
+  2026), and the test is a two-sided sign-flip permutation test with statistic |mean(d)| and Monte Carlo p-value
+  (1 + number of permutations with |mean| ≥ observed) / 10001 (10000 random sign vectors, seed 2026), α = 0.05; the
+  test assumes that under the null the per-task differences are symmetric about zero. Inference concerns these tasks
+  and these eight models. With 35 task clusters the power is adequate for a difference near the 8 pp seen post hoc in
+  run B (a UK − EN contrast, not cyrillic − latin) but a smaller script effect may be missed.
+- Replies: an empty reply counts as declaring no invented gem; replies stopped at the cap are kept; a request that fails
+  after the client's retries is sent again until a reply is stored, and the number of such failures is reported.
+- Schedule: all requests of a part are sent in one reproducible random order (seed 2026), so arms and models are
+  interleaved in time.
+- Secondary (descriptive): the same contrast over all 36 tasks, per model, for the Ukrainian-service tasks only, for
+  the two added models, and for the any-absent outcome; identical replies between arms or samples; the number of invented names derived from the switched name (any spelling,
+  transliteration or translation) by arm, coded from the list of names without the arm labels; the latin arm compared
+  with the English replies of run B (different runs, descriptive only).
+
+### Part 2: two current models
+- Claude Sonnet 5.5 (anthropic/claude-sonnet-5.5, provider Anthropic; the endpoint accepts neither temperature nor
+  seed, so the provider defaults are used and no seed is sent) and DeepSeek V4 Pro (deepseek/deepseek-v4-pro, provider
+  GMICloud, fp8; temperature 0.7, seed = sample number). Reasoning settings are the provider defaults; reasoning tokens
+  are recorded.
+- Main run: all 200 tasks in both languages, sample 0 (800 requests); no repeat subset.
+- Analyses: the run B analyses 1 and 2 (rates by language and context, Ukrainian − English per model with the exact
+  McNemar test, Holm correction over the two models) and the name classes, for each added model; reported separately
+  from run B and not pooled with it. Analysis code: `src/rubydeps/runc_analysis.py` (`rubydeps runc-check`,
+  `rubydeps runc-analyze`), written before generation.
+
+### Pilot and budget
+Before the main requests, a pilot of the first 3 script tasks in both arms for all ten models and 2 main-run tasks in
+both languages for the two added models, all with seed 99 (`results/run-c/pilot.jsonl`, not analysed), checks the
+endpoints and the cost per reply. The projection is the mean recorded cost per pilot reply of each model times its
+planned requests, plus the pilot cost. The total budget is 20 USD: if the projection exceeds 17 USD, part 2 is reduced
+to the 100 Ukrainian-service tasks before any part 2 main request is sent; if it still exceeds 17 USD, part 2 is limited
+to DeepSeek V4 Pro. Nothing else is changed after the pilot. The runner stops sending requests when the recorded cost
+of all run C files reaches 17 USD; the replies stored by then are analysed and the stop is reported.
