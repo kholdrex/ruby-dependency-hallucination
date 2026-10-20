@@ -84,9 +84,9 @@ def spent(paths: list[Path]) -> float:
     return sum(r.get("cost", 0.0) for p in paths for r in load_rows(p))
 
 
-def run(jobs: list[tuple], path: Path, ledger: list[Path]) -> None:
-    """Send the jobs not yet stored; a stored reply must have the same prompt. Stops when the recorded cost of all
-    run C files reaches BUDGET_STOP."""
+def run(jobs: list[tuple], path: Path, ledger: list[Path], stop: float = BUDGET_STOP) -> None:
+    """Send the jobs not yet stored; a stored reply must have the same prompt. Stops when the recorded cost of the
+    ledger files reaches stop."""
     stored = {key(r): r["prompt"] for r in load_rows(path)}
     todo = []
     for j in schedule(jobs):
@@ -104,7 +104,7 @@ def run(jobs: list[tuple], path: Path, ledger: list[Path]) -> None:
     def call(job):
         part, model, task, lang, arm, sample = job
         with lock:
-            if total[0] >= BUDGET_STOP:
+            if total[0] >= stop:
                 raise BudgetExceeded(f"recorded cost {total[0]:.2f} USD")
         cfg = settings(model)
         messages = prompts.messages(task, lang)

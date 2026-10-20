@@ -228,3 +228,35 @@ Correction (2026-10-19, after the analysis): the pilot had 68 replies, not 76 as
 reduced part 2 only; dropping Claude Sonnet 5.5 also from the script requests of part 1 was the authors' reading of
 "the two models of part 2" and was stricter than the rule required: keeping its 72 script requests was projected at
 8.26 USD in total. This reading was recorded in commit 39c1cd7 before any main request was sent.
+
+## Run D: Claude Sonnet 5.5 and the rest of DeepSeek V4 Pro, fixed on 2026-10-20 before generation
+
+Run D carries out the part of run C that the run C budget rule removed. It is a new, separately reported run; it does
+not change run B, run C or their analyses. The budget was raised by the authors after run C, on seeing that Claude
+Sonnet 5.5 had been dropped; no run D reply had been generated at that point. Code: `src/rubydeps/rund.py`,
+`src/rubydeps/rund_analysis.py` (`rubydeps rund`, `rubydeps rund-check`, `rubydeps rund-analyze`), written before
+generation; replies: `results/run-d/replies.jsonl`.
+
+- Models and settings as fixed for run C: Claude Sonnet 5.5 (provider Anthropic, provider defaults for temperature,
+  seed and reasoning) and DeepSeek V4 Pro (provider GMICloud, fp8, temperature 0.7, seed = sample number); at most 16384
+  completion tokens; the run B prompt templates.
+- Script experiment: Claude Sonnet 5.5, the 36 name-switch tasks in both arms, sample 10 (72 requests), as planned for
+  the added models in run C.
+- Main run: Claude Sonnet 5.5, all 200 tasks in both languages, sample 0 (400 requests); DeepSeek V4 Pro, the 100
+  global tasks in both languages, sample 0 (200 requests), which together with its 200 run C replies on the
+  Ukrainian-service tasks completes the run C design for this model.
+- Schedule: all 672 requests in one reproducible random order (seed 2026). No pilot: the run C pilot gave the cost per
+  reply (projection 27.66 USD for Claude Sonnet 5.5 and 1.92 USD for DeepSeek V4 Pro). The runner stops sending
+  requests when the recorded cost of run D reaches 36 USD; the replies stored by then are analysed and the stop is
+  reported.
+- Replies: empty replies count as declaring no invented gem, replies stopped at the cap are kept, and a request that
+  fails after the client's retries is sent again until a reply is stored (as in run C).
+- Registry: names of all run D replies and of the run C DeepSeek V4 Pro main-run replies are looked up afresh after
+  generation (`results/run-d/registry.json`, list of published names `results/run-d/rubygems_names.txt.gz`); the run C
+  DeepSeek V4 Pro replies are labelled again with these lookups, and names whose class changed are listed.
+- Analyses (`results/run-d/summary.json`): for each of the two models over all 200 tasks, the run B analyses 1 and 2
+  (rates by language and context; Ukrainian − English with a task bootstrap and the exact McNemar test, Holm correction
+  over the two models) and the name classes; for DeepSeek V4 Pro the Ukrainian-service half comes from run C, a day
+  earlier, so its context contrast mixes two generation days. Script experiment of Claude Sonnet 5.5: the cyrillic −
+  latin difference over the 35 primary tasks with a task-bootstrap interval and the any-absent outcome, descriptive
+  only (one model, one sample). Results are reported separately from run B and not pooled with it.

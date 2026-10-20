@@ -75,6 +75,29 @@ def cmd_runc_analyze(_):
     runc_analysis.main(tasks.load(DATA / "tasks.jsonl"), ROOT)
 
 
+def cmd_rund(_):
+    from . import runc, rund
+
+    all_tasks = tasks.load(DATA / "tasks.jsonl")
+    variants = runc.script_tasks(all_tasks, DATA / "script_tasks.jsonl")
+    folder = RESULTS / "run-d"
+    folder.mkdir(exist_ok=True)
+    replies = folder / "replies.jsonl"
+    runc.run(rund.jobs(all_tasks, variants), replies, [replies], rund.BUDGET_STOP)
+
+
+def cmd_rund_check(_):
+    from . import rund_analysis
+
+    rund_analysis.check_registry(ROOT)
+
+
+def cmd_rund_analyze(_):
+    from . import rund_analysis
+
+    rund_analysis.main(tasks.load(DATA / "tasks.jsonl"), ROOT)
+
+
 def main():
     parser = argparse.ArgumentParser(prog="rubydeps")
     sub = parser.add_subparsers(required=True)
@@ -92,6 +115,9 @@ def main():
     runc_parser.set_defaults(func=cmd_runc)
     sub.add_parser("runc-check").set_defaults(func=cmd_runc_check)
     sub.add_parser("runc-analyze").set_defaults(func=cmd_runc_analyze)
+    sub.add_parser("rund").set_defaults(func=cmd_rund)
+    sub.add_parser("rund-check").set_defaults(func=cmd_rund_check)
+    sub.add_parser("rund-analyze").set_defaults(func=cmd_rund_analyze)
     args = parser.parse_args()
     args.func(args)
 

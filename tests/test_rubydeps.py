@@ -213,3 +213,16 @@ def test_script_variants_change_only_the_named_tasks():
     for arms in variants.values():
         assert arms["latin"].text["uk"] != arms["cyrillic"].text["uk"]
         assert arms["latin"].text["en"] == arms["cyrillic"].text["en"]
+
+
+def test_run_d_jobs():
+    from rubydeps import runc, rund
+
+    all_tasks = tasks.load(DATA / "tasks.jsonl")
+    jobs = rund.jobs(all_tasks, runc.script_tasks(all_tasks, DATA / "script_tasks.jsonl"))
+    from collections import Counter
+
+    count = Counter((j[0], j[1]) for j in jobs)
+    assert count == {("script", rund.SONNET): 72, ("main", rund.SONNET): 400, ("main", rund.DEEPSEEK): 200}
+    assert all(j[2].context == "global" for j in jobs if j[1] == rund.DEEPSEEK)
+    assert len({(j[0], j[1], j[2].id, j[3], j[4], j[5]) for j in jobs}) == len(jobs)

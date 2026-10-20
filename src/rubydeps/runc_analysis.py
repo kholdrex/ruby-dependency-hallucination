@@ -116,11 +116,11 @@ def script(labelled: list[dict], tasks: list[Task], variant_ids: list[str]) -> d
     return res
 
 
-def added_main(labelled: list[dict], tasks: list[Task]) -> dict:
+def added_main(labelled: list[dict], tasks: list[Task], models=tuple(ADDED)) -> dict:
     """Run B analyses 1 and 2 and the name classes for each added model (sample 0)."""
     context = {t.id: t.context for t in tasks}
     out, pvalues = {}, {}
-    for m in ADDED:
+    for m in models:
         rows = [r for r in labelled if r["part"] == "main" and r["model"] == m]
         if not rows:
             continue
