@@ -260,3 +260,15 @@ generation; replies: `results/run-d/replies.jsonl`.
   earlier, so its context contrast mixes two generation days. Script experiment of Claude Sonnet 5.5: the cyrillic −
   latin difference over the 35 primary tasks with a task-bootstrap interval and the any-absent outcome, descriptive
   only (one model, one sample). Results are reported separately from run B and not pooled with it.
+
+Run D notes (after generation): the requests were sent on 20 October 2026 from 05:41 EEST. After 106 replies a
+Claude Sonnet 5.5 request failed after the client's retries and the run was restarted as prescribed; after 116 replies
+every Claude Sonnet 5.5 request was refused with HTTP 402 because the OpenRouter account balance did not cover the
+requested token limit (the key limit was not reached). The refused requests returned no reply and stored nothing. While
+the run was stopped, one of the authors looked at the 116 stored replies (none declared an invented gem; lookups in a
+temporary cache, not in the repository); the authors then added credit and the remaining 556 requests were sent on
+21 October 2026 from 03:30 to 04:27 EEST, unchanged. All 672 planned requests returned a reply; 32 Claude Sonnet 5.5
+replies stopped at the token limit, and 15 Claude Sonnet 5.5 and 4 DeepSeek V4 Pro replies were empty because
+reasoning used the whole limit (kept as prescribed); 3 DeepSeek V4 Pro replies ended with a broken stream. The cost
+recorded for run D was 35.12 USD, below the stop at 36 USD. No class of the run C DeepSeek V4 Pro names changed with
+the run D lookups.

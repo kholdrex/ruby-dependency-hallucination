@@ -1,0 +1,1298 @@
+{
+ "aasm": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:35+00:00"
+ },
+ "actionmailbox": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:36+00:00"
+ },
+ "actionmailer": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:36+00:00"
+ },
+ "actionpack": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:36+00:00"
+ },
+ "actionview": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:36+00:00"
+ },
+ "active_model_serializers": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:36+00:00"
+ },
+ "activemodel": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:37+00:00"
+ },
+ "activerecord": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:37+00:00"
+ },
+ "activerecord-import": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:37+00:00"
+ },
+ "activestorage": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:37+00:00"
+ },
+ "activesupport": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:37+00:00"
+ },
+ "adyen-ruby-api-library": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:37+00:00"
+ },
+ "anthropic": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:37+00:00"
+ },
+ "async-websocket": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:38+00:00"
+ },
+ "attr_encrypted": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:38+00:00"
+ },
+ "audited": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:39+00:00"
+ },
+ "aws-sdk-cloudfront": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:39+00:00"
+ },
+ "aws-sdk-s3": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:39+00:00"
+ },
+ "aws-sdk-ses": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:39+00:00"
+ },
+ "aws-sdk-sesv2": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:40+00:00"
+ },
+ "aws-sdk-sns": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:40+00:00"
+ },
+ "aws-sdk-sqs": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:40+00:00"
+ },
+ "aws-sigv4": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:41+00:00"
+ },
+ "axlsx": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:41+00:00"
+ },
+ "babosa": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:41+00:00"
+ },
+ "barby": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:42+00:00"
+ },
+ "base64": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:42+00:00"
+ },
+ "bcrypt": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:42+00:00"
+ },
+ "benchmark": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:42+00:00"
+ },
+ "benchmark-ips": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:43+00:00"
+ },
+ "bic": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:43+00:00"
+ },
+ "bigcommerce": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:43+00:00"
+ },
+ "bigdecimal": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:43+00:00"
+ },
+ "blind_index": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:44+00:00"
+ },
+ "bootsnap": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:44+00:00"
+ },
+ "bootstrap": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:44+00:00"
+ },
+ "braintree": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:45+00:00"
+ },
+ "builder": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:45+00:00"
+ },
+ "byebug": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:45+00:00"
+ },
+ "capybara": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:45+00:00"
+ },
+ "carrierwave": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:46+00:00"
+ },
+ "caxlsx": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:46+00:00"
+ },
+ "certificate_authority": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:46+00:00"
+ },
+ "chronic": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:46+00:00"
+ },
+ "chunky_png": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:47+00:00"
+ },
+ "ckan": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:47+00:00"
+ },
+ "cld3": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:47+00:00"
+ },
+ "coinbase_commerce": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:48+00:00"
+ },
+ "colorize": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:48+00:00"
+ },
+ "commonmarker": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:49+00:00"
+ },
+ "concurrent-ruby": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:49+00:00"
+ },
+ "connection_pool": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:49+00:00"
+ },
+ "countries": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:49+00:00"
+ },
+ "creek": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:50+00:00"
+ },
+ "csv": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:50+00:00"
+ },
+ "damerau-levenshtein": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:50+00:00"
+ },
+ "database_cleaner": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:50+00:00"
+ },
+ "database_cleaner-active_record": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:51+00:00"
+ },
+ "database_cleaner-sequel": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:51+00:00"
+ },
+ "date": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:51+00:00"
+ },
+ "dbf": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:52+00:00"
+ },
+ "debug": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:52+00:00"
+ },
+ "deepl-rb": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:52+00:00"
+ },
+ "devise": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:52+00:00"
+ },
+ "devise-jwt": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:53+00:00"
+ },
+ "devise-two-factor": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:53+00:00"
+ },
+ "devise_saml_authenticatable": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:53+00:00"
+ },
+ "digest": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:54+00:00"
+ },
+ "discordrb": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:54+00:00"
+ },
+ "docusign_esign": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:54+00:00"
+ },
+ "docx": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:54+00:00"
+ },
+ "dotenv": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:54+00:00"
+ },
+ "dotenv-rails": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:54+00:00"
+ },
+ "down": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:55+00:00"
+ },
+ "drb": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:55+00:00"
+ },
+ "dry-monads": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:55+00:00"
+ },
+ "dry-schema": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:55+00:00"
+ },
+ "dry-validation": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:55+00:00"
+ },
+ "dstu4145": {
+  "status": "absent",
+  "checked": "2026-10-21T01:32:56+00:00"
+ },
+ "easypost": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:56+00:00"
+ },
+ "ebay_client": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:56+00:00"
+ },
+ "ebayapi": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:57+00:00"
+ },
+ "elasticsearch": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:57+00:00"
+ },
+ "elasticsearch-model": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:57+00:00"
+ },
+ "elasticsearch-rails": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:57+00:00"
+ },
+ "email_reply_parser": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:58+00:00"
+ },
+ "engtagger": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:58+00:00"
+ },
+ "erb": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:58+00:00"
+ },
+ "erubi": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:58+00:00"
+ },
+ "facebook-messenger": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:59+00:00"
+ },
+ "factory_bot": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:59+00:00"
+ },
+ "factory_bot_rails": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:59+00:00"
+ },
+ "faker": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:59+00:00"
+ },
+ "faraday": {
+  "status": "exists",
+  "checked": "2026-10-21T01:32:59+00:00"
+ },
+ "faraday-follow_redirects": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:00+00:00"
+ },
+ "faraday-multipart": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:00+00:00"
+ },
+ "faraday-net_http": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:00+00:00"
+ },
+ "faraday-retry": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:00+00:00"
+ },
+ "fast-stemmer": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:01+00:00"
+ },
+ "fedex": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:01+00:00"
+ },
+ "ffi": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:01+00:00"
+ },
+ "ffi-aspell": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:02+00:00"
+ },
+ "ffi-hunspell": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:02+00:00"
+ },
+ "fileutils": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:02+00:00"
+ },
+ "firebase_cloud_messaging": {
+  "status": "absent",
+  "checked": "2026-10-21T01:33:03+00:00"
+ },
+ "geocoder": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:03+00:00"
+ },
+ "google-cloud-text_to_speech": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:03+00:00"
+ },
+ "google-cloud-translate": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:03+00:00"
+ },
+ "googleauth": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:04+00:00"
+ },
+ "hexapdf": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:04+00:00"
+ },
+ "holidays": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:04+00:00"
+ },
+ "htmlentities": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:04+00:00"
+ },
+ "httparty": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:05+00:00"
+ },
+ "httpx": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:05+00:00"
+ },
+ "hunspell-ffi": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:05+00:00"
+ },
+ "i18n": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:05+00:00"
+ },
+ "iban-tools": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:06+00:00"
+ },
+ "ibanizator": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:06+00:00"
+ },
+ "image_processing": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:06+00:00"
+ },
+ "importmap-rails": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:07+00:00"
+ },
+ "jaro_winkler": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:07+00:00"
+ },
+ "jbuilder": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:07+00:00"
+ },
+ "json": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:07+00:00"
+ },
+ "json-schema": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:07+00:00"
+ },
+ "jsonapi-serializer": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:08+00:00"
+ },
+ "jwe": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:08+00:00"
+ },
+ "jwt": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:08+00:00"
+ },
+ "kaminari": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:08+00:00"
+ },
+ "klaviyo-api-sdk": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:09+00:00"
+ },
+ "language_filter": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:09+00:00"
+ },
+ "launchy": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:10+00:00"
+ },
+ "letter_opener": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:10+00:00"
+ },
+ "lingua": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:10+00:00"
+ },
+ "lingua-stemmer": {
+  "status": "absent",
+  "checked": "2026-10-21T01:33:11+00:00"
+ },
+ "liqpay": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:11+00:00"
+ },
+ "listen": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:11+00:00"
+ },
+ "lockbox": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:11+00:00"
+ },
+ "logger": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:12+00:00"
+ },
+ "lograge": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:12+00:00"
+ },
+ "mail": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:12+00:00"
+ },
+ "mail_form": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:12+00:00"
+ },
+ "mailchimp_api_v3": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:13+00:00"
+ },
+ "mailchimp_marketing": {
+  "status": "absent",
+  "checked": "2026-10-21T01:33:13+00:00"
+ },
+ "marcel": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:14+00:00"
+ },
+ "matrix": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:14+00:00"
+ },
+ "mechanize": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:14+00:00"
+ },
+ "mimemagic": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:15+00:00"
+ },
+ "mini_magick": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:15+00:00"
+ },
+ "mini_mime": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:15+00:00"
+ },
+ "minitest": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:15+00:00"
+ },
+ "minitest-mock": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:16+00:00"
+ },
+ "mitie": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:16+00:00"
+ },
+ "mollie-api-ruby": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:17+00:00"
+ },
+ "monetize": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:17+00:00"
+ },
+ "money": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:17+00:00"
+ },
+ "money-rails": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:17+00:00"
+ },
+ "morph": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:18+00:00"
+ },
+ "mutex_m": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:18+00:00"
+ },
+ "mysql2": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:18+00:00"
+ },
+ "net-http": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:18+00:00"
+ },
+ "net-http2": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:19+00:00"
+ },
+ "net-imap": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:19+00:00"
+ },
+ "newrelic_rpm": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:19+00:00"
+ },
+ "nokogiri": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:19+00:00"
+ },
+ "numo-narray": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:19+00:00"
+ },
+ "oauth": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:20+00:00"
+ },
+ "oauth2": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:20+00:00"
+ },
+ "oj": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:20+00:00"
+ },
+ "omniauth": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:20+00:00"
+ },
+ "omniauth-apple": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:21+00:00"
+ },
+ "omniauth-google-oauth2": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:21+00:00"
+ },
+ "omniauth-openid-connect": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:21+00:00"
+ },
+ "omniauth-rails_csrf_protection": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:22+00:00"
+ },
+ "omniauth-saml": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:22+00:00"
+ },
+ "omniauth_openid_connect": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:22+00:00"
+ },
+ "onfido": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:22+00:00"
+ },
+ "openai": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:23+00:00"
+ },
+ "openssl": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:23+00:00"
+ },
+ "openssl-ccm": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:23+00:00"
+ },
+ "openssl-signature_algorithm": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:24+00:00"
+ },
+ "optparse": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:24+00:00"
+ },
+ "paperclip": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:24+00:00"
+ },
+ "paypal-checkout-sdk": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:24+00:00"
+ },
+ "paypal-sdk-rest": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:25+00:00"
+ },
+ "pdf-reader": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:25+00:00"
+ },
+ "pdf-table-extractor": {
+  "status": "absent",
+  "checked": "2026-10-21T01:33:25+00:00"
+ },
+ "pg": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:26+00:00"
+ },
+ "pg_search": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:26+00:00"
+ },
+ "phonelib": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:26+00:00"
+ },
+ "pkcs7": {
+  "status": "absent",
+  "checked": "2026-10-21T01:33:26+00:00"
+ },
+ "plaid": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:26+00:00"
+ },
+ "postmark": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:27+00:00"
+ },
+ "pragmatic_segmenter": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:27+00:00"
+ },
+ "prawn": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:27+00:00"
+ },
+ "prawn-table": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:27+00:00"
+ },
+ "propshaft": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:27+00:00"
+ },
+ "pry": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:28+00:00"
+ },
+ "pry-rails": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:28+00:00"
+ },
+ "puma": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:28+00:00"
+ },
+ "pundit": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:28+00:00"
+ },
+ "pycall": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:28+00:00"
+ },
+ "quickbooks-ruby": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:29+00:00"
+ },
+ "rack": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:29+00:00"
+ },
+ "rack-attack": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:29+00:00"
+ },
+ "rack-cors": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:29+00:00"
+ },
+ "rack-mini-profiler": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:29+00:00"
+ },
+ "rack-protection": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:30+00:00"
+ },
+ "rack-session": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:30+00:00"
+ },
+ "rack-test": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:30+00:00"
+ },
+ "rackup": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:30+00:00"
+ },
+ "rails": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:30+00:00"
+ },
+ "rails-i18n": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:31+00:00"
+ },
+ "railties": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:31+00:00"
+ },
+ "rainbow": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:31+00:00"
+ },
+ "rake": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:31+00:00"
+ },
+ "ransack": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:32+00:00"
+ },
+ "redcarpet": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:32+00:00"
+ },
+ "redis": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:32+00:00"
+ },
+ "redis-namespace": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:32+00:00"
+ },
+ "regexp_parser": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:32+00:00"
+ },
+ "rerun": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:33+00:00"
+ },
+ "rest-client": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:33+00:00"
+ },
+ "rexml": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:33+00:00"
+ },
+ "rmagick": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:33+00:00"
+ },
+ "roo": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:33+00:00"
+ },
+ "roo-xls": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:34+00:00"
+ },
+ "rotp": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:34+00:00"
+ },
+ "rouge": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:34+00:00"
+ },
+ "rqrcode": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:34+00:00"
+ },
+ "rqrcode_png": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:35+00:00"
+ },
+ "rspec": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:35+00:00"
+ },
+ "rspec-rails": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:35+00:00"
+ },
+ "rtesseract": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:35+00:00"
+ },
+ "rubocop": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:36+00:00"
+ },
+ "rubocop-rails": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:36+00:00"
+ },
+ "ruby-mp3info": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:36+00:00"
+ },
+ "ruby-openai": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:37+00:00"
+ },
+ "ruby-progressbar": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:37+00:00"
+ },
+ "ruby-saml": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:37+00:00"
+ },
+ "ruby-stemmer": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:37+00:00"
+ },
+ "ruby-vips": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:37+00:00"
+ },
+ "ruby_linux_notifications": {
+  "status": "absent",
+  "checked": "2026-10-21T01:33:38+00:00"
+ },
+ "rubyzip": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:38+00:00"
+ },
+ "rufus-scheduler": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:38+00:00"
+ },
+ "sanitize": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:39+00:00"
+ },
+ "sass-rails": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:39+00:00"
+ },
+ "sassc-rails": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:39+00:00"
+ },
+ "savon": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:40+00:00"
+ },
+ "searchkick": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:40+00:00"
+ },
+ "securerandom": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:40+00:00"
+ },
+ "selenium-webdriver": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:40+00:00"
+ },
+ "sendgrid-ruby": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:40+00:00"
+ },
+ "sentimental": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:41+00:00"
+ },
+ "sentry-rails": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:41+00:00"
+ },
+ "sentry-ruby": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:41+00:00"
+ },
+ "sepa_king": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:41+00:00"
+ },
+ "sequel": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:42+00:00"
+ },
+ "shopify_api": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:42+00:00"
+ },
+ "shoulda-matchers": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:42+00:00"
+ },
+ "sidekiq": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:42+00:00"
+ },
+ "sidekiq-cron": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:43+00:00"
+ },
+ "sidekiq-scheduler": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:43+00:00"
+ },
+ "simplecov": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:43+00:00"
+ },
+ "sinatra": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:43+00:00"
+ },
+ "sinatra-activerecord": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:43+00:00"
+ },
+ "sinatra-contrib": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:44+00:00"
+ },
+ "slack-ruby-client": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:44+00:00"
+ },
+ "smartcard": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:44+00:00"
+ },
+ "spring": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:44+00:00"
+ },
+ "sprockets-rails": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:45+00:00"
+ },
+ "sqlite3": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:45+00:00"
+ },
+ "stanford-core-nlp": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:45+00:00"
+ },
+ "stimulus-rails": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:46+00:00"
+ },
+ "stopwords-filter": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:46+00:00"
+ },
+ "street_address": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:46+00:00"
+ },
+ "stripe": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:47+00:00"
+ },
+ "taxjar-ruby": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:47+00:00"
+ },
+ "telegram-bot-ruby": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:47+00:00"
+ },
+ "tempfile": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:47+00:00"
+ },
+ "terminal-notifier": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:48+00:00"
+ },
+ "terminal-table": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:48+00:00"
+ },
+ "text": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:48+00:00"
+ },
+ "text-hyphen": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:48+00:00"
+ },
+ "thor": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:49+00:00"
+ },
+ "time": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:49+00:00"
+ },
+ "timecop": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:49+00:00"
+ },
+ "timeout": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:49+00:00"
+ },
+ "titlecase": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:50+00:00"
+ },
+ "turbo-rails": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:50+00:00"
+ },
+ "turbolinks": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:50+00:00"
+ },
+ "twilio-ruby": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:50+00:00"
+ },
+ "tzinfo": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:50+00:00"
+ },
+ "tzinfo-data": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:50+00:00"
+ },
+ "ua-crypto": {
+  "status": "absent",
+  "checked": "2026-10-21T01:33:51+00:00"
+ },
+ "ukrainian": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:51+00:00"
+ },
+ "ukrainian_stemmer": {
+  "status": "absent",
+  "checked": "2026-10-21T01:33:51+00:00"
+ },
+ "unicode_utils": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:52+00:00"
+ },
+ "ups_shipping": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:52+00:00"
+ },
+ "uri": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:52+00:00"
+ },
+ "us_states": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:52+00:00"
+ },
+ "valvat": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:53+00:00"
+ },
+ "vapid": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:53+00:00"
+ },
+ "vcr": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:54+00:00"
+ },
+ "viber-bot": {
+  "status": "absent",
+  "checked": "2026-10-21T01:33:54+00:00"
+ },
+ "vonage": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:54+00:00"
+ },
+ "web-console": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:54+00:00"
+ },
+ "web-push": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:54+00:00"
+ },
+ "webauthn": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:55+00:00"
+ },
+ "webdrivers": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:55+00:00"
+ },
+ "webmock": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:55+00:00"
+ },
+ "webpacker": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:55+00:00"
+ },
+ "webpush": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:55+00:00"
+ },
+ "webrick": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:56+00:00"
+ },
+ "whatlanguage": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:56+00:00"
+ },
+ "whenever": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:56+00:00"
+ },
+ "woocommerce_api": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:56+00:00"
+ },
+ "write_xlsx": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:57+00:00"
+ },
+ "x509": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:57+00:00"
+ },
+ "xero-ruby": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:57+00:00"
+ },
+ "xmldsig": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:57+00:00"
+ },
+ "xmlsig": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:58+00:00"
+ },
+ "xsv": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:58+00:00"
+ },
+ "yaml": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:58+00:00"
+ },
+ "zeitwerk": {
+  "status": "exists",
+  "checked": "2026-10-21T01:33:58+00:00"
+ }
+}

@@ -1,0 +1,107 @@
+{
+ "requests": 672,
+ "cost_usd": 35.11775005400001,
+ "script_sonnet": {
+  "tasks": 35,
+  "value": 0.0,
+  "ci": [
+   0.0,
+   0.0
+  ],
+  "rates": {
+   "cyrillic": {
+    "replies": 35,
+    "rate": 0.0
+   },
+   "latin": {
+    "replies": 35,
+    "rate": 0.0
+   }
+  },
+  "any_absent": {
+   "tasks": 35,
+   "value": 0.0,
+   "ci": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "main": {
+  "anthropic/claude-sonnet-5.5": {
+   "tasks": 200,
+   "rate": {
+    "en": 0.0,
+    "uk": 0.0,
+    "en|global": 0.0,
+    "en|ukraine": 0.0,
+    "uk|global": 0.0,
+    "uk|ukraine": 0.0
+   },
+   "uk_minus_en": {
+    "value": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ],
+    "uk_only": 0,
+    "en_only": 0,
+    "p": 1.0,
+    "p_holm": 1.0
+   },
+   "names": {
+    "exists": 1410,
+    "near_miss": 2
+   },
+   "no_dependency": 11,
+   "truncated": 25,
+   "empty": 10
+  },
+  "deepseek/deepseek-v4-pro": {
+   "tasks": 200,
+   "rate": {
+    "en": 0.01,
+    "uk": 0.025,
+    "en|global": 0.0,
+    "en|ukraine": 0.02,
+    "uk|global": 0.01,
+    "uk|ukraine": 0.04
+   },
+   "uk_minus_en": {
+    "value": 0.015,
+    "ci": [
+     0.0,
+     0.035
+    ],
+    "uk_only": 3,
+    "en_only": 0,
+    "p": 0.25,
+    "p_holm": 0.5
+   },
+   "names": {
+    "exists": 2296,
+    "near_miss": 1,
+    "invented": 9,
+    "malformed": 1
+   },
+   "no_dependency": 21,
+   "truncated": 0,
+   "empty": 9
+  }
+ },
+ "deepseek_run_c_status_changes": [],
+ "finish": {
+  "anthropic/claude-sonnet-5.5|stop": 440,
+  "deepseek/deepseek-v4-pro|stop": 197,
+  "anthropic/claude-sonnet-5.5|length": 32,
+  "deepseek/deepseek-v4-pro|error": 3
+ },
+ "empty_or_error": {
+  "deepseek/deepseek-v4-pro": 5,
+  "anthropic/claude-sonnet-5.5": 15
+ },
+ "reasoning_tokens_mean": {
+  "anthropic/claude-sonnet-5.5": 3068.576271186441,
+  "deepseek/deepseek-v4-pro": 2213.04
+ }
+}
